@@ -6,40 +6,37 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="min-h-screen p-4"
+      className="min-h-screen p-4 flex "
     >
       <ShimmerButton
-        shimmerColor="#D1FAE5"
+        shimmerColor="#E9D5FF"
         shimmerDuration="3s"
         shimmerSize="0.05em"
-        background="linear-gradient(135deg,rgba(15,157,122,0.75) 0%,rgba(45,212,191,0.65) 55%,rgba(125,220,111,0.55) 100%)"
-        borderRadius="12px"
+        background="linear-gradient(135deg,#6D28D9 0%,#8B5CF6 55%,#A855F7 100%)"
+        borderRadius="20px"
         className="
-          h-10
-          px-6
-          font-medium
+          h-11
+          px-7
           font-heading
+          font-medium
           text-white
-
           backdrop-blur-xl
-
           border
-          border-emerald-100/30
-
-          shadow-[0_12px_30px_rgba(15,157,122,.25)]
-
+          border-purple-200/20
+          shadow-[0_12px_30px_rgba(109,40,217,.28)]
           transition-all
           duration-300
-
           hover:-translate-y-0.5
-          hover:border-emerald-100/60
-          hover:shadow-[0_15px_35px_rgba(45,212,191,.35)]
-
+          hover:border-purple-200/40
+          hover:shadow-[0_18px_40px_rgba(139,92,246,.45)]
           active:scale-[0.98]
         "
       >
         <span className="flex items-center gap-2">
-          Ver Projetos →
+          Ver Projetos
+          <span className="transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
         </span>
       </ShimmerButton>
     </section>
