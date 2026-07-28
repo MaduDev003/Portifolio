@@ -67,14 +67,26 @@
     transform: translateZ(0) rotate(360deg);
     }
   }
-}
+  --animate-blink-cursor: blink-cursor 1.2s step-end infinite
+;
+  @keyframes blink-cursor {
+  0%, 49% {
+    opacity: 1;}
+  50%, 100% {
+    opacity: 0;}}}
+
 
 body {
-  font-family: var(--font-manrope), sans-serif;
+  font-family: var(--font-jakarta), sans-serif;
+  letter-spacing: -0.015em;
+}
+
+.font-name {
+  font-family: var(--font-jakarta), sans-serif;
 }
 
 :root {
-  --background: oklch(96.346% 0.00319 15.323);
+  --background: oklch(99.405% 0.00011 271.152);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);

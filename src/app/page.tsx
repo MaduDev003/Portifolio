@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
     <Header />
-    <main className="py-18 min-h-screen px-14">
+    <main className="py-6 min-h-screen px-14 mt-2">
       <AboutMe />
     </main>
     </>

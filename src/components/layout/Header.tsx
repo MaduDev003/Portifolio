@@ -2,33 +2,20 @@
 
 import { useState } from "react";
 import { FiDownload } from "react-icons/fi";
-
-const actionButton = `
-  inline-flex
-  items-center
-  justify-center
-  gap-2
-  h-10
-  rounded-full
-  border
-  border-[#A78BFA]
-  bg-[#DDD6FE]
-  text-[#6D28D9]
-  font-heading
-  font-medium
-  transition-all
-  duration-200
-  cursor-pointer
-
-  hover:bg-[#EDE9FE]
-  hover:border-[#8B5CF6]
-  hover:shadow-[0_0_12px_rgba(139,92,246,0.18)]
-
-  active:scale-[0.98]
-`;
-
+import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
+import SecondaryButton from "@/src/components/ui/SecondaryButton";
 export default function Header() {
-  const [activeLink, setActiveLink] = useState<string>("Home");
+  const [activeLink, setActiveLink] = useState("Home");
+  const [changeTheme, setChangeTheme] = useState<"light" | "dark">("light");
+  const [changeIdiom, setChangeIdiom] = useState<"pt-br" | "en">("pt-br");
+
+  const links = [
+    "Home",
+    "Sobre mim",
+    "Experiência",
+    "Projetos",
+    "Contato",
+  ];
 
   return (
     <header
@@ -40,59 +27,77 @@ export default function Header() {
         z-50
         flex
         h-14
-        w-[73%]
+        w-[78%]
+        max-w-6xl
         items-center
         justify-between
         rounded-full
         border
-        border-white/30
-        bg-white/60
-        px-6
+        border-white/40
+        bg-white/40
         backdrop-blur-2xl
-        shadow-[0_8px_30px_rgba(0,0,0,0.08)]
+        px-6
+        shadow-[0_10px_40px_rgba(0,0,0,.08)]
+        before:absolute
+        before:inset-0
+        before:rounded-full
+        before:bg-gradient-to-b
+        before:from-white/40
+        before:to-transparent
+        before:pointer-events-none
       "
     >
+
       {/* Logo */}
-      <div className="font-heading font-semibold text-zinc-800">
-        Madu
+      <div
+        className="
+          relative
+          font-heading
+          text-lg
+          font-semibold
+          tracking-tight
+          text-zinc-800
+        "
+      >
+        Madu.
       </div>
 
-      {/* Menu */}
-      <nav className="ml-15">
-        <ul className="flex items-center justify-center gap-6">
-          {[
-            "Home",
-            "Sobre mim",
-            "Experiência",
-            "Projetos",
-            "Contato",
-          ].map((item) => (
+      <nav className="relative">
+        <ul className="flex items-center gap-9">
+          {links.map((item) => (
             <li
               key={item}
               onClick={() => setActiveLink(item)}
               className={`
                 relative
                 cursor-pointer
-                font-heading
-                text-zinc-600
+                text-sm
+                font-medium
                 transition-all
-                duration-200
-
+                duration-300
+                ${
+                  activeLink === item
+                  ? "text-[#6D5EF7]"
+                  : "text-zinc-500"
+                }
                 after:absolute
-                after:left-0
-                after:-bottom-1
-                after:h-0.5
+                after:left-1/2
+                after:-bottom-2
+                after:h-[2px]
                 after:w-0
+                after:-translate-x-1/2
                 after:rounded-full
-                after:bg-[linear-gradient(135deg,#6D28D9_0%,#8B5CF6_55%,#A855F7_100%)]
+                after:bg-gradient-to-r
+                after:from-[#6D5EF7]
+                after:to-[#C084FC]
                 after:transition-all
-                after:duration-300
-
-                hover:bg-[linear-gradient(135deg,#6D28D9_0%,#8B5CF6_55%,#A855F7_100%)]
-                hover:bg-clip-text
-                hover:text-transparent
-                hover:after:w-full
-
+                after:duration-100
+                ${
+                  activeLink === item
+                  ? "after:w-full"
+                  : "hover:after:w-8"
+                }
+                hover:text-[#6D5EF7]
               `}
             >
               {item}
@@ -100,25 +105,53 @@ export default function Header() {
           ))}
         </ul>
       </nav>
-
-      {/* Ações */}
-      <div className="flex items-center  gap-3 px-2">
-        <button className={`${actionButton} px-5`}>
-          <FiDownload className="h-4 w-4" />
+      <div className="relative flex items-center gap-2">
+        <button
+          className="
+            flex
+            h-10
+            items-center
+            gap-2
+            rounded-full
+            px-5
+            font-heading
+            text-sm
+            font-medium
+            text-white
+            bg-linear-to-br
+            from-[#6D5EF7]
+            via-[#8B5CF6]
+            to-[#A855F7]
+            shadow-[0_10px_25px_rgba(109,94,247,.30)]
+            transition-all
+            duration-300
+            hover:-translate-y-0.5
+            hover:shadow-[0_15px_35px_rgba(109,94,247,.45)]
+            active:scale-[0.97]
+          "
+        >
+          <FiDownload size={15}/>
           Currículo
         </button>
-
-        <button className={`${actionButton} w-10 p-0`}>
-          1
-        </button>
-
-        <button className={`${actionButton} w-10 p-0`}>
-          1
-        </button>
-
-        <button className={`${actionButton} w-10 p-0`}>
-          1
-        </button>
+        <SecondaryButton 
+           onClick={() =>
+            setChangeTheme((prev) =>
+              prev === "light" ? "dark" : "light"
+            )}
+            children={changeTheme === "light"
+            ? <HiOutlineSun size={23}/>
+            : <HiOutlineMoon size={23}/>
+          }  
+           />
+        
+        <SecondaryButton
+          onClick={() =>
+            setChangeIdiom((prev) =>
+              prev === "pt-br" ? "en" : "pt-br"
+            )}
+            children={changeIdiom === "pt-br" ? "PT" : "EN"}
+        />
+       
       </div>
     </header>
   );
