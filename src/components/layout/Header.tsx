@@ -75,14 +75,9 @@ export default function Header() {
                 font-medium
                 transition-all
                 duration-300
-                ${
-                  activeLink === item
-                  ? "text-[#6D5EF7]"
-                  : "text-zinc-500"
-                }
                 after:absolute
                 after:left-1/2
-                after:-bottom-2
+                after:-bottom-1
                 after:h-[2px]
                 after:w-0
                 after:-translate-x-1/2
@@ -92,11 +87,8 @@ export default function Header() {
                 after:to-[#C084FC]
                 after:transition-all
                 after:duration-100
-                ${
-                  activeLink === item
-                  ? "after:w-full"
-                  : "hover:after:w-8"
-                }
+                hover:after:w-full
+               text-neutral-600
                 hover:text-[#6D5EF7]
               `}
             >

@@ -17,9 +17,7 @@ export default function AboutMe() {
         min-h-screen
         items-center
         
-        px-8
-        lg:px-24
-        xl:px-32
+        xl:px-24
       "
     >
       <div className="flex max-w-160 flex-1 flex-col">
