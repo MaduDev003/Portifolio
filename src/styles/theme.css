@@ -1,0 +1,165 @@
+
+:root {
+
+
+  --brand-primary: #7C5CFC;
+  --brand-middle: #9B6DFF;
+  --brand-end: #C4B5FD;
+  --brand-hover: #6D4AFF;
+  --brand-text: #6D4AFF;
+
+
+
+  --brand-soft: rgba(
+    124,
+    92,
+    252,
+    0.12
+  );
+
+
+  --brand-border: rgba(
+    124,
+    92,
+    252,
+    0.25
+  );
+
+
+
+  --radius: 0.625rem;
+
+}
+
+:root {
+
+  --background: #FFFFFF;
+  --foreground: #262626;
+  --card: #faf7ffab;
+  --card-foreground: #171717;
+  --button-secondary-bg: rgba(
+    124,
+    92,
+    252,
+    0.10
+  );
+  --button-secondary-border: rgba(
+    155,
+    109,
+    255,
+    0.35
+  );
+  --button-secondary-text: #6D4AFF;
+  --button-secondary-hover-bg: rgba(
+    124,
+    92,
+    252,
+    0.18
+  );
+  --button-secondary-hover-border: #9B6DFF;
+  --button-secondary-hover-text: #5633E6;
+  --muted: #71717A;
+  --muted-foreground: #52525B;
+  --border: #E4E4E7;
+  --ring: var(--brand-primary);
+  --header-bg: rgba(
+    255,
+    255,
+    255,
+    0.40
+  );
+
+
+  --header-border: rgba(
+    255,
+    255,
+    255,
+    0.40
+  );
+
+
+  --header-highlight: rgba(
+    255,
+    255,
+    255,
+    0.40
+  );
+
+
+  --header-shadow: rgba(
+    0,
+    0,
+    0,
+    0.08
+  );
+
+}
+
+.dark {
+  --background: #161616;
+  --foreground: #E5E7EB;
+  --card: #18181d;
+  --card-foreground: #FAFAFA;
+  --button-secondary-bg: rgba(
+    124,
+    92,
+    252,
+    0.16
+  );
+  --button-secondary-border: rgba(
+    196,
+    181,
+    253,
+    0.35
+  );
+  --button-secondary-text: #C4B5FD;
+  --button-secondary-hover-bg: rgba(
+    124,
+    92,
+    252,
+    0.26
+  );
+  --button-secondary-hover-border: #A78BFA;
+  --button-secondary-hover-text: #EDE9FE;
+  --muted: #A1A1AA;
+  --muted-foreground: #D4D4D8;
+  --border: rgba(
+    255,
+    255,
+    255,
+    0.12
+  );
+  --ring: #A78BFA;
+
+  --header-bg: rgba(
+    27,
+    24,
+    35,
+    0.65
+  );
+
+
+  --header-border: rgba(
+    196,
+    181,
+    253,
+    0.15
+  );
+
+
+  --header-highlight: rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+
+
+  --header-shadow: rgba(
+    0,
+    0,
+    0,
+    0.35
+  );
+
+}

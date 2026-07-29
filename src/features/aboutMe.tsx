@@ -29,14 +29,14 @@ export default function AboutMe() {
             gap-3 
             rounded-full 
             border 
-            border-violet-200 
-            bg-violet-50 
+            border-button-secondary-hover-border
+            bg-accent-foreground
             px-4 
             py-2"
           >
-          <span className="h-2.5 w-2.5 rounded-full bg-[#8B5CF6]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-brand-hover animate-bounce" />
 
-          <p className="text-sm font-medium text-[#6D5EF7]">
+          <p className="text-sm font-medium  text-accent-foreground">
             Olá, eu sou
           </p>
         </div>
@@ -45,10 +45,10 @@ export default function AboutMe() {
           className="
             mt-1
             font-body
+            text-card-foreground
             text-[5rem]
             font-black
             leading-[0.9]
-            text-neutral-950
             md:text-[5.8rem]
             lg:text-[6.4rem]
             xl:text-[6.8rem]
@@ -63,42 +63,47 @@ export default function AboutMe() {
           <div className="h-px w-8 bg-neutral-300" />
           <TypingAnimation
             duration={70}
-            className="text-lg font-medium text-[#6D5EF7]"
+            className="text-lg font-medium text-brand-middle"
           >
             Engenheira de Software · Front-End
           </TypingAnimation>
         </div>
 
-        <p className="mt-5 max-w-130 text-lg leading-8 text-neutral-600">
+        <p className="mt-5 max-w-130 text-lg leading-8 text-accent-foreground">
          Apaixonada por tecnologia, design e experiências digitais. Gosto de aprender continuamente 
          e explorar novas formas de desenvolver interfaces modernas, acessíveis e intuitivas.
         </p>
 
         <div className="mt-8 flex items-center gap-5">
-          <ShimmerButton
-            shimmerColor="#FFFFFF"
-            shimmerDuration="2s"
-            shimmerSize="0.08em"
-            background="linear-gradient(180deg,#6D5EF7,#5B46E8)"
-            borderRadius="16px"
-            className="
-              h-12
-              px-7
-              text-sm
-              font-medium
-              text-white
-              shadow-[0_12px_30px_rgba(91,70,232,.18)]
-              transition-all
-              duration-300
-              hover:-translate-y-0.5
-              hover:shadow-[0_18px_36px_rgba(91,70,232,.28)]
-            "
-          >
-            <span className="flex items-center gap-2">
-              Explore Projects
-              <span>↗</span>
-            </span>
-          </ShimmerButton>
+        <ShimmerButton
+          shimmerColor="rgba(255,255,255,.22)"
+          shimmerDuration="2.8s"
+          shimmerSize="0.035em"
+          background="linear-gradient( 120deg,
+          #50457c 0%,
+          #6952c4 55%,
+          #8F72FD 100%)"
+          borderRadius="27px"
+          className="
+            h-12
+            px-7
+            text-sm
+            font-medium
+            text-white
+
+
+            transition-all
+            duration-300
+
+            hover:-translate-y-0.5
+            hover:shadow-[0_16px_34px_rgba(109,74,255,.25)]
+          "
+        >
+          <span className="flex items-center gap-2 text-[16px]">
+            Ver Projetos
+            <span>↗</span>
+          </span>
+        </ShimmerButton>
 
           <div className="flex items-center gap-3">
             <SecondaryButton   className="h-12 w-12">

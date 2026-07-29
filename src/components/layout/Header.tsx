@@ -1,13 +1,18 @@
 "use client";
-
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { useState } from "react";
 import { FiDownload } from "react-icons/fi";
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
+import { useTheme } from "next-themes";
+
 import SecondaryButton from "@/src/components/ui/SecondaryButton";
+
+
 export default function Header() {
   const [activeLink, setActiveLink] = useState("Home");
-  const [changeTheme, setChangeTheme] = useState<"light" | "dark">("light");
-  const [changeIdiom, setChangeIdiom] = useState<"pt-br" | "en">("pt-br");
+
+  const { theme, setTheme } = useTheme();
+
 
   const links = [
     "Home",
@@ -18,45 +23,42 @@ export default function Header() {
   ];
 
   return (
-    <header
-      className="
-        fixed
-        top-2
-        left-1/2
-        -translate-x-1/2
-        z-50
-        flex
-        h-14
-        w-[78%]
-        max-w-6xl
-        items-center
-        justify-between
-        rounded-full
-        border
-        border-white/40
-        bg-white/40
-        backdrop-blur-2xl
-        px-6
-        shadow-[0_10px_40px_rgba(0,0,0,.08)]
-        before:absolute
-        before:inset-0
-        before:rounded-full
-        before:bg-gradient-to-b
-        before:from-white/40
-        before:to-transparent
-        before:pointer-events-none
-      "
-    >
-
-      {/* Logo */}
+   <header
+    className="
+      fixed
+      top-2
+      left-1/2
+      -translate-x-1/2
+      z-50
+      flex
+      h-14
+      w-[78%]
+      max-w-6xl
+      items-center
+      justify-between
+      rounded-full
+      bg-card
+      border
+      border-[#6e5cb836]
+      backdrop-blur-2xl
+      px-6
+      shadow-[0_10px_40px_var(--header-shadow)]
+      before:absolute
+      before:inset-0
+      before:rounded-full
+      before:from-header-highlight
+      before:to-transparent
+      before:pointer-events-none
+    "
+  > 
       <div
         className="
           relative
           font-heading
+          text-foreground
           text-lg
           font-semibold
           tracking-tight
-          text-zinc-800
         "
       >
         Madu.
@@ -73,23 +75,34 @@ export default function Header() {
                 cursor-pointer
                 text-sm
                 font-medium
+
+                text-muted-foreground
+
                 transition-all
                 duration-300
+
+                hover:text-brand-middle
+
+
                 after:absolute
                 after:left-1/2
                 after:-bottom-1
-                after:h-[2px]
+
+                after:h-0.5
                 after:w-0
+
                 after:-translate-x-1/2
+
                 after:rounded-full
-                after:bg-gradient-to-r
-                after:from-[#6D5EF7]
-                after:to-[#C084FC]
+
+                after:bg-linear-to-r
+                after:from-brand-primary
+                after:to-brand-end
+
                 after:transition-all
-                after:duration-100
+                after:duration-300
+                
                 hover:after:w-full
-               text-neutral-600
-                hover:text-[#6D5EF7]
               `}
             >
               {item}
@@ -97,59 +110,56 @@ export default function Header() {
           ))}
         </ul>
       </nav>
+
+
       <div className="relative flex items-center gap-2">
-        <button
-          className="
-            flex
-            h-10
-            items-center
-            gap-2
-            rounded-full
-            px-5
-            font-heading
-            text-sm
-            font-medium
-            text-white
-            bg-linear-to-br
-            from-[#6D5EF7]
-            via-[#8B5CF6]
-            to-[#A855F7]
-            shadow-[0_10px_25px_rgba(109,94,247,.30)]
-            transition-all
-            duration-300
-            hover:-translate-y-0.5
-            hover:shadow-[0_15px_35px_rgba(109,94,247,.45)]
-            active:scale-[0.97]
-          "
-        >
+      <ShimmerButton
+        shimmerColor="rgba(255,255,255,.22)"
+        shimmerDuration="2.8s"
+        shimmerSize="0.035em"
+        background="linear-gradient( 120deg,
+        #50457c 0%,
+        #6952c4 55%,
+        #8F72FD 100%)"
+        borderRadius="27px"
+        className="
+          h-10
+          px-7
+          gap-2
+          text-sm
+          font-medium
+          text-white
+
+
+          transition-all
+          duration-300
+
+          hover:-translate-y-0.5
+        "
+      >
           <FiDownload size={15}/>
-          Currículo
-        </button>
+                Currículo
+      </ShimmerButton>
+
         <SecondaryButton
           onClick={() =>
-            setChangeTheme((prev) =>
-              prev === "light" ? "dark" : "light"
+            setTheme(
+              theme === "dark"
+                ? "light"
+                : "dark"
             )
           }
           className="h-9 w-9"
         >
-          {changeTheme === "light" ? (
+          {theme === "dark" ? (
             <HiOutlineSun size={23} />
           ) : (
             <HiOutlineMoon size={23} />
           )}
         </SecondaryButton>
-        
-        <SecondaryButton
-          onClick={() =>
-            setChangeIdiom((prev) =>
-              prev === "pt-br" ? "en" : "pt-br"
-            )}
-             className="h-9 w-9"
-            children={changeIdiom === "pt-br" ? "PT" : "EN"}
-        />
-       
+
       </div>
+
     </header>
   );
 }

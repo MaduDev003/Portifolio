@@ -28,33 +28,21 @@ export default function SecondaryButton({
         items-center
         justify-center
         rounded-full
-
         border
-        border-[#D4C5FF]
-
-        bg-[#EEE8FF]
-
-        text-[#6D5EF7]
-
+        border-button-secondary-border
+        bg-button-secondary-bg
+        text-button-secondary-text
         shadow-[0_2px_8px_rgba(15,23,42,0.06)]
-
         transition-all
         duration-300
         ease-out
-
         hover:-translate-y-0.5
         hover:scale-[1.03]
-
-        hover:border-[#C3AEFF]
-
-        hover:bg-[#F5F2FF]
-
-        hover:text-[#5B46E8]
-
+        hover:border-button-secondary-hover-border
+        hover:bg-button-secondary-hover-bg
+        hover:text-button-secondary-hover-text
         hover:shadow-[0_8px_22px_rgba(109,94,247,.14)]
-
         cursor-pointer
-
         active:scale-95
       `}
     >
