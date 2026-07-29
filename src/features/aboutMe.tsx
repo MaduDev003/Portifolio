@@ -76,13 +76,10 @@ export default function AboutMe() {
 
         <div className="mt-8 flex items-center gap-5">
         <ShimmerButton
-          shimmerColor="rgba(255,255,255,.22)"
+          shimmerColor="rgba(255,255,255,.65)"
           shimmerDuration="2.8s"
-          shimmerSize="0.035em"
-          background="linear-gradient( 120deg,
-          #50457c 0%,
-          #6952c4 55%,
-          #8F72FD 100%)"
+          shimmerSize="0.2em"
+          background="#5B3CC4"
           borderRadius="27px"
           className="
             h-12
