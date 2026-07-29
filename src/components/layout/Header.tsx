@@ -125,22 +125,27 @@ export default function Header() {
           <FiDownload size={15}/>
           Currículo
         </button>
-        <SecondaryButton 
-           onClick={() =>
+        <SecondaryButton
+          onClick={() =>
             setChangeTheme((prev) =>
               prev === "light" ? "dark" : "light"
-            )}
-            children={changeTheme === "light"
-            ? <HiOutlineSun size={23}/>
-            : <HiOutlineMoon size={23}/>
-          }  
-           />
+            )
+          }
+          className="h-9 w-9"
+        >
+          {changeTheme === "light" ? (
+            <HiOutlineSun size={23} />
+          ) : (
+            <HiOutlineMoon size={23} />
+          )}
+        </SecondaryButton>
         
         <SecondaryButton
           onClick={() =>
             setChangeIdiom((prev) =>
               prev === "pt-br" ? "en" : "pt-br"
             )}
+             className="h-9 w-9"
             children={changeIdiom === "pt-br" ? "PT" : "EN"}
         />
        

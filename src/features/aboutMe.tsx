@@ -63,7 +63,7 @@ export default function AboutMe() {
           <div className="h-px w-8 bg-neutral-300" />
           <TypingAnimation
             duration={70}
-            className="text-md font-medium text-[#6D5EF7]"
+            className="text-lg font-medium text-[#6D5EF7]"
           >
             Engenheira de Software · Front-End
           </TypingAnimation>
@@ -101,18 +101,19 @@ export default function AboutMe() {
           </ShimmerButton>
 
           <div className="flex items-center gap-3">
-            <SecondaryButton>
-              <FiGithub size={18} />
+            <SecondaryButton   className="h-12 w-12">
+              <FiGithub size={23} />
             </SecondaryButton>
 
-            <SecondaryButton>
-              <FiLinkedin size={18} />
+            <SecondaryButton className="h-12 w-12">
+              <FiLinkedin size={23} />
             </SecondaryButton>
 
             <SecondaryButton
-              hoverChildren={<HiOutlineMailOpen size={20} />}
+            className="h-12 w-12"
+              hoverChildren={<HiOutlineMailOpen size={23} />}
             >
-              <HiOutlineMail size={20} />
+              <HiOutlineMail size={23} />
             </SecondaryButton>
           </div>
         </div>
