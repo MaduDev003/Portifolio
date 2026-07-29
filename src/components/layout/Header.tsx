@@ -2,20 +2,20 @@
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { useState } from "react";
 import { FiDownload } from "react-icons/fi";
-import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { useTheme } from "next-themes";
 
 import SecondaryButton from "@/src/components/ui/SecondaryButton";
 
 
 export default function Header() {
-  const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink, setActiveLink] = useState("Inicio");
 
   const { theme, setTheme } = useTheme();
 
 
   const links = [
-    "Home",
+    "Inicio",
     "Sobre mim",
     "Experiência",
     "Projetos",
@@ -142,11 +142,7 @@ export default function Header() {
           }
           className="h-9 w-9"
       >
-          {theme === "dark" ? (
-            <HiOutlineSun size={23} />
-          ) : (
-            <HiOutlineMoon size={23} />
-          )}
+          <AnimatedThemeToggler duration={600} fromCenter className={"cursor-pointer"}/>
       </SecondaryButton>
 
     </div>

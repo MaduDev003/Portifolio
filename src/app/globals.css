@@ -5,11 +5,6 @@
 @import "../styles/theme.css";
 @import "../styles/animations.css";
 
-
-
-
-
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -30,14 +25,12 @@
   --color-brand-border: var(--brand-border);
   --color-brand-text: var(--brand-text);
 
-
   --color-button-secondary-bg: var(--button-secondary-bg);
   --color-button-secondary-border: var(--button-secondary-border);
   --color-button-secondary-text: var(--button-secondary-text);
   --color-button-secondary-hover-bg: var(--button-secondary-hover-bg);
   --color-button-secondary-hover-border: var(--button-secondary-hover-border);
   --color-button-secondary-hover-text: var(--button-secondary-hover-text);
-
 
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
@@ -46,8 +39,6 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-ring: var(--ring);
-
-
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
@@ -68,19 +59,14 @@
 
 }
 
-
 body {
   font-family: var(--font-jakarta), sans-serif;
   letter-spacing: -0.015em;
 }
 
-
-
 .font-name {
   font-family: var(--font-jakarta), sans-serif;
 }
-
-
 
 @layer base {
   * {
@@ -89,18 +75,21 @@ body {
 
   }
 
-
   body {
 
     @apply bg-background text-foreground;
 
   }
 
-
   html {
 
     @apply font-sans;
 
   }
+
+}
+  ::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 
 }
