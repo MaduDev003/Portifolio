@@ -153,7 +153,7 @@ export default function AboutMe() {
         squaresClassName="
           transition-all
           duration-300
-          hover:scale-110
+          hover:scale-105
           hover:fill-brand-middle
           hover:drop-shadow-[0_0_10px_rgba(91,60,196,.45)]
         "
