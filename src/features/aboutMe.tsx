@@ -138,32 +138,106 @@ export default function AboutMe() {
         </div>
       </div>
 
-      <div
-  className="
-    relative
-    flex
-    flex-1
-    max-w-160
-    items-center
-    justify-center
-    overflow-hidden
-  "
->
-    <InteractiveGridPattern 
-    squaresClassName="
-      transition-all
-      duration-300
-      hover:scale-110
-      hover:fill-brand-middle
-      hover:drop-shadow-[0_0_10px_rgba(91,60,196,.45)]
-    "
-    />
+   <div
+      className="
+        relative
+        flex
+        flex-1
+        max-w-160
+        items-center
+        justify-center
+        overflow-hidden
+      "
+    >
+      <InteractiveGridPattern 
+        squaresClassName="
+          transition-all
+          duration-300
+          hover:scale-110
+          hover:fill-brand-middle
+          hover:drop-shadow-[0_0_10px_rgba(91,60,196,.45)]
+        "
+      />
 
       <img
         src={foto.src}
         alt="Minha foto"
         className="relative z-10 pointer-events-none"
       />
+
+     
+    </div>
+      <div
+      className="
+        absolute
+        top-30
+        right-138
+        z-20
+        w-50
+        rounded-xl
+        border
+        border-border
+        bg-card/90
+        p-4
+        shadow-lg
+        backdrop-blur-md
+        pointer-events-none
+      "
+    >
+      <p className="text-[14px] font-medium text-muted-foreground">
+        Styles:
+      </p>
+
+      <div className="mt-3 space-y-2  text-md  font-mono">
+        <p className="text-brand-middle">
+          position: absolute;
+        </p>
+
+        <p className="text-muted-foreground">
+          padding: 4px;
+        </p>
+
+        <p className="text-muted-foreground">
+          z-index: 20;
+        </p>
+      </div>
+    </div>
+
+
+    <div
+      className="
+        absolute
+        bottom-20
+        right-10
+        z-20
+        w-60
+        rounded-xl
+        border
+        border-border
+        bg-card/80
+        p-4
+        shadow-lg
+        backdrop-blur-lg
+        pointer-events-none
+      "
+    >
+      <p className="text-[14px] font-medium text-muted-foreground">
+        UI Component:
+      </p>
+
+      <div className="mt-3 space-y-2 text-md font-mono">
+        <p className="text-brand-middle">
+          border-radius: 16px;
+        </p>
+
+        <p className="text-muted-foreground">
+          padding: 24px;
+        </p>
+
+        <p className="text-muted-foreground">
+          animation: smooth;
+        </p>
+      </div>
     </div>
     </section>
   );
