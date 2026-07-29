@@ -36,7 +36,7 @@ export default function AboutMe() {
             px-4 
             py-2"
           >
-          <span className="h-2.5 w-2.5 rounded-full bg-brand-hover animate-bounce" />
+          <span className="h-2.5 w-2.5 rounded-full bg-brand-hover  animate-[pulse_0.7s_ease-in-out_infinite]" />
 
           <p className="text-sm font-medium  text-accent-foreground">
             Olá, eu sou
