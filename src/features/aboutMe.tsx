@@ -2,7 +2,7 @@
 
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { TypingAnimation } from "@/components/ui/typing-animation";
-
+import { IoMdArrowForward } from "react-icons/io";
 import SecondaryButton from "@/src/components/ui/SecondaryButton";
 
 import { FiGithub, FiLinkedin } from "react-icons/fi";
@@ -98,7 +98,9 @@ export default function AboutMe() {
         >
           <span className="flex items-center gap-2 text-[16px]">
             Ver Projetos
-            <span>↗</span>
+           <div className="w-6 h-6 bg-white/25 rounded-full flex justify-center items-center rotate-[-45deg]">
+                <IoMdArrowForward size={16}/>
+           </div>
           </span>
         </ShimmerButton>
 

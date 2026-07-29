@@ -113,32 +113,34 @@ export default function Header() {
 
 
       <div className="relative flex items-center gap-2">
-      <ShimmerButton
-        shimmerColor="rgba(255,255,255,.65)"
-        shimmerDuration="2.8s"
-        shimmerSize="0.2em"
-        background="#7d68cc"
-        borderRadius="27px"
-        className="
-          h-10
-          px-7
-          gap-2
-          text-sm
-          font-medium
-          text-white
-
-
-          transition-all
-          duration-300
-
-          hover:-translate-y-0.5
-        "
+      <a
+        href="/Maria_Eduarda_Marinho_Schwarz_CV.pdf"
+        download
       >
-          <FiDownload size={15}/>
-                Currículo
-      </ShimmerButton>
+        <ShimmerButton
+            shimmerColor="rgba(255,255,255,.65)"
+            shimmerDuration="2.8s"
+            shimmerSize="0.2em"
+            background="#7d68cc"
+            borderRadius="27px"
+            className="
+              h-10
+              px-7
+              gap-2
+              text-sm
+              font-medium
+              text-white
+              transition-all
+              duration-300
+              hover:-translate-y-0.5
+            "
+          >
+            <FiDownload size={18} />
+            Currículo
+          </ShimmerButton>
+      </a>
 
-        <SecondaryButton
+      <SecondaryButton
           onClick={() =>
             setTheme(
               theme === "dark"
@@ -147,16 +149,15 @@ export default function Header() {
             )
           }
           className="h-9 w-9"
-        >
+      >
           {theme === "dark" ? (
             <HiOutlineSun size={23} />
           ) : (
             <HiOutlineMoon size={23} />
           )}
-        </SecondaryButton>
+      </SecondaryButton>
 
-      </div>
-
+    </div>
     </header>
   );
 }
