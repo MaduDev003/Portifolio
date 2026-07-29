@@ -33,9 +33,10 @@
 
 :root {
 
-  --background: #FFFFFF;
+  --background: #ebebeb;
   --foreground: #262626;
   --card: #faf7ffab;
+  --secondary-font-color: #4d4c4c;
   --card-foreground: #171717;
   --button-secondary-bg: rgba(
     124,
@@ -99,6 +100,7 @@
   --background: #161616;
   --foreground: #E5E7EB;
   --card: #18181d;
+  --secondary-font-color: #b4b4b4;
   --card-foreground: #FAFAFA;
   --button-secondary-bg: rgba(
     124,

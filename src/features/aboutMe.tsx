@@ -71,7 +71,7 @@ export default function AboutMe() {
           </TypingAnimation>
         </div>
 
-        <p className="mt-5 max-w-130 text-lg leading-8 text-accent-foreground">
+        <p className="mt-5 max-w-130 text-lg leading-8 text-secondary-font">
          Apaixonada por tecnologia, design e experiências digitais. Gosto de aprender continuamente 
          e explorar novas formas de desenvolver interfaces modernas, acessíveis e intuitivas.
         </p>
