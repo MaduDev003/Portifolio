@@ -2,8 +2,10 @@
 
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { TypingAnimation } from "@/components/ui/typing-animation";
+import { InteractiveGridPattern  } from "@/components/ui/interactive-grid-pattern";
 import { IoMdArrowForward } from "react-icons/io";
 import SecondaryButton from "@/src/components/ui/SecondaryButton";
+import foto from "@/src/assets/images/essa.png"
 
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
@@ -136,7 +138,33 @@ export default function AboutMe() {
         </div>
       </div>
 
-      <div className="hidden flex-1 items-center justify-center lg:flex" />
+      <div
+  className="
+    relative
+    flex
+    flex-1
+    max-w-160
+    items-center
+    justify-center
+    overflow-hidden
+  "
+>
+    <InteractiveGridPattern 
+    squaresClassName="
+      transition-all
+      duration-300
+      hover:scale-110
+      hover:fill-brand-middle
+      hover:drop-shadow-[0_0_10px_rgba(91,60,196,.45)]
+    "
+    />
+
+      <img
+        src={foto.src}
+        alt="Minha foto"
+        className="relative z-10 pointer-events-none"
+      />
+    </div>
     </section>
   );
 }
