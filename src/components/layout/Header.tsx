@@ -70,38 +70,30 @@ export default function Header() {
             <li
               key={item}
               onClick={() => setActiveLink(item)}
-              className={`
+             className={`
                 relative
                 cursor-pointer
                 text-sm
                 font-medium
-
-                text-muted-foreground
-
                 transition-all
                 duration-300
 
-                hover:text-brand-middle
-
+                ${activeLink === item ? "text-brand-middle" : "text-muted-foreground"}
 
                 after:absolute
                 after:left-1/2
                 after:-bottom-1
-
                 after:h-0.5
-                after:w-0
-
+                after:${activeLink === item ? "w-full" : "w-0"}
                 after:-translate-x-1/2
-
                 after:rounded-full
-
                 after:bg-linear-to-r
                 after:from-brand-primary
                 after:to-brand-end
-
                 after:transition-all
                 after:duration-300
-                
+
+                hover:text-brand-middle
                 hover:after:w-full
               `}
             >

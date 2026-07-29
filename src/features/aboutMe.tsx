@@ -98,27 +98,40 @@ export default function AboutMe() {
         >
           <span className="flex items-center gap-2 text-[16px]">
             Ver Projetos
-           <div className="w-6 h-6 bg-white/25 rounded-full flex justify-center items-center rotate-[-45deg]">
+           <div className="w-6 h-6 bg-white/25 rounded-full flex justify-center items-center -rotate-45">
                 <IoMdArrowForward size={16}/>
            </div>
           </span>
         </ShimmerButton>
 
           <div className="flex items-center gap-3">
-            <SecondaryButton   className="h-12 w-12">
-              <FiGithub size={23} />
-            </SecondaryButton>
-
-            <SecondaryButton className="h-12 w-12">
-              <FiLinkedin size={23} />
-            </SecondaryButton>
-
-            <SecondaryButton
-            className="h-12 w-12"
-              hoverChildren={<HiOutlineMailOpen size={23} />}
+            <a
+              href="https://github.com/MaduDev003"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <HiOutlineMail size={23} />
-            </SecondaryButton>
+              <SecondaryButton className="h-12 w-12">
+                <FiGithub size={23} />
+              </SecondaryButton>
+            </a>
+
+             <a
+                href="https://www.linkedin.com/in/maria-eduarda-schwarz/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+              <SecondaryButton className="h-12 w-12">
+                <FiLinkedin size={23} />
+              </SecondaryButton>
+            </a>
+            <a href="mailto:mariaschwarzdev@gmail.com">
+              <SecondaryButton
+                className="h-12 w-12"
+                hoverChildren={<HiOutlineMailOpen size={23} />}
+              >
+                <HiOutlineMail size={23} />
+              </SecondaryButton>
+            </a>
           </div>
         </div>
       </div>
