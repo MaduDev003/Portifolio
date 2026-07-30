@@ -60,7 +60,7 @@ export default function Header() {
           items-center
           justify-between
           rounded-full
-          bg-card/90
+          bg-card
           border
           border-[#6e5cb836]
           px-6
@@ -69,7 +69,7 @@ export default function Header() {
           before:absolute
           before:inset-0
           before:rounded-full
-          before:bg-gradient-to-r
+          before:bg-linear-to-r
           before:from-header-highlight
           before:to-transparent
           before:pointer-events-none
