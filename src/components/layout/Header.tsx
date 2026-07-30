@@ -5,37 +5,31 @@ import { FiDownload } from "react-icons/fi";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { useTheme } from "next-themes";
 
-import SecondaryButton from "@/src/components/ui/SecondaryButton";
-
-
 export default function Header() {
   const [activeLink, setActiveLink] = useState("Inicio");
 
-  const { theme, setTheme } = useTheme();
-
-
-const links = [
-  {
-    label: "Inicio",
-    href: "#presentation",
-  },
-  {
-    label: "Sobre mim",
-    href: "#about",
-  },
-  {
-    label: "Experiência",
-    href: "#experience",
-  },
-  {
-    label: "Projetos",
-    href: "#projects",
-  },
-  {
-    label: "Contato",
-    href: "#contact",
-  },
-];
+  const links = [
+    {
+      label: "Inicio",
+      href: "#presentation",
+    },
+    {
+      label: "Sobre mim",
+      href: "#about",
+    },
+    {
+      label: "Experiência",
+      href: "#experience",
+    },
+    {
+      label: "Projetos",
+      href: "#projects",
+    },
+    {
+      label: "Contato",
+      href: "#contact",
+    },
+  ];
 
   return (
    <header
