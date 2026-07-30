@@ -42,7 +42,7 @@ export default function AboutMe() {
         <div className="mt-15 grid gap-6 md:grid-cols-3">
           <div className="rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-middle/40">
             <span className="text-sm font-medium uppercase tracking-[.15em] text-brand-middle">
-              Inicío
+              Início
             </span>
 
             <h3 className="mt-4 text-xl font-semibold text-card-foreground">
