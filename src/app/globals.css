@@ -5,11 +5,15 @@
 @import "../styles/theme.css";
 @import "../styles/animations.css";
 
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-jakarta);
+
+  /* Fontes */
+  --font-sans: var(--font-montserrat);
   --font-heading: var(--font-jakarta);
+
   --color-header-bg: var(--header-bg);
   --color-header-border: var(--header-border);
   --color-header-highlight: var(--header-highlight);
@@ -38,17 +42,22 @@
   --color-border: var(--border);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
-   --color-secondary-font: var(--secondary-font-color);
+  --color-secondary-font: var(--secondary-font-color);
+
   --color-ring: var(--ring);
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+
   --color-input: var(--input);
   --color-destructive: var(--destructive);
+
   --radius-sm: calc(var(--radius) * .6);
   --radius-md: var(--radius);
   --radius-lg: calc(var(--radius) * 1.2);
@@ -57,40 +66,56 @@
   --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
   --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
   --animate-blink-cursor: blink-cursor 1.2s step-end infinite;
-
 }
 
+
 body {
-  font-family: var(--font-jakarta), sans-serif;
+  font-family: var(--font-inter), sans-serif;
   letter-spacing: -0.015em;
 }
 
-.font-name {
+
+.font-heading {
   font-family: var(--font-jakarta), sans-serif;
 }
 
+
+.font-name {
+  font-family: var(--font-jakarta), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+
 @layer base {
   * {
-
     @apply border-border outline-ring/50;
-
   }
+
 
   body {
-
     @apply bg-background text-foreground;
-
   }
+
 
   html {
-
     @apply font-sans;
-
   }
 
-}
-  ::view-transition-old(root), ::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-jakarta), sans-serif;
+  }
+}
+
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }

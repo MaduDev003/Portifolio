@@ -13,7 +13,7 @@ import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
 export default function Presentation() {
   return (
     <section
-      id="about"
+      id="presetation"
       className="
         flex
         min-h-screen
@@ -46,7 +46,7 @@ export default function Presentation() {
         <h1
           className="
             mt-1
-            font-body
+            font-heading
             text-card-foreground
             text-[5rem]
             font-black

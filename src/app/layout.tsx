@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
-
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 import { cn } from "@/lib/utils";
 import ThemeProvider from "@/src/providers/ThemeProvider";
 
 
+
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+});
+
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakarta",
+  weight: ["400", "500", "600", "700"],
 });
-
 
 export const metadata: Metadata = {
   title: "Maria Eduarda | Front-End Developer",
@@ -31,7 +38,8 @@ export default function RootLayout({
       className={cn(
         "h-full",
         "antialiased",
-        jakarta.variable
+        jakarta.variable,
+        inter.variable
       )}
       suppressHydrationWarning
     >

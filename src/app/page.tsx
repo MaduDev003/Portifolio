@@ -1,4 +1,5 @@
 import Header from "../components/layout/Header";
+import AboutMe from "../features/aboutMe";
 import Presentation from "../features/presentation";
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
     <Header />
     <main className="py-6 min-h-screen px-14 mt-6">
       <Presentation />
-    
+      <AboutMe />
       
     </main>
     </>
