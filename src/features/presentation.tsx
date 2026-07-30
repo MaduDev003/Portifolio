@@ -13,7 +13,7 @@ import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
 export default function Presentation() {
   return (
     <section
-      id="presetation"
+      id="presentation"
       className="
         flex
         min-h-screen

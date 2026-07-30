@@ -14,13 +14,28 @@ export default function Header() {
   const { theme, setTheme } = useTheme();
 
 
-  const links = [
-    "Inicio",
-    "Sobre mim",
-    "Experiência",
-    "Projetos",
-    "Contato",
-  ];
+const links = [
+  {
+    label: "Inicio",
+    href: "#presentation",
+  },
+  {
+    label: "Sobre mim",
+    href: "#about",
+  },
+  {
+    label: "Experiência",
+    href: "#experience",
+  },
+  {
+    label: "Projetos",
+    href: "#projects",
+  },
+  {
+    label: "Contato",
+    href: "#contact",
+  },
+];
 
   return (
    <header
@@ -67,38 +82,43 @@ export default function Header() {
       <nav className="relative">
         <ul className="flex items-center gap-9">
           {links.map((item) => (
-            <li
-              key={item}
-              onClick={() => setActiveLink(item)}
-             className={`
-                relative
-                cursor-pointer
-                text-sm
-                font-medium
-                transition-all
-                duration-300
+            <li key={item.href}>
+              <a
+                href={item.href}
+                onClick={() => setActiveLink(item.label)}
+                className={`
+                  relative
+                  cursor-pointer
+                  text-sm
+                  font-medium
+                  transition-all
+                  duration-300
 
-                ${activeLink === item ? "text-muted-foreground" : "text-muted-foreground"}
+                  after:absolute
+                  after:left-1/2
+                  after:-bottom-1
+                  after:h-0.5
+                  after:-translate-x-1/2
+                  after:rounded-full
+                  after:bg-linear-to-r
+                  after:from-brand-primary
+                  after:to-brand-end
+                  after:transition-all
+                  after:duration-300
 
-                after:absolute
-                after:left-1/2
-                after:-bottom-1
-                after:h-0.5
-               
-                after:-translate-x-1/2
-                after:rounded-full
-                after:bg-linear-to-r
-                after:from-brand-primary
-                after:to-brand-end
-                after:transition-all
-                after:duration-300
-                 ${activeLink === item ? "after:w-full" : "after:w-0"}
-              
-                hover:after:w-full
-              `}
-            >
-              {item}
+                  ${
+                    activeLink === item.label
+                      ? "after:w-full"
+                      : "after:w-0"
+                  }
+
+                  hover:after:w-full
+                `}
+              >
+                {item.label}
+              </a>
             </li>
+
           ))}
         </ul>
       </nav>
