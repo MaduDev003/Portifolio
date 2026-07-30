@@ -10,7 +10,7 @@ import foto from "@/src/assets/images/essa.png"
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
 
-export default function AboutMe() {
+export default function Presentation() {
   return (
     <section
       id="about"
@@ -36,7 +36,7 @@ export default function AboutMe() {
             px-4 
             py-2"
           >
-          <span className="h-2.5 w-2.5 rounded-full bg-brand-hover  animate-[pulse_0.7s_ease-in-out_infinite]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-brand-middle  animate-[pulse_0.7s_ease-in-out_infinite]" />
 
           <p className="text-sm font-medium  text-accent-foreground">
             Olá, eu sou

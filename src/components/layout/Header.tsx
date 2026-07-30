@@ -78,13 +78,13 @@ export default function Header() {
                 transition-all
                 duration-300
 
-                ${activeLink === item ? "text-brand-middle" : "text-muted-foreground"}
+                ${activeLink === item ? "text-muted-foreground" : "text-muted-foreground"}
 
                 after:absolute
                 after:left-1/2
                 after:-bottom-1
                 after:h-0.5
-                after:${activeLink === item ? "w-full" : "w-0"}
+               
                 after:-translate-x-1/2
                 after:rounded-full
                 after:bg-linear-to-r
@@ -92,8 +92,8 @@ export default function Header() {
                 after:to-brand-end
                 after:transition-all
                 after:duration-300
-
-                hover:text-brand-middle
+                 ${activeLink === item ? "after:w-full" : "after:w-0"}
+              
                 hover:after:w-full
               `}
             >
