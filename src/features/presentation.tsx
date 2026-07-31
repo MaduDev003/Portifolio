@@ -112,7 +112,14 @@ export default function Presentation() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SecondaryButton className="h-12 w-12 rounded-full">
+              <SecondaryButton 
+                className="
+                  h-12 w-12 rounded-full
+                  shadow-[0_2px_8px_rgba(15,23,42,0.10)]
+                  hover:shadow-[0_10px_24px_rgba(15,23,42,0.10),0_0_20px_rgba(124,92,252,0.18)]
+                  dark.shadow-[0_2px_8px_rgba(124,92,252,0.08)]
+                  dark.hover:shadow-[0_10px_28px_rgba(124,92,252,0.18)]
+                ">
                 <FiGithub size={23} />
               </SecondaryButton>
             </a>
@@ -122,13 +129,26 @@ export default function Presentation() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-              <SecondaryButton className="h-12 w-12 rounded-full">
+              <SecondaryButton 
+              className="
+                h-12 w-12 rounded-full
+                shadow-[0_2px_8px_rgba(15,23,42,0.10)]
+                hover:shadow-[0_10px_24px_rgba(15,23,42,0.10),0_0_20px_rgba(124,92,252,0.18)]
+                dark.shadow-[0_2px_8px_rgba(124,92,252,0.08)]
+                dark.hover:shadow-[0_10px_28px_rgba(124,92,252,0.18)]
+                ">
                 <FiLinkedin size={23} />
               </SecondaryButton>
             </a>
             <a href="mailto:mariaschwarzdev@gmail.com">
               <SecondaryButton
-                className="h-12 w-12 rounded-full"
+                className="
+                h-12 w-12 rounded-full
+                shadow-[0_2px_8px_rgba(15,23,42,0.10)]
+                hover:shadow-[0_10px_24px_rgba(15,23,42,0.10),0_0_20px_rgba(124,92,252,0.18)]
+                dark.shadow-[0_2px_8px_rgba(124,92,252,0.08)]
+                dark.hover:shadow-[0_10px_28px_rgba(124,92,252,0.18)]
+                "
                 hoverChildren={<HiOutlineMailOpen size={23} />}
               >
                 <HiOutlineMail size={23} />

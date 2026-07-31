@@ -14,7 +14,7 @@ export default function Skills() {
           {skillCategories.map((category) => (
             <div key={category.title}>
               <div className="mb-5">
-                <h3 className="text-xl font-semibold text-card-foreground">
+                <h3 className="text-xl font-heading font-semibold text-card-foreground">
                   {category.title}
                 </h3>
 
@@ -30,7 +30,15 @@ export default function Skills() {
                   return (
                     <SecondaryButton
                       key={skill.name}
-                      className="h-12 rounded-xl px-5 flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03]"
+                      className="
+                        h-12 rounded-xl px-5 flex items-center
+                        gap-2 transition-all duration-300 
+                        hover:-translate-y-1 hover:scale-[1.03]
+                        shadow-[0_2px_8px_rgba(15,23,42,0.10)]
+                        hover:shadow-[0_10px_24px_rgba(15,23,42,0.10),0_0_20px_rgba(124,92,252,0.18)]
+                        dark.shadow-[0_2px_8px_rgba(124,92,252,0.08)]
+                        dark.hover:shadow-[0_10px_28px_rgba(124,92,252,0.18)]
+                      "
                     >
                       <Icon size={22} color={skill.color} />
                       <span>{skill.name}</span>

@@ -32,7 +32,6 @@ export default function SecondaryButton({
         border-button-secondary-border
         bg-button-secondary-bg
         text-button-secondary-text
-        shadow-[0_2px_8px_rgba(15,23,42,0.06)]
         transition-all
         duration-300
         ease-out
@@ -41,7 +40,6 @@ export default function SecondaryButton({
         hover:border-button-secondary-hover-border
         hover:bg-button-secondary-hover-bg
         hover:text-button-secondary-hover-text
-        hover:shadow-[0_8px_22px_rgba(109,94,247,.14)]
         cursor-pointer
         active:scale-95
       `}
