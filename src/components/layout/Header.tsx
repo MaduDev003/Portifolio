@@ -99,34 +99,31 @@ export default function Header() {
                 <a
                   href={item.href}
                   onClick={() => setActiveLink(item.label)}
-                  className={`
-                    relative
-                    cursor-pointer
-                    text-sm
-                    font-medium
-                    transition-all
-                    duration-300
-
-                    after:absolute
-                    after:left-1/2
-                    after:-bottom-1
-                    after:h-0.5
-                    after:-translate-x-1/2
-                    after:rounded-full
-                    after:bg-linear-to-r
-                    after:from-brand-primary
-                    after:to-brand-end
-                    after:transition-all
-                    after:duration-300
-
-                    ${
-                      activeLink === item.label
-                        ? "after:w-full"
-                        : "after:w-0"
-                    }
-
-                    hover:after:w-full
-                  `}
+                className={`
+                  relative
+                  cursor-pointer
+                  text-sm
+                  font-medium
+                  text-muted-foreground
+                  transition-colors
+                  duration-300
+                  after:absolute
+                  after:left-0
+                  after:-bottom-1
+                  after:h-0.5
+                  after:w-full
+                  after:origin-center
+                  after:scale-x-0
+                  after:rounded-full
+                  after:bg-linear-to-r
+                  after:from-brand-primary
+                  after:to-brand-end
+                  after:transition-transform
+                  after:duration-300
+                  after:ease-out
+                  hover:text-brand-middle
+                  hover:after:scale-x-100
+                `}
                 >
                   {item.label}
                 </a>
