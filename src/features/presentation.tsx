@@ -112,7 +112,7 @@ export default function Presentation() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SecondaryButton className="h-12 w-12">
+              <SecondaryButton className="h-12 w-12 rounded-full">
                 <FiGithub size={23} />
               </SecondaryButton>
             </a>
@@ -122,13 +122,13 @@ export default function Presentation() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-              <SecondaryButton className="h-12 w-12">
+              <SecondaryButton className="h-12 w-12 rounded-full">
                 <FiLinkedin size={23} />
               </SecondaryButton>
             </a>
             <a href="mailto:mariaschwarzdev@gmail.com">
               <SecondaryButton
-                className="h-12 w-12"
+                className="h-12 w-12 rounded-full"
                 hoverChildren={<HiOutlineMailOpen size={23} />}
               >
                 <HiOutlineMail size={23} />

@@ -1,3 +1,4 @@
+"use client"
 import { ReactNode, useState } from "react";
 
 type Props = {
@@ -27,7 +28,6 @@ export default function SecondaryButton({
         flex
         items-center
         justify-center
-        rounded-full
         border
         border-button-secondary-border
         bg-button-secondary-bg

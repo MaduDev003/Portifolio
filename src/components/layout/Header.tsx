@@ -18,6 +18,10 @@ export default function Header() {
       href: "#about",
     },
     {
+      label: "Habilidades",
+      href: "#skills",
+    },
+    {
       label: "Experiência",
       href: "#experience",
     },

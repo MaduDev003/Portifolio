@@ -3,7 +3,6 @@
 
 
   --brand-primary: #7C5CFC;
-  --brand-middle: #8c57ff;
   --brand-end: #C4B5FD;
   --brand-hover: #6D4AFF;
   --brand-text: #6D4AFF;
@@ -38,18 +37,9 @@
   --card: #faf7ffab;
   --secondary-font-color: #4d4c4c;
   --card-foreground: #171717;
-  --button-secondary-bg: rgba(
-    124,
-    92,
-    252,
-    0.10
-  );
-  --button-secondary-border: rgba(
-    155,
-    109,
-    255,
-    0.35
-  );
+    --brand-middle: #844cfc;
+  --button-secondary-bg: rgba(62, 29, 194, 0.1);
+  --button-secondary-border: rgba(67, 11, 187, 0.35);
   --button-secondary-text: #6D4AFF;
   --button-secondary-hover-bg: rgba(
     124,
@@ -102,6 +92,7 @@
   --card: #18181d;
   --secondary-font-color: #a8a7a7;
   --card-foreground: #FAFAFA;
+    --brand-middle: #9370df;
   --button-secondary-bg: rgba(
     124,
     92,
