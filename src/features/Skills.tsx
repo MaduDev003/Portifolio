@@ -4,7 +4,7 @@ import SecondaryButton from "../components/ui/SecondaryButton";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 xl:px-24 px-6">
+    <section id="skills" className="py-10 xl:px-24 px-6">
       <div className="mx-auto max-w-7xl">
         <span className="text-lg font-medium uppercase tracking-[.3em] text-brand-middle">
           / 02 Habilidades

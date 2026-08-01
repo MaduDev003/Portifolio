@@ -185,7 +185,7 @@ export default function Header() {
             "
           >
             <AnimatedThemeToggler
-              duration={900}
+              duration={600}
               className="cursor-pointer"
             />
           </div>
