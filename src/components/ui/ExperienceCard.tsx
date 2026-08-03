@@ -110,7 +110,7 @@ export default function ExperienceCard({
       <div className="mt-8">
         <span
           className="
-            text-sm
+            text-md
             font-semibold
             text-brand-middle
           "
