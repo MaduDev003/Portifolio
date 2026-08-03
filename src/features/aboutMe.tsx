@@ -28,7 +28,7 @@ export default function AboutMe() {
           </h2>
         </div>
 
-        <div className="mx-auto mt-16 max-w-6xl rounded-3xl border border-brand-middle/15 bg-card/60 p-8 shadow-sm backdrop-blur-sm md:p-10">
+        <div className="mx-auto mt-16 max-w-6xl rounded-3xl border border-brand-middle/15 bg-card p-8 shadow-sm md:p-10">
           <div className="border-l-2 border-brand-middle/40 pl-6 md:pl-8">
             <p className="text-lg leading-9 text-muted-foreground">
               Minha trajetória na tecnologia começou em{" "}
