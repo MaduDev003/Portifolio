@@ -26,110 +26,160 @@ import {
 
 import { TbWand } from "react-icons/tb";
 
-export const mySkills = [
+import {
+  HiOutlineCodeBracket,
+  HiOutlineServerStack,
+  HiOutlineWrenchScrewdriver,
+  HiOutlineShieldCheck,
+} from "react-icons/hi2";
+
+export const skillCategories = [
   {
-    name: "React",
-    icon: BiLogoReact,
-    color: "#61DAFB",
+    title: "Front-end",
+    description:
+      "Construção de interfaces modernas, responsivas e acessíveis.",
+
+    icon: HiOutlineCodeBracket,
+
+    skills: [
+      {
+        name: "React",
+        icon: BiLogoReact,
+        color: "#61DAFB",
+      },
+      {
+        name: "Next.js",
+        icon: SiNextdotjs,
+        color: "#FFFFFF",
+      },
+      {
+        name: "TypeScript",
+        icon: BiLogoTypescript,
+        color: "#3178C6",
+      },
+      {
+        name: "JavaScript",
+        icon: BiLogoJavascript,
+        color: "#F7DF1E",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: BiLogoTailwindCss,
+        color: "#06B6D4",
+      },
+      {
+        name: "HTML5",
+        icon: BiLogoHtml5,
+        color: "#E34F26",
+      },
+      {
+        name: "CSS3",
+        icon: BiLogoCss3,
+        color: "#1572B6",
+      },
+      {
+        name: "Framer Motion",
+        icon: SiFramer,
+        color: "#0055FF",
+      },
+      {
+        name: "Shadcn/UI",
+        icon: SiShadcnui,
+        color: "#FFFFFF",
+      },
+      {
+        name: "Magic UI",
+        icon: TbWand,
+        color: "#A855F7",
+      },
+    ],
   },
+
   {
-    name: "Next.js",
-    icon: SiNextdotjs,
-    color: "#FFFFFF",
+    title: "Back-end",
+    description:
+      "Desenvolvimento de APIs, microsserviços e integrações.",
+
+    icon: HiOutlineServerStack,
+
+    skills: [
+      {
+        name: "Node.js",
+        icon: BiLogoNodejs,
+        color: "#5FA04E",
+      },
+      {
+        name: "Express",
+        icon: SiExpress,
+        color: "#A1A1AA",
+      },
+      {
+        name: "MongoDB",
+        icon: BiLogoMongodb,
+        color: "#47A248",
+      },
+      {
+        name: "RabbitMQ",
+        icon: SiRabbitmq,
+        color: "#FF6600",
+      },
+    ],
   },
+
   {
-    name: "TypeScript",
-    icon: BiLogoTypescript,
-    color: "#3178C6",
+    title: "Ferramentas",
+    description:
+      "Tecnologias utilizadas no fluxo de desenvolvimento.",
+
+    icon: HiOutlineWrenchScrewdriver,
+
+    skills: [
+      {
+        name: "Git",
+        icon: BiLogoGit,
+        color: "#F05032",
+      },
+      {
+        name: "Docker",
+        icon: SiDocker,
+        color: "#2496ED",
+      },
+      {
+        name: "Postman",
+        icon: SiPostman,
+        color: "#FF6C37",
+      },
+      {
+        name: "Bruno",
+        icon: SiBruno,
+        color: "#F59E0B",
+      },
+      {
+        name: "Figma",
+        icon: BiLogoFigma,
+        color: "#F24E1E",
+      },
+    ],
   },
+
   {
-    name: "JavaScript",
-    icon: BiLogoJavascript,
-    color: "#F7DF1E",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: BiLogoTailwindCss,
-    color: "#06B6D4",
-  },
-  {
-    name: "HTML5",
-    icon: BiLogoHtml5,
-    color: "#E34F26",
-  },
-  {
-    name: "CSS3",
-    icon: BiLogoCss3,
-    color: "#1572B6",
-  },
-  {
-    name: "Framer Motion",
-    icon: SiFramer,
-    color: "#0055FF",
-  },
-  {
-    name: "Shadcn/UI",
-    icon: SiShadcnui,
-    color: "#FFFFFF",
-  },
-  {
-    name: "Magic UI",
-    icon: TbWand,
-    color: "#A855F7",
-  },
-  {
-    name: "Jest",
-    icon: SiJest,
-    color: "#C21325",
-  },
-  {
-    name: "Cypress",
-    icon: SiCypress,
-    color: "#69D3A7",
-  },
-  {
-    name: "Figma",
-    icon: BiLogoFigma,
-    color: "#F24E1E",
-  },
-  {
-    name: "Git",
-    icon: BiLogoGit,
-    color: "#F05032",
-  },
-  {
-    name: "Bruno",
-    icon: SiBruno,
-    color: "#8B4513",
-  },
-  {
-    name: "Node.js",
-    icon: BiLogoNodejs,
-    color: "#5FA04E",
-  },
-  {
-    name: "Express",
-    icon: SiExpress,
-    color: "#A1A1AA",
-  },
-  {
-    name: "MongoDB",
-    icon: BiLogoMongodb,
-    color: "#47A248",
-  },
-  {
-    name: "RabbitMQ",
-    icon: SiRabbitmq,
-    color: "#FF6600",
-  },
-  {
-    name: "Docker",
-    icon: SiDocker,
-    color: "#3B82F6",
-  },
-  {
-    name: "Postman",
-    icon: SiPostman,
-    color: "#FF6C37",
+    title: "Qualidade",
+    description:
+      "Testes automatizados e foco em código confiável.",
+
+    icon: HiOutlineShieldCheck,
+
+    skills: [
+      {
+        name: "Jest",
+        icon: SiJest,
+        color: "#C21325",
+      },
+      {
+        name: "Cypress",
+        icon: SiCypress,
+        color: "#69D3A7",
+      },
+    ],
   },
 ];

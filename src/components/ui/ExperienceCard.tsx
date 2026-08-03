@@ -24,7 +24,7 @@ export default function ExperienceCard({
         rounded-3xl
         border
         border-border
-        bg-card
+        bg-background
         p-10
         shadow-[0_4px_14px_rgba(15,23,42,0.14)]
         hover:border-brand-middle/40
