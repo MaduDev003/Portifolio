@@ -2,45 +2,9 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-
-const experiences = [
-  {
-    title: "Backend Developer",
-    company: "GETNET",
-    period: "2023 - 2026",
-    description:
-      "Atuação com Node.js, APIs REST, microsserviços, testes automatizados e mensageria.",
-    technologies: ["Node.js", "Jest", "RabbitMQ"],
-    side: "left",
-  },
-  {
-    title: "Front-end Developer",
-    company: "Projetos Front-end",
-    period: "2026",
-    description:
-      "Construção de interfaces modernas utilizando React, Next.js, TypeScript e Tailwind CSS.",
-    technologies: ["React", "Next.js", "TypeScript"],
-    side: "right",
-  },
-  {
-    title: "UI Engineer",
-    company: "Design & Interfaces",
-    period: "Atual",
-    description:
-      "Foco em experiências digitais, animações, acessibilidade e criação de componentes reutilizáveis.",
-    technologies: ["UI/UX", "Motion", "Design System"],
-    side: "left",
-  },
-  {
-    title: "Product Engineer",
-    company: "Próximos passos",
-    period: "Futuro",
-    description:
-      "Unindo engenharia e produto para criar soluções digitais completas.",
-    technologies: ["Produto", "Frontend", "Arquitetura"],
-    side: "right",
-  },
-];
+import TimelinePoint from "@/src/components/ui/TimelinePoint";
+import ExperienceCard from "@/src/components/ui/ExperienceCard";
+import {experiences} from "@/src/data/experiences";
 
 
 export default function Experience() {
@@ -51,59 +15,52 @@ export default function Experience() {
     offset: ["start center", "end end"],
   });
 
-  const lineHeight = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["0%", "100%"]
-  );
-
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <section
       id="experience"
-      className="py-18 xl:px-24 px-6 mb-10"
+      className="relative overflow-hidden border-y border-border/40 bg-brand-middle/5 py-20 xl:px-34"
     >
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)",
+          backgroundSize: "28px 28px",
+        }}
+      />
+      <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-brand-hover/5 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-brand-hover/5 to-transparent" />
 
-      <div className="mx-auto max-w-7xl">
-         <div className="flex w-full flex-col items-center justify-center text-center mb-25">
-          <span className="text-5xl font-heading font-bold tracking-tight text-brand-middle md:text-6xl">
-            Experiencia
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <div className="mb-25 flex w-full flex-col items-center justify-center text-center">
+          <span className="font-heading text-5xl font-bold tracking-tight text-brand-middle md:text-6xl">
+            Experiência
           </span>
 
           <div className="mt-5 h-px w-20 bg-brand-middle/40" />
-      </div>
-
+        </div>
 
         <div
           ref={lineRef}
-          className="
-            relative
-            flex
-            flex-col
-            gap-40
-          "
+          className="relative flex flex-col gap-40"
         >
-
-
-          {/* LINHA */}
           <div
             className="
               absolute
-              left-1/2
               top-0
               bottom-0
+              left-1/2
               w-3
               -translate-x-1/2
+              overflow-hidden
               rounded-full
               bg-button-secondary-bg
-              overflow-hidden
             "
           >
-
             <motion.div
-              style={{
-                height: lineHeight,
-              }}
+              style={{ height: lineHeight }}
               className="
                 absolute
                 top-0
@@ -117,26 +74,13 @@ export default function Experience() {
                 shadow-[0_0_20px_rgba(168,85,247,0.8)]
               "
             />
-
           </div>
 
-
-
-
           {experiences.map((experience, index) => (
-
             <div
               key={index}
-              className="
-                grid
-                grid-cols-[1fr_auto_1fr]
-                items-start
-                relative
-              "
+              className="relative grid grid-cols-[1fr_auto_1fr] items-start"
             >
-
-
-              {/* CARD ESQUERDA */}
               <div
                 className={
                   experience.side === "left"
@@ -144,27 +88,13 @@ export default function Experience() {
                     : ""
                 }
               >
-
-                {
-                  experience.side === "left" && (
-                    <ExperienceCard experience={experience}/>
-                  )
-                }
-
+                {experience.side === "left" && (
+                  <ExperienceCard experience={experience} />
+                )}
               </div>
 
-
-
-
-
-              {/* PONTO */}
               <TimelinePoint />
 
-
-
-
-
-              {/* CARD DIREITA */}
               <div
                 className={
                   experience.side === "right"
@@ -172,177 +102,14 @@ export default function Experience() {
                     : ""
                 }
               >
-
-                {
-                  experience.side === "right" && (
-                    <ExperienceCard experience={experience}/>
-                  )
-                }
-
+                {experience.side === "right" && (
+                  <ExperienceCard experience={experience} />
+                )}
               </div>
-
-
             </div>
-
           ))}
-
-
         </div>
-
-
       </div>
-
     </section>
-  );
-}
-
-
-
-
-
-function TimelinePoint() {
-  return (
-    <div
-      className="
-        size-10
-        rounded-full
-        bg-brand-primary
-        border-4
-        border-background
-        shadow-[0_0_25px_var(--brand-primary)]
-        z-10
-        transition-transform
-        duration-300
-        hover:scale-125
-      "
-    />
-  );
-}
-
-
-
-
-
-function ExperienceCard({
-  experience,
-}: {
-  experience: {
-    title: string;
-    company: string;
-    period: string;
-    description: string;
-    technologies: string[];
-  };
-}) {
-
-  return (
-
-    <div
-  className="
-    w-115
-    min-h-150
-    rounded-3xl
-    hover:border-brand-middle/40
-    border
-    border-border
-    bg-card
-    p-10
-    shadow-xl
-    transition-all
-    duration-300
-    hover:-translate-y-3
-  "
->
-
-      <div
-        className="
-          flex
-          justify-between
-          items-start
-          gap-4
-          mb-6
-        "
-      >
-
-        <h3
-          className="
-            text-3xl
-            font-bold
-          "
-        >
-          {experience.title}
-        </h3>
-
-
-        <span
-          className="
-            text-sm
-            text-brand-middle
-            whitespace-nowrap
-          "
-        >
-          {experience.period}
-        </span>
-
-      </div>
-
-
-
-      <p
-        className="
-          text-lg
-          font-medium
-          mb-4
-        "
-      >
-        {experience.company}
-      </p>
-
-
-
-      <p
-        className="
-          text-muted-foreground
-          leading-relaxed
-          text-base
-          mb-8
-        "
-      >
-        {experience.description}
-      </p>
-
-
-
-
-      <div
-        className="
-          flex
-          flex-wrap
-          gap-2
-        "
-      >
-
-        {experience.technologies.map((tech) => (
-
-          <span
-            key={tech}
-            className="
-              rounded-full
-              bg-secondary
-              px-4
-              py-1.5
-              text-sm
-            "
-          >
-            {tech}
-          </span>
-
-        ))}
-
-      </div>
-
-
-    </div>
-
   );
 }

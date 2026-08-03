@@ -18,7 +18,7 @@ export default function Presentation() {
         min-h-screen
         items-center
         mb-10
-        xl:px-24
+        xl:px-34
       "
     >
       <div className="flex max-w-160 flex-1 flex-col">
@@ -185,7 +185,7 @@ export default function Presentation() {
       className="
         absolute
         top-30
-        right-138
+        right-148
         z-20
         w-50
         rounded-xl
@@ -222,7 +222,7 @@ export default function Presentation() {
       className="
         absolute
         bottom-20
-        right-10
+        right-20
         z-20
         w-60
         rounded-xl

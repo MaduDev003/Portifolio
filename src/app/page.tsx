@@ -8,8 +8,10 @@ export default function Home() {
   return (
     <>
     <Header />
-    <main className="py-6 min-h-screen px-14 mt-6">
-      <Presentation />
+    <main className="py-6 min-h-screen mt-6">
+
+        <Presentation />
+  
       <AboutMe />
       <Skills/>
       <Experience />

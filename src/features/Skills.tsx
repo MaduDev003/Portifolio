@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-18 xl:px-24 px-6 mb-10"
+      className="py-18 xl:px-34 px-6 mb-10 min-h-130"
     >
       <div className="mx-auto max-w-7xl">
 
