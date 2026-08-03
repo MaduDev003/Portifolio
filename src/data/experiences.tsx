@@ -1,29 +1,22 @@
 export const experiences = [
   {
-    title: "Backend Developer",
-    company: "GETNET",
-    period: "2023 - 2026",
-    description:
-      "Atuação com Node.js, APIs REST, microsserviços, testes automatizados e mensageria.",
-    technologies: ["Node.js", "Jest", "RabbitMQ"],
-    side: "left",
-  },
-  {
-    title: "Front-end Developer",
-    company: "Projetos Front-end",
-    period: "2026",
-    description:
-      "Construção de interfaces modernas utilizando React, Next.js, TypeScript e Tailwind CSS.",
-    technologies: ["React", "Next.js", "TypeScript"],
-    side: "right",
-  },
-  {
-    title: "UI Engineer",
-    company: "Design & Interfaces",
-    period: "Atual",
-    description:
-      "Foco em experiências digitais, animações, acessibilidade e criação de componentes reutilizáveis.",
-    technologies: ["UI/UX", "Motion", "Design System"],
-    side: "left",
-  },
+  title: "Desenvolvedora de Software Jr",
+  company: "GETNET",
+  period: "2023 - 2026",
+  location: "Porto Alegre, RS",
+  description:
+    "Atuação no desenvolvimento de aplicações web, contribuindo em soluções front-end e back-end. Experiência com React, Node.js, APIs REST, microsserviços, testes automatizados e integração com serviços de mensageria em ambiente corporativo.",
+  technologies: [
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Jest",
+    "RabbitMQ",
+    "Azure Service Bus",
+    "REST APIs",
+    "Microservices",
+  ],
+   achievements:["Contribuí para a evolução de aplicações internas, implementando novas funcionalidades e melhorias de performance."],
+  side: "left",
+},
 ];

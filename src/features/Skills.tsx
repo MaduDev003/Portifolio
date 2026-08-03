@@ -40,6 +40,7 @@ export default function Skills() {
                   hover:-translate-y-1
                   hover:border-brand-middle/50!
                   hover:bg-brand-middle/5
+                  text-card-foreground!
                   shadow-[0_4px_14px_rgba(15,23,42,0.14)]
                   hover:shadow-[0_12px_32px_rgba(15,23,42,0.18),0_0_28px_rgba(124,92,252,0.28)]
                   dark:shadow-[0_4px_14px_rgba(124,92,252,0.12)]

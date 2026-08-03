@@ -1,3 +1,8 @@
+import {
+  MdOutlineCalendarToday,
+  MdLocationOn,
+} from "react-icons/md";
+
 export default function ExperienceCard({
   experience,
 }: {
@@ -5,105 +10,157 @@ export default function ExperienceCard({
     title: string;
     company: string;
     period: string;
+    location: string;
     description: string;
     technologies: string[];
+    achievements: string[];
   };
 }) {
-
   return (
-
     <div
-  className="
-    w-115
-    min-h-150
-    rounded-3xl
-    hover:border-brand-middle/40
-    border
-    border-border
-    bg-card
-    p-10
-    shadow-xl
-    transition-all
-    duration-300
-    hover:-translate-y-3
-  "
->
-
+      className="
+        w-115
+        min-h-170
+        rounded-3xl
+        border
+        border-border
+        bg-card
+        p-10
+        shadow-[0_4px_14px_rgba(15,23,42,0.14)]
+        hover:border-brand-middle/40
+        hover:shadow-[0_12px_32px_rgba(15,23,42,0.18),0_0_28px_rgba(124,92,252,0.28)]
+        dark:shadow-[0_4px_14px_rgba(124,92,252,0.12)]
+        dark:hover:shadow-[0_12px_36px_rgba(124,92,252,0.30)]
+        transition-all
+        duration-300
+        hover:-translate-y-3
+      "
+    >
       <div
         className="
-          flex
-          justify-between
-          items-start
-          gap-4
           mb-6
+          flex
+          flex-col
+          items-start
+          gap-2
         "
       >
-
         <h3
           className="
-            text-3xl
+            text-2xl
             font-bold
           "
         >
           {experience.title}
         </h3>
 
-
-        <span
+        <p
           className="
-            text-sm
+            text-lg
+            font-medium
             text-brand-middle
-            whitespace-nowrap
           "
         >
+          {experience.company}
+        </p>
+      </div>
+
+      <div
+        className="
+          mb-6
+          flex
+          justify-between
+          gap-4
+        "
+      >
+        <span
+          className="
+            whitespace-nowrap
+            text-sm
+            text-secondary-font
+          "
+        >
+          <MdOutlineCalendarToday className="mr-2 inline-block" />
           {experience.period}
         </span>
 
+        <span
+          className="
+            whitespace-nowrap
+            text-sm
+            text-secondary-font
+          "
+        >
+          <MdLocationOn className="mr-2 inline-block" />
+          {experience.location}
+        </span>
       </div>
 
-
-
       <p
         className="
-          text-lg
-          font-medium
-          mb-4
-        "
-      >
-        {experience.company}
-      </p>
-
-
-
-      <p
-        className="
-          text-muted-foreground
-          leading-relaxed
-          text-base
           mb-8
+          text-base
+          leading-relaxed
+          text-muted-foreground
         "
       >
         {experience.description}
       </p>
 
+      <div className="mt-8">
+        <span
+          className="
+            text-sm
+            font-semibold
+            text-brand-middle
+          "
+        >
+          Principais conquistas:
+        </span>
 
+        <ul className="mt-4 space-y-3">
+          {experience.achievements.map((achievement) => (
+            <li
+              key={achievement}
+              className="
+                flex
+                items-start
+                gap-3
+                text-sm
+                leading-relaxed
+                text-muted-foreground
+              "
+            >
+              <span
+                className="
+                  mt-2
+                  size-2
+                  shrink-0
+                  rounded-full
+                  bg-brand-middle
+                "
+              />
 
+              {achievement}
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div
         className="
+          mt-6
           flex
           flex-wrap
           gap-2
         "
       >
-
         {experience.technologies.map((tech) => (
-
           <span
             key={tech}
             className="
               rounded-full
-              bg-secondary
+              bg-brand-soft
               px-4
               py-1.5
               text-sm
@@ -111,13 +168,8 @@ export default function ExperienceCard({
           >
             {tech}
           </span>
-
         ))}
-
       </div>
-
-
     </div>
-
   );
 }
