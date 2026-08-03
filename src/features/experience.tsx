@@ -61,37 +61,17 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-10 xl:px-24 px-6"
+      className="py-18 xl:px-24 px-6 mb-10"
     >
 
       <div className="mx-auto max-w-7xl">
+         <div className="flex w-full flex-col items-center justify-center text-center mb-25">
+          <span className="text-5xl font-heading font-bold tracking-tight text-brand-middle md:text-6xl">
+            Experiencia
+          </span>
 
-
-        <span
-          className="
-            text-lg
-            font-medium
-            uppercase
-            tracking-[.3em]
-            text-brand-middle
-          "
-        >
-          / 03 Experiencia
-        </span>
-
-
-        <h2
-          className="
-            text-5xl
-            mt-20
-            font-bold
-            text-center
-            mb-24
-          "
-        >
-          Minha Jornada
-        </h2>
-
+          <div className="mt-5 h-px w-20 bg-brand-middle/40" />
+      </div>
 
 
         <div

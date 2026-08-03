@@ -1,54 +1,65 @@
-
-import { skillCategories } from "../data/skills";
+import { mySkills } from "../data/skills";
 import SecondaryButton from "../components/ui/SecondaryButton";
 
 export default function Skills() {
+
   return (
-    <section id="skills" className="py-10 xl:px-24 px-6">
+    <section
+      id="skills"
+      className="py-18 xl:px-24 px-6 mb-10"
+    >
       <div className="mx-auto max-w-7xl">
-        <span className="text-lg font-medium uppercase tracking-[.3em] text-brand-middle">
-          / 02 Habilidades
-        </span>
 
-        <div className="mt-10 space-y-12">
-          {skillCategories.map((category) => (
-            <div key={category.title}>
-              <div className="mb-5">
-                <h3 className="text-xl font-heading font-semibold text-card-foreground">
-                  {category.title}
-                </h3>
+        <div className="flex flex-col items-center text-center">
+          <span className="text-5xl font-heading font-bold tracking-tight text-brand-middle md:text-6xl">
+            Habilidades
+          </span>
 
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {category.description}
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill) => {
-                  const Icon = skill.icon;
-
-                  return (
-                    <SecondaryButton
-                      key={skill.name}
-                      className="
-                        h-12 rounded-xl px-5 flex items-center
-                        gap-2 transition-all duration-300 
-                        hover:-translate-y-1 hover:scale-[1.03]
-                        shadow-[0_2px_8px_rgba(15,23,42,0.10)]
-                        hover:shadow-[0_10px_24px_rgba(15,23,42,0.10),0_0_20px_rgba(124,92,252,0.18)]
-                        dark.shadow-[0_2px_8px_rgba(124,92,252,0.08)]
-                        dark.hover:shadow-[0_10px_28px_rgba(124,92,252,0.18)]
-                      "
-                    >
-                      <Icon size={22} color={skill.color} />
-                      <span>{skill.name}</span>
-                    </SecondaryButton>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+          <div className="mt-5 h-px w-24 bg-linear-to-r from-transparent via-brand-middle to-transparent" />
         </div>
+
+
+        <div className="mx-auto mt-16 flex max-w-7xl flex-wrap justify-center gap-4">
+
+          {mySkills.map((skill) => {
+            const Icon = skill.icon;
+
+            return (
+              <SecondaryButton
+                key={skill.name}
+                className="
+                  h-12
+                  rounded-full
+                  px-5
+                  gap-2
+                  border
+                  border-border!
+                  bg-card/30
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-brand-middle/50!
+                  hover:bg-brand-middle/5
+                  shadow-[0_4px_14px_rgba(15,23,42,0.14)]
+                  hover:shadow-[0_12px_32px_rgba(15,23,42,0.18),0_0_28px_rgba(124,92,252,0.28)]
+                  dark:shadow-[0_4px_14px_rgba(124,92,252,0.12)]
+                  dark:hover:shadow-[0_12px_36px_rgba(124,92,252,0.30)]
+                "
+              >
+                <Icon
+                  size={20}
+                  color={skill.color}
+                />
+
+                <span className="font-medium">
+                  {skill.name}
+                </span>
+              </SecondaryButton>
+            );
+          })}
+
+        </div>
+
       </div>
     </section>
   );

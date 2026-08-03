@@ -1,7 +1,6 @@
 "use client";
 
 import { ShimmerButton } from "@/components/ui/shimmer-button";
-import { TypingAnimation } from "@/components/ui/typing-animation";
 import { InteractiveGridPattern  } from "@/components/ui/interactive-grid-pattern";
 import { IoMdArrowForward } from "react-icons/io";
 import SecondaryButton from "@/src/components/ui/SecondaryButton";
@@ -18,7 +17,7 @@ export default function Presentation() {
         flex
         min-h-screen
         items-center
-        
+        mb-10
         xl:px-24
       "
     >
@@ -63,12 +62,7 @@ export default function Presentation() {
 
         <div className="mt-5 flex items-center gap-4">
           <div className="h-px w-8 bg-neutral-300" />
-          <TypingAnimation
-            duration={70}
-            className="text-lg font-medium text-brand-middle"
-          >
-            Engenheira de Software · Front-End
-          </TypingAnimation>
+          <span className="text-lg font-medium text-brand-middle"> Engenheira de Software · Front-End</span>
         </div>
 
         <p className="mt-5 max-w-130 text-lg leading-8 text-secondary-font">
