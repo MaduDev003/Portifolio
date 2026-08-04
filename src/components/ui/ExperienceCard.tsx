@@ -28,9 +28,6 @@ export default function ExperienceCard({
         p-10
         shadow-[0_4px_14px_rgba(15,23,42,0.14)]
         hover:border-brand-middle/40
-        hover:shadow-[0_12px_32px_rgba(15,23,42,0.18),0_0_28px_rgba(124,92,252,0.28)]
-        dark:shadow-[0_4px_14px_rgba(124,92,252,0.12)]
-        dark:hover:shadow-[0_12px_36px_rgba(124,92,252,0.30)]
         transition-all
         duration-300
         hover:-translate-y-3

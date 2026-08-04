@@ -33,8 +33,7 @@ export default function Skills() {
                   duration-300
                   hover:-translate-y-2
                   hover:border-brand-middle/40
-                  hover:shadow-[0_12px_32px_rgba(15,23,42,0.18),0_0_28px_rgba(124,92,252,0.28)]
-                  dark:hover:shadow-[0_12px_36px_rgba(124,92,252,0.30)]
+                 
                 "
               >
                 <div className="flex items-start gap-5">
