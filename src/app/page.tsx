@@ -3,19 +3,18 @@ import AboutMe from "../features/aboutMe";
 import Experience from "../features/experience";
 import Presentation from "../features/presentation";
 import Skills from "../features/Skills";
+import Projects from "../features/Projects";
 
 export default function Home() {
   return (
     <>
     <Header />
     <main className="py-6 min-h-screen mt-6">
-
-        <Presentation />
-  
+      <Presentation />
       <AboutMe />
       <Skills/>
       <Experience />
-  
+      <Projects />
     </main>
     </>
   );

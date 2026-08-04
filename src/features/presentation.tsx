@@ -72,6 +72,11 @@ export default function Presentation() {
 
         <div className="mt-8 flex items-center gap-5">
         <ShimmerButton
+         onClick={() => {
+            document
+              .getElementById("projects")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
           shimmerColor="rgba(255,255,255,.65)"
           shimmerDuration="2.8s"
           shimmerSize="0.2em"
