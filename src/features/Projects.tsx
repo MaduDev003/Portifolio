@@ -42,7 +42,7 @@ const [hoveredProject,setHoveredProject] = useState<string | null>(null);
                         overflow-hidden
                         rounded-full
                         border border-white/10
-                        bg-linear-to-r from-brand-middle to-brand-hover
+                        bg-linear-to-r from-brand-middle/80 to-brand-hover
                         px-4 py-2
                         text-sm font-semibold text-white
                         shadow-lg
@@ -51,7 +51,7 @@ const [hoveredProject,setHoveredProject] = useState<string | null>(null);
                        
                     "
                     >
-                    <FaRegStar className="relative z-10 text-base" />
+                    <FaRegStar className=" group-hover:scale-110 group-hover:rotate-45 transition-all duration-300 relative z-10 text-base" />
                     <span className="relative z-10">Destaque</span>
                     </span>
                 )}
