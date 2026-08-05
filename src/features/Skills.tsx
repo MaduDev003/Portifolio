@@ -8,7 +8,6 @@ export default function Skills() {
     >
 
       <div className="relative mx-auto max-w-7xl">
-        {/* Título */}
         <div className="text-center">
           <h2 className="font-heading text-5xl font-bold tracking-tight text-brand-middle md:text-6xl">
             Habilidades
