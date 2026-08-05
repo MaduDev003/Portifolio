@@ -90,7 +90,7 @@ export default function Projects() {
                     absolute
                     inset-0
                     bg-linear-to-t
-                    from-black/50
+                    from-black/30
                     via-transparent
                     to-transparent
                   "
@@ -161,12 +161,16 @@ export default function Projects() {
 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span
+                    <>
+                    <div
                       key={tech}
                       className="
+                        group
+                        relative
                         rounded-full
                         border
                         border-brand-middle/30
+                        overflow-hidden
                         bg-brand-middle/10
                         px-3
                         py-1
@@ -174,8 +178,26 @@ export default function Projects() {
                         text-brand-middle
                       "
                     >
-                      {tech}
-                    </span>
+                   <span>{tech}</span>
+                    <span
+                      className="
+                        pointer-events-none
+                        absolute
+                        -top-4
+                        -left-5
+                        h-16
+                        w-8
+                        rotate-12
+                        bg-white/10
+                        blur-lg
+                        transition-transform
+                        duration-700
+                        group-hover:translate-x-20
+                      "
+                    />
+                    </div>
+                   
+                    </>
                   ))}
                 </div>
 

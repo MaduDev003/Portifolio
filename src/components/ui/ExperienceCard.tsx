@@ -19,6 +19,7 @@ export default function ExperienceCard({
   return (
     <div
       className="
+      group
         w-115
         min-h-170
         rounded-3xl
@@ -27,10 +28,10 @@ export default function ExperienceCard({
         bg-background
         p-10
         shadow-[0_4px_14px_rgba(15,23,42,0.14)]
-        hover:border-brand-middle/40
         transition-all
         duration-300
         hover:-translate-y-3
+        hover:border-brand-middle/40
       "
     >
       <div
@@ -153,18 +154,41 @@ export default function ExperienceCard({
         "
       >
         {experience.technologies.map((tech) => (
-          <span
+          <div
             key={tech}
             className="
+            
+              relative
+              overflow-hidden
               rounded-full
-              bg-brand-soft
-              px-4
-              py-1.5
+              border
+              border-brand-middle/30
+              bg-brand-middle/10
+              px-3
+              py-1
               text-sm
+              text-brand-middle
             "
           >
-            {tech}
-          </span>
+            <span>{tech}</span>
+
+            <span
+              className="
+                pointer-events-none
+                absolute
+                -top-4
+                -left-5
+                h-16
+                w-8
+                rotate-12
+                bg-white/10
+                blur-lg
+                transition-transform
+                duration-700
+                group-hover:translate-x-20
+              "
+            />
+          </div>
         ))}
       </div>
     </div>
