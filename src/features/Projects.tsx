@@ -30,7 +30,7 @@ const [hoveredProject,setHoveredProject] = useState<string | null>(null);
               onMouseEnter={() => setHoveredProject(project.title)}
               onMouseLeave={() => setHoveredProject(null)}
               key={project.title}
-              className="group w-120 h-140 gap-3 rounded-md backdrop:blur-sm border border-border bg-card transition-all duration-300 hover:-translate-y-2 hover:border-brand-middle/40"
+              className="group w-120 h-148 gap-3 rounded-md backdrop:blur-sm border border-border bg-card transition-all duration-300 hover:-translate-y-2 hover:border-brand-middle/40"
             >
 
              <div className="relative overflow-hidden rounded-t-md">
@@ -56,8 +56,25 @@ const [hoveredProject,setHoveredProject] = useState<string | null>(null);
                     </span>
                 )}
 
+                {hoveredProject === project.title && (
+                   <video
+                    src={project.video}
+                    autoPlay
+                    muted
+                    playsInline
+                    className="
+                      aspect-video
+                      w-full
+                      object-cover
+                      transition
+                      duration-700
+                      group-hover:scale-105
+                    "
+                  />
+                )}
+                {hoveredProject !== project.title && (
                 <img
-                    src={hoveredProject === project.title ? project.gif : project.image}
+                    src={project.image}
                     alt={project.title}
                     className="
                     aspect-video
@@ -69,11 +86,12 @@ const [hoveredProject,setHoveredProject] = useState<string | null>(null);
                     hover:border-brand-middle
                     "
                 />
+                )}
                 </div>
 
               <div className="space-y-5 p-6">
                 <div>
-                  <h3 className="text-2xl font-semibold">
+                  <h3 className="text-2xl font-semibold text-brand-middle/80">
                     {project.title}
                   </h3>
 
@@ -100,7 +118,7 @@ const [hoveredProject,setHoveredProject] = useState<string | null>(null);
                         href={project.demo}
                         className="
                         group relative overflow-hidden rounded-xl
-                        bg-linear-to-r from-brand-middle/80 to-brand-hover
+                        bg-linear-to-r from-brand-middle/70 to-brand-hover
                         px-5 py-2.5
                         font-semibold text-white
                         shadow-md shadow-brand-primary/20
