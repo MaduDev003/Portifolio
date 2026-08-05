@@ -4,71 +4,49 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="mb-10 min-h-130 px-6 py-18 xl:px-34"
+      className="relative overflow-hidden px-6 py-24 xl:px-34"
     >
-      <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col items-center text-center">
-          <span className="font-heading text-5xl font-bold tracking-tight text-brand-middle md:text-6xl">
-            Habilidades
-          </span>
 
-          <div className="mt-5 h-px w-24 bg-linear-to-r from-transparent via-brand-middle to-transparent" />
+      <div className="relative mx-auto max-w-7xl">
+        {/* Título */}
+        <div className="text-center">
+          <h2 className="font-heading text-5xl font-bold tracking-tight text-brand-middle md:text-6xl">
+            Habilidades
+          </h2>
+
+          <p className="mt-4 text-secondary-font">
+            Tecnologias e ferramentas que utilizo para desenvolver aplicações
+            modernas.
+          </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="mt-20 space-y-20">
           {skillCategories.map((category) => {
             const CategoryIcon = category.icon;
 
             return (
-              <article
-                key={category.title}
-                className="
-                  group
-                  rounded-3xl
-                  border
-                  border-border
-                  bg-card
-                  p-8
-                  transition-all
-                  duration-300
-                  hover:-translate-y-2
-                  hover:border-brand-middle/40
-                 
-                "
-              >
-                <div className="flex items-start gap-5">
-                  <div
-                    className="
-                      flex
-                      h-14
-                      w-14
-                      items-center
-                      justify-center
-                      rounded-2xl
-                      bg-brand-middle/10
-                      text-brand-middle
-                      transition-transform
-                      duration-300
-                      group-hover:scale-110
-                    "
-                  >
-                    <CategoryIcon size={28} />
-                  </div>
+              <div key={category.title}>
+                {/* Cabeçalho */}
+                <div className="flex items-center gap-4">
+                  <CategoryIcon
+                    size={26}
+                    className="text-brand-middle"
+                  />
 
-                  <div>
-                    <h3 className="text-2xl font-bold text-card-foreground">
-                      {category.title}
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-relaxed text-secondary-font">
-                      {category.description}
-                    </p>
-                  </div>
+                  <h3 className="font-heading text-3xl font-semibold text-card-foreground">
+                    {category.title}
+                  </h3>
                 </div>
 
-                <div className="my-6 h-px bg-linear-to-r from-brand-middle/40 via-brand-middle/10 to-transparent" />
+                {/* Linha com glow */}
+                <div className="relative mt-5 mb-10">
+                  <div className="absolute left-0 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-brand-middle shadow-[0_0_12px_#7C5CFC,0_0_28px_#7C5CFC]" />
 
-                <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                  <div className="ml-5 h-px bg-gradient-to-r from-brand-middle via-brand-middle/40 to-transparent" />
+                </div>
+
+                {/* Skills */}
+                <div className="grid grid-cols-2 gap-x-10 gap-y-6 md:grid-cols-3 lg:grid-cols-4">
                   {category.skills.map((skill) => {
                     const Icon = skill.icon;
 
@@ -76,27 +54,37 @@ export default function Skills() {
                       <div
                         key={skill.name}
                         className="
+                          group
                           flex
                           items-center
                           gap-3
-                          transition-transform
-                          duration-200
-                          hover:translate-x-1
+                          transition-all
+                          duration-300
+                          hover:translate-x-2
                         "
                       >
                         <Icon
                           size={20}
                           color={skill.color}
+                          className="transition-transform duration-300 group-hover:scale-110"
                         />
 
-                        <span className="text-md text-muted-foreground">
+                        <span
+                          className="
+                            font-medium
+                            text-card-foreground
+                            transition-colors
+                            duration-300
+                            group-hover:text-brand-middle
+                          "
+                        >
                           {skill.name}
                         </span>
                       </div>
                     );
                   })}
                 </div>
-              </article>
+              </div>
             );
           })}
         </div>

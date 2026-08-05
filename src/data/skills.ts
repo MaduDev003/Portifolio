@@ -36,9 +36,6 @@ import {
 export const skillCategories = [
   {
     title: "Front-end",
-    description:
-      "Construção de interfaces modernas, responsivas e acessíveis.",
-
     icon: HiOutlineCodeBracket,
 
     skills: [
@@ -97,9 +94,6 @@ export const skillCategories = [
 
   {
     title: "Back-end",
-    description:
-      "Desenvolvimento de APIs, microsserviços e integrações.",
-
     icon: HiOutlineServerStack,
 
     skills: [
@@ -128,9 +122,6 @@ export const skillCategories = [
 
   {
     title: "Ferramentas",
-    description:
-      "Tecnologias utilizadas no fluxo de desenvolvimento.",
-
     icon: HiOutlineWrenchScrewdriver,
 
     skills: [
@@ -164,9 +155,6 @@ export const skillCategories = [
 
   {
     title: "Qualidade",
-    description:
-      "Testes automatizados e foco em código confiável.",
-
     icon: HiOutlineShieldCheck,
 
     skills: [
