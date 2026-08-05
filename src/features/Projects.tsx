@@ -31,9 +31,9 @@ export default function Projects() {
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
 
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <article
-              key={project.title}
+              key={index}
               onMouseEnter={() => setHoveredProject(project.title)}
               onMouseLeave={() => setHoveredProject(null)}
               className="
@@ -160,10 +160,10 @@ export default function Projects() {
 
 
                 <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
+                  {project.technologies.map((tech, index) => (
                     <>
                     <div
-                      key={tech}
+                      key={index}
                       className="
                         group
                         relative

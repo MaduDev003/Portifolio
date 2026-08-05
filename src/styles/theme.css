@@ -1,9 +1,4 @@
 :root {
-  --brand-primary: #7C5CFC;
-  --brand-end: #8B7CFF;
-  --brand-hover: #6547F5;
-  --brand-text: #5B3FD6;
-
   --brand-soft: rgba(124, 92, 252, 0.10);
   --brand-border: rgba(124, 92, 252, 0.20);
 
@@ -12,88 +7,50 @@
 
 
 :root {
-  --background: #f4f4f5;
+  --background: #FFFFFF;
   --foreground: #18181B;
 
-  --card: #FFFFFF;
+  --brand-primary: #7C5CFC;
+  --brand-end: #9065FF;
+  --brand-hover: rgb(161, 70, 247);
+  --brand-text: #a642e8;
+
+  --card: rgb(235, 232, 245);
   --card-foreground: #18181B;
 
-  --secondary-font-color: #52525B;
+  --secondary-font-color: #4F4F63;
 
-  --brand-middle: #7c5cfa;
+  --brand-middle: #784acf;
 
-
-  --button-secondary-bg: rgba(
-    109,
-    74,
-    255,
-    0.08
-  );
-
-  --button-secondary-border: rgba(
-    109,
-    74,
-    255,
-    0.16
-  );
-
+  --button-secondary-bg: rgba(124, 92, 252, 0.12);
+  --button-secondary-border: rgba(124, 92, 252, 0.30);
   --button-secondary-text: #5B3FD6;
 
-
-  --button-secondary-hover-bg: rgba(
-    109,
-    74,
-    255,
-    0.14
-  );
-
+  --button-secondary-hover-bg: rgba(124, 92, 252, 0.18);
   --button-secondary-hover-border: #8B6BFF;
-
   --button-secondary-hover-text: #4C2FC4;
 
+  --muted: #7e6fb8;
+  --muted-foreground: #503e5f;
 
-  --muted: #6b6b6b;
-  --muted-foreground: #414144;
-
-
-  --border: #E4E4E7;
+  --border: rgba(124, 92, 252, 0.14);
 
   --ring: #7C5CFC;
 
-
-  --header-bg: rgba(
-    255,
-    255,
-    255,
-    0.72
-  );
-
-  --header-border: rgba(
-    124,
-    92,
-    252,
-    0.12
-  );
-
-  --header-highlight: rgba(
-    255,
-    255,
-    255,
-    0.9
-  );
-
-  --header-shadow: rgba(
-    0,
-    0,
-    0,
-    0.06
-  );
+  --header-bg: rgba(255, 255, 255, 0.82);
+  --header-border: rgba(124, 92, 252, 0.16);
+  --header-highlight: rgba(255, 255, 255, 0.96);
+  --header-shadow: rgba(124, 92, 252, 0.08);
 }
+
 
 .dark {
   --background: #0e0e11;
   --foreground: #E5E7EB;
-
+    --brand-primary: #7C5CFC;
+  --brand-end: #8B7CFF;
+  --brand-hover: #6547F5;
+  --brand-text: #5B3FD6;
   --card: #13131A;
   --card-foreground: #FAFAFA;
 
