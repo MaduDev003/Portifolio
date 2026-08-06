@@ -11,9 +11,9 @@
   --foreground: #18181B;
 
   --brand-primary: #7C5CFC;
-  --brand-end: #9065FF;
-  --brand-hover: rgb(161, 70, 247);
-  --brand-text: #a642e8;
+  --brand-end: #9365ff;
+  --brand-hover: rgb(153, 70, 247);
+  --brand-text: #8242e8;
 
   --card: rgb(235, 232, 245);
   --card-foreground: #18181B;
@@ -23,14 +23,14 @@
   --brand-middle: #784acf;
 
   --button-secondary-bg: rgba(124, 92, 252, 0.12);
-  --button-secondary-border: rgba(124, 92, 252, 0.30);
+  --button-secondary-border: rgba(124, 92, 252, 0.342);
   --button-secondary-text: #5B3FD6;
 
   --button-secondary-hover-bg: rgba(124, 92, 252, 0.18);
-  --button-secondary-hover-border: #8B6BFF;
-  --button-secondary-hover-text: #4C2FC4;
+  --button-secondary-hover-border: #7a58f3;
+  --button-secondary-hover-text: #6725d1;
 
-  --muted: #7e6fb8;
+  --muted: #705bc2;
   --muted-foreground: #503e5f;
 
   --border: rgba(124, 92, 252, 0.14);

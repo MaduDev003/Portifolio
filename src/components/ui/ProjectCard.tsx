@@ -178,7 +178,7 @@ export default function ProjectCard({
                   bg-brand-middle/10
                   px-3
                   py-1
-                  text-xs
+                  text-[13px]
                   text-brand-middle
                 "
               >
@@ -227,7 +227,7 @@ export default function ProjectCard({
               bg-brand-hover
               py-2
               text-center
-              text-xs
+              text-[13px]
               font-semibold
               text-white
               transition-all
@@ -251,7 +251,7 @@ export default function ProjectCard({
               border-border
               py-2
               text-center
-              text-xs
+              text-[13px]
               font-semibold
               text-muted-foreground
               transition-all
@@ -259,7 +259,7 @@ export default function ProjectCard({
               hover:text-brand-middle
             "
           >
-            <span className="relative z-10">
+            <span>
               Código
             </span>
 
