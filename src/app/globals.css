@@ -22,12 +22,14 @@
   --color-brand-primary: var(--brand-primary);
   --color-brand-middle: var(--brand-middle);
   --color-brand-end: var(--brand-end);
-
   --color-brand-hover: var(--brand-hover);
 
   --color-brand-soft: var(--brand-soft);
   --color-brand-border: var(--brand-border);
   --color-brand-text: var(--brand-text);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+
 
   --color-button-secondary-bg: var(--button-secondary-bg);
   --color-button-secondary-border: var(--button-secondary-border);
@@ -35,7 +37,7 @@
   --color-button-secondary-hover-bg: var(--button-secondary-hover-bg);
   --color-button-secondary-hover-border: var(--button-secondary-hover-border);
   --color-button-secondary-hover-text: var(--button-secondary-hover-text);
-
+  
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
 

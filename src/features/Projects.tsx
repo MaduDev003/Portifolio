@@ -26,13 +26,23 @@ export default function Projects() {
               font-bold
               tracking-tight
               text-brand-middle
+              drop-shadow-[0_6px_25px_rgba(124,92,252,0.30)]
               md:text-6xl
             "
           >
             Projetos
           </span>
-
-          <div className="mt-5 h-px w-20 bg-brand-middle/40" />
+          <div
+              className="
+                mt-5
+                h-1
+                rounded-full
+                w-20
+                bg-linear-to-r
+                from-brand-middle
+                to-accent
+              "
+            />
 
           <h2
             className="

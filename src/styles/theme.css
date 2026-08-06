@@ -44,104 +44,48 @@
 }
 
 
+
 .dark {
-  --background: #0e0e11;
-  --foreground: #E5E7EB;
-    --brand-primary: #7C5CFC;
-  --brand-end: #8B7CFF;
-  --brand-hover: #6547F5;
-  --brand-text: #5B3FD6;
-  --card: #13131A;
+  --background: #09090B;
+  --foreground: #F4F4F5;
+
+
+  --brand-primary: #8B5CF6;
+  --brand-middle: #A78BFA;
+  --brand-end: #DDD6FE;
+  --brand-hover: #7C3AED;
+  --brand-text: #C4B5FD;
+
+
+  --accent: #E879F9;
+  --accent-soft: rgba(255,184,107,.20);
+
+
+  --card: #14121C;
   --card-foreground: #FAFAFA;
 
-  --secondary-font-color: #94A3B8;
 
-  --brand-middle: #8e7bc7;
-
-
-  --brand-soft: rgba(
-    124,
-    92,
-    252,
-    0.14
-  );
-
-  --brand-border: rgba(
-    167,
-    139,
-    250,
-    0.22
-  );
+  --secondary-font-color: #A1A1AA;
 
 
-  --button-secondary-bg: rgba(
-    167,
-    139,
-    250,
-    0.12
-  );
-
-  --button-secondary-border: rgba(
-    167,
-    139,
-    250,
-    0.28
-  );
-
+  --button-secondary-bg: rgba(167,139,250,.12);
+  --button-secondary-border: rgba(167,139,250,.28);
   --button-secondary-text: #DDD6FE;
 
-
-  --button-secondary-hover-bg: rgba(
-    167,
-    139,
-    250,
-    0.20
-  );
-
+  --button-secondary-hover-bg: rgba(167,139,250,.22);
   --button-secondary-hover-border: #C4B5FD;
+  --button-secondary-hover-text: #FFFFFF;
 
-  --button-secondary-hover-text: #F5F3FF;
-
-
-  --muted: #94A3B8;
-
+  --muted: #A78BFA;
   --muted-foreground: #CBD5E1;
 
-  --border: rgba(
-    148,
-    163,
-    184,
-    0.16
-  );
+  --border: rgba(255,255,255,.10);
 
   --ring: #A78BFA;
 
 
-  --header-bg: rgba(
-    9,
-    9,
-    11,
-    0.72
-  );
-
-  --header-border: rgba(
-    167,
-    139,
-    250,
-    0.18
-  );
-
-  --header-highlight: rgba(
-    255,
-    255,
-    255,
-    0.06
-  );
-
-  --header-shadow: rgba(
-    0,
-    0,
-    0,
-    0.45
-  );
+  --header-bg: rgba(9,9,11,.72);
+  --header-border: rgba(167,139,250,.18);
+  --header-highlight: rgba(255,255,255,.06);
+  --header-shadow: rgba(0,0,0,.45);
 }

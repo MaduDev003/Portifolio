@@ -79,35 +79,44 @@ export default function ProjectCard({
           className="
             absolute
             inset-0
-            bg-linear-to-t
-            from-black/40
+            bg-linear-to-bt
+            from-black/60
             via-transparent
             to-transparent
           "
         />
 
         {project.contrast && (
-          <span
-            className="
-              absolute
-              left-4
-              top-4
-              flex
-              items-center
-              gap-1
-              rounded-lg
-              bg-brand-hover
-              px-3
-              py-1
-              text-[12px]
-              font-semibold
-              text-white
-              shadow-lg
-            "
-          >
-            <FaRegStar className="transition group-hover:rotate-45" />
-            Destaque
-          </span>
+    <span
+  className="
+    absolute
+    left-4
+    top-4
+    flex
+    items-center
+    gap-2
+    rounded-full
+    border
+    border-accent/30
+    bg-card/80
+    px-3
+    py-1
+    text-[12px]
+    font-semibold
+    text-accent
+    backdrop-blur-md
+  "
+>
+<span
+    className="
+      size-2
+      rounded-full
+      bg-accent
+      animate-[pulse_0.7s_ease-in-out_infinite]
+    "
+  />
+  Destaque
+</span>
         )}
       </div>
 
@@ -173,7 +182,7 @@ export default function ProjectCard({
                   transition-all
                   duration-300
                   hover:bg-brand-middle/10
-                  hover:text-brand-middle
+                  hover:text-accent
                 "
               >
                 {tech}
@@ -206,6 +215,7 @@ export default function ProjectCard({
               transition-all
               duration-300
               hover:-translate-y-0.5
+              hover:shadow-[0_12px_30px_rgba(124,92,252,0.40)]
               hover:bg-brand-hover
             "
           >
@@ -239,21 +249,21 @@ export default function ProjectCard({
               GitHub ↗
             </span>
 
-            <span
-              className="
-                pointer-events-none
-                absolute
-                inset-0
-                -translate-x-full
-                bg-linear-to-r
-                from-transparent
-                via-brand-middle/20
-                to-transparent
-                transition-transform
-                duration-700
-                group-hover:translate-x-full
-              "
-            />
+           <span
+            className="
+              pointer-events-none
+              absolute
+              inset-0
+              -translate-x-full
+              bg-linear-to-r
+              from-transparent
+              via-brand-middle/20
+              to-accent/20
+              transition-transform
+              duration-700
+              group-hover:translate-x-full
+            "
+          />
           </a>
         </div>
       </div>
