@@ -60,8 +60,6 @@ export default function AboutMe() {
 
 
       <div className="relative z-10 mx-auto max-w-7xl">
-
-        {/* Header */}
         <div
           className="
             flex

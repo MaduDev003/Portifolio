@@ -50,7 +50,7 @@ export default function Projects() {
               max-w-3xl
               text-md
               text-muted-foreground
-              md:text-2xl
+              md:text-xl
             "
           >
             Explore projetos onde tecnologia, design e experiência se encontram.

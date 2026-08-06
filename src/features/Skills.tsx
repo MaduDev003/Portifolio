@@ -8,16 +8,52 @@ export default function Skills() {
     >
 
       <div className="relative mx-auto max-w-7xl">
-        <div className="text-center">
-          <h2 className="font-heading text-5xl font-bold tracking-tight text-brand-middle md:text-6xl">
-            Habilidades
-          </h2>
 
-          <p className="mt-4 text-secondary-font">
-            Tecnologias e ferramentas que utilizo para desenvolver aplicações
+          <div  className="
+            flex
+            flex-col
+            items-center
+            text-center
+          ">
+          <span
+            className="
+              font-heading
+              text-5xl
+              font-bold
+              tracking-tight
+              text-brand-middle
+              drop-shadow-[0_4px_15px_rgba(124,92,252,0.20)]
+              md:text-6xl
+            "
+          >
+            Habilidades
+          </span>
+
+          <div
+            className="
+              mt-5
+              h-1
+              w-20
+              rounded-full
+              bg-linear-to-r
+              from-brand-middle
+              to-accent
+            "
+          />
+           <h2
+            className="
+              mt-5
+              max-w-3xl
+              text-lg
+              text-muted-foreground
+              md:text-xl
+            "
+          >
+             Tecnologias e ferramentas que utilizo para desenvolver aplicações
             modernas.
-          </p>
+          </h2>
         </div>
+
 
         <div className="mt-20 space-y-20">
           {skillCategories.map((category) => {

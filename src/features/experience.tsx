@@ -72,7 +72,6 @@ export default function Experience() {
       />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-        {/* Header */}
         <div
           className="
             mb-25
@@ -107,6 +106,8 @@ export default function Experience() {
               bg-linear-to-r
               from-brand-middle
               to-accent
+              bg-clip-text
+              text-transparent
             "
           />
         </div>
