@@ -173,21 +173,20 @@ export default function ExperienceCard({
             <span>{tech}</span>
 
             <span
-              className="
-                pointer-events-none
-                absolute
-                -top-4
-                -left-5
-                h-16
-                w-8
-                rotate-12
-                bg-white/10
-                blur-lg
-                transition-transform
-                duration-700
-                group-hover:translate-x-20
-              "
-            />
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-0
+                  -translate-x-full
+                  bg-linear-to-r
+                  from-transparent
+                  via-brand-middle/20
+                  to-transparent
+                  transition-transform
+                  duration-700
+                  group-hover:translate-x-full
+                "
+              />
           </div>
         ))}
       </div>

@@ -38,12 +38,12 @@ export default function Projects() {
             className="
               mt-5
               max-w-3xl
-              text-lg
+              text-md
               text-muted-foreground
               md:text-2xl
             "
           >
-            Transformando ideias em produtos digitais.
+            Explore projetos onde tecnologia, design e experiência se encontram.
           </h2>
         </div>
 

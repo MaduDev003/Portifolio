@@ -41,9 +41,7 @@ export default function ProjectCard({
         hover:border-brand-middle/40
       "
     >
-
       <div className="relative overflow-hidden">
-
         {isHovered && project.video ? (
           <video
             src={project.video}
@@ -98,10 +96,10 @@ export default function ProjectCard({
               items-center
               gap-1
               rounded-lg
-              bg-brand-hover/90
+              bg-brand-hover
               px-3
               py-1
-              text-xs
+              text-[12px]
               font-semibold
               text-white
               shadow-lg
@@ -111,9 +109,7 @@ export default function ProjectCard({
             Destaque
           </span>
         )}
-
       </div>
-
 
       <div
         className="
@@ -124,7 +120,6 @@ export default function ProjectCard({
           p-4
         "
       >
-
         <div>
           <h3
             className="
@@ -148,7 +143,6 @@ export default function ProjectCard({
           </p>
         </div>
 
-
         <div
           className="
             mt-2
@@ -157,56 +151,36 @@ export default function ProjectCard({
             pt-3
           "
         >
-
           <div
             className="
               flex
               flex-wrap
-              gap-1.5
+              gap-2
             "
           >
-
             {project.technologies.map((tech) => (
               <div
                 key={tech}
                 className="
-                  relative
-                  overflow-hidden
-                  rounded-full
+                  rounded-md
                   border
                   border-brand-middle/30
-                  bg-brand-middle/10
-                  px-3
+                  px-2.5
                   py-1
                   text-[13px]
+                  font-medium
                   text-brand-middle
+                  transition-all
+                  duration-300
+                  hover:bg-brand-middle/10
+                  hover:text-brand-middle
                 "
               >
                 {tech}
-
-                <span
-                  className="
-                    pointer-events-none
-                    absolute
-                    -top-4
-                    -left-5
-                    h-16
-                    w-8
-                    rotate-12
-                    bg-white/10
-                    blur-lg
-                    transition-transform
-                    duration-700
-                    group-hover:translate-x-20
-                  "
-                />
               </div>
             ))}
-
           </div>
-
         </div>
-
 
         <div
           className="
@@ -216,7 +190,6 @@ export default function ProjectCard({
             pt-3
           "
         >
-
           <a
             href={project.demo}
             target="_blank"
@@ -224,19 +197,20 @@ export default function ProjectCard({
             className="
               flex-1
               rounded-lg
-              bg-brand-hover
+              bg-brand-hover/80
               py-2
               text-center
-              text-[13px]
+              text-[14px]
               font-semibold
               text-white
               transition-all
+              duration-300
               hover:-translate-y-0.5
+              hover:bg-brand-hover
             "
           >
             Ver projeto ↗
           </a>
-
 
           <a
             href={project.github}
@@ -248,41 +222,41 @@ export default function ProjectCard({
               overflow-hidden
               rounded-lg
               border
-              border-border
+              border-brand-middle/50
+              bg-brand-middle/10
               py-2
               text-center
-              text-[13px]
+              text-[14px]
               font-semibold
-              text-muted-foreground
+              text-brand-middle
               transition-all
+              duration-300
+              hover:-translate-y-0.5
               hover:border-brand-middle
-              hover:text-brand-middle
             "
           >
-            <span>
-              Código
+            <span className="relative z-10">
+              GitHub ↗
             </span>
 
             <span
               className="
+                pointer-events-none
                 absolute
                 inset-0
-                translate-y-full
+                -translate-x-full
                 bg-linear-to-r
-                from-brand-middle/10
-                to-brand-hover/10
+                from-transparent
+                via-brand-middle/20
+                to-transparent
                 transition-transform
-                duration-300
-                group-hover:translate-y-0
+                duration-700
+                group-hover:translate-x-full
               "
             />
-
           </a>
-
         </div>
-
       </div>
-
     </article>
   );
 }
