@@ -1,4 +1,5 @@
 import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import AboutMe from "../features/aboutMe";
 import Experience from "../features/experience";
 import Presentation from "../features/presentation";
@@ -10,7 +11,7 @@ export default function Home() {
   return (
     <>
     <Header />
-    <main className="py-6 min-h-screen mt-6">
+    <main className="flex-1 mt-6">
       <Presentation />
       <AboutMe />
       <Skills/>
@@ -18,6 +19,7 @@ export default function Home() {
       <Projects />
       <Contact />
     </main>
+    <Footer/>
     </>
   );
 }

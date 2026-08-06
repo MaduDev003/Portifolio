@@ -116,8 +116,8 @@ export default function Header() {
                   after:scale-x-0
                   after:rounded-full
                   after:bg-linear-to-r
-                  after:from-brand-primary
-                  after:to-brand-end
+                  after:from-brand-middle
+                  after:to-accent
                   after:transition-transform
                   after:duration-300
                   after:ease-out

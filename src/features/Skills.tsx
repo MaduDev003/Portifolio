@@ -4,18 +4,17 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden px-6 py-24 xl:px-34"
+      className="
+        relative
+        overflow-hidden
+        py-24
+        xl:px-34
+      "
     >
-
-      <div className="relative mx-auto max-w-7xl">
-
-          <div  className="
-            flex
-            flex-col
-            items-center
-            text-center
-          ">
-           <span
+      <div className="mx-auto max-w-7xl">
+        {/* Header */}
+        <div className="flex flex-col items-center text-center">
+          <span
             className="
               font-heading
               bg-linear-to-r
@@ -36,90 +35,174 @@ export default function Skills() {
             className="
               mt-5
               h-1
-              w-20
+              w-24
               rounded-full
               bg-linear-to-r
               from-brand-middle
               to-accent
             "
           />
-           <h2
+
+          <h2
             className="
               mt-5
               max-w-3xl
               text-lg
+              leading-8
               text-muted-foreground
               md:text-xl
             "
           >
-             Tecnologias e ferramentas que utilizo para desenvolver aplicações
-            modernas.
+            Tecnologias e ferramentas que utilizo para desenvolver aplicações
+            modernas, acessíveis e focadas na experiência do usuário.
           </h2>
         </div>
 
-
-        <div className="mt-20 space-y-20">
+        {/* Cards */}
+        <div className="mt-20 grid gap-8 lg:grid-cols-2">
           {skillCategories.map((category) => {
             const CategoryIcon = category.icon;
 
             return (
-              <div key={category.title}>
-                <div className="flex items-center gap-4">
-                  <CategoryIcon
-                    size={26}
-                    className="text-brand-middle"
-                  />
+              <article
+                key={category.title}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-3xl
+                  border
+                  border-brand-middle/15
+                  bg-card
+                  p-8
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-brand-middle/35
+                "
+              >
+                {/* Hover */}
+                <span
+                  className="
+                    absolute
+                    inset-0
+                    bg-linear-to-br
+                    from-brand-middle/8
+                    via-transparent
+                    to-accent/10
+                    opacity-0
+                    transition-opacity
+                    duration-500
+                    group-hover:opacity-100
+                  "
+                />
 
-                  <h3 className="font-heading text-3xl font-semibold text-card-foreground">
-                    {category.title}
-                  </h3>
-                </div>
+                <div className="relative z-10">
+                  {/* Cabeçalho */}
+                  <div className="flex items-center gap-5">
+                    <div
+                      className="
+                        flex
+                        size-14
+                        items-center
+                        justify-center
+                        rounded-2xl
+                        bg-brand-middle/10
+                        text-brand-middle
+                        transition-all
+                        duration-300
+                        group-hover:bg-brand-middle/15
+                      "
+                    >
+                      <CategoryIcon size={24} />
+                    </div>
 
-                <div className="relative mt-5 mb-10">
-                  <div className="absolute left-0 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-brand-middle shadow-[0_0_12px_#7C5CFC,0_0_28px_#7C5CFC]" />
-
-                  <div className="ml-5 h-px bg-linear-to-r from-brand-middle via-brand-middle/40 to-transparent" />
-                </div>
-
-                <div className="grid grid-cols-2 gap-x-10 gap-y-6 md:grid-cols-3 lg:grid-cols-4">
-                  {category.skills.map((skill) => {
-                    const Icon = skill.icon;
-
-                    return (
-                      <div
-                        key={skill.name}
+                    <div className="flex-1">
+                      <h3
                         className="
-                          group
-                          flex
-                          items-center
-                          gap-3
-                          transition-all
-                          duration-300
-                          hover:translate-x-2
+                          font-heading
+                          text-2xl
+                          font-semibold
+                          text-foreground
                         "
                       >
-                        <Icon
-                          size={20}
-                          color={skill.color}
-                          className="transition-transform duration-300 group-hover:scale-110"
-                        />
+                        {category.title}
+                      </h3>
 
-                        <span
+                      <div
+                        className="
+                          mt-3
+                          h-px
+                          w-28
+                          bg-linear-to-r
+                          from-brand-middle
+                          to-accent
+                        "
+                      />
+                    </div>
+                  </div>
+
+                  {/* Skills */}
+                  <div
+                    className="
+                      mt-8
+                      flex
+                      flex-wrap
+                      gap-3
+                    "
+                  >
+                    {category.skills.map((skill) => {
+                      const Icon = skill.icon;
+
+                      return (
+                        <div
+                          key={skill.name}
                           className="
-                            font-medium
-                            text-card-foreground
-                            transition-colors
+                            group/item
+                            flex
+                            items-center
+                            gap-2
+                            rounded-xl
+                            border
+                            border-brand-middle/15
+                            bg-brand-middle/5
+                            px-4
+                            py-2.5
+                            transition-all
                             duration-300
-                            group-hover:text-brand-middle
+                            hover:-translate-y-1
+                            hover:border-accent/40
+                            hover:bg-brand-middle/10
                           "
                         >
-                          {skill.name}
-                        </span>
-                      </div>
-                    );
-                  })}
+                          <Icon
+                            size={18}
+                            color={skill.color}
+                            className="
+                              transition-transform
+                              duration-300
+                              group-hover/item:scale-110
+                            "
+                          />
+
+                          <span
+                            className="
+                              text-sm
+                              font-medium
+                              text-card-foreground
+                              transition-colors
+                              duration-300
+                              group-hover/item:text-accent
+                            "
+                          >
+                            {skill.name}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>
