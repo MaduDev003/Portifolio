@@ -1,5 +1,4 @@
 import {
-  FaEnvelope,
   FaGithub,
   FaLinkedin,
   FaFileAlt,
@@ -7,13 +6,6 @@ import {
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 const contacts = [
-  {
-    title: "Email",
-    description: "Entre em contato diretamente.",
-    value: "mariaschwarzdev@gmail.com",
-    href: "mailto:mariaschwarzdev@gmail.com",
-    icon: FaEnvelope,
-  },
   {
     title: "LinkedIn",
     description: "Vamos nos conectar.",
@@ -162,7 +154,7 @@ export default function Contact() {
             grid
             gap-6
             md:grid-cols-2
-            xl:grid-cols-4
+            xl:grid-cols-3
           "
         >
           {contacts.map((contact) => {
@@ -268,7 +260,7 @@ export default function Contact() {
               className="
                 h-12
                 px-7
-                text-sm
+                text-md
                 font-medium
                 text-white
                 transition-all
