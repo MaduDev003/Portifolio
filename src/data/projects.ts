@@ -12,7 +12,7 @@ export const projects = [
         "Plataforma de cinema desenvolvida com foco em experiência do usuário, acessibilidade e arquitetura escalável.",
       video: "/videos/lumicine.mp4",
       image: lumicineImage.src,
-      technologies: ["React", "Next.js", "TypeScript", "TailwindCSS", "Zustand", "React-Hook-Form", "ZOD"],
+      technologies: ["React", "Next.js", "TypeScript", "TailwindCSS"],
       github: "#",
       demo: "#",
     },
@@ -48,4 +48,5 @@ export const projects = [
       github: "#",
       demo: "#",
     },
+    
   ];
