@@ -15,14 +15,17 @@ export default function Skills() {
             items-center
             text-center
           ">
-          <span
+           <span
             className="
               font-heading
+              bg-linear-to-r
+              from-brand-middle
+              to-accent
+              bg-clip-text
               text-5xl
               font-bold
               tracking-tight
-              text-brand-middle
-              drop-shadow-[0_4px_15px_rgba(124,92,252,0.20)]
+              text-transparent
               md:text-6xl
             "
           >

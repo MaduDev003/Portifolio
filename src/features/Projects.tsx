@@ -20,13 +20,16 @@ export default function Projects() {
 
         <div className="flex flex-col items-center text-center">
           <span
-            className="
+             className="
               font-heading
+              bg-linear-to-r
+              from-brand-middle
+              to-accent
+              bg-clip-text
               text-5xl
               font-bold
               tracking-tight
-              text-brand-middle
-              drop-shadow-[0_6px_25px_rgba(124,92,252,0.30)]
+              text-transparent
               md:text-6xl
             "
           >

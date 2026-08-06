@@ -23,10 +23,10 @@ export default function ExperienceCard({
         w-115
         min-h-170
         rounded-3xl
-        border
-        border-border
-        bg-background
         p-10
+        border
+        border-brand-middle/15
+        bg-card
         shadow-[0_4px_14px_rgba(15,23,42,0.14)]
         transition-all
         duration-300
@@ -135,7 +135,7 @@ export default function ExperienceCard({
                   size-2
                   shrink-0
                   rounded-full
-                  bg-brand-middle
+                  bg-accent
                 "
               />
 
@@ -181,7 +181,7 @@ export default function ExperienceCard({
                   bg-linear-to-r
                   from-transparent
                   via-brand-middle/20
-                  to-transparent
+                  to-accent/30
                   transition-transform
                   duration-700
                   group-hover:translate-x-full

@@ -35,7 +35,7 @@ export default function Presentation() {
             px-4 
             py-2"
           >
-          <span className="h-2.5 w-2.5 rounded-full bg-brand-middle  animate-[pulse_0.7s_ease-in-out_infinite]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-accent  animate-[pulse_0.7s_ease-in-out_infinite]" />
 
           <p className="text-sm font-medium  text-accent-foreground">
             Olá, eu sou
@@ -62,7 +62,19 @@ export default function Presentation() {
 
         <div className="mt-5 flex items-center gap-4">
           <div className="h-px w-8 bg-neutral-300" />
-          <span className="text-lg font-medium text-brand-middle"> Engenheira de Software · Front-End</span>
+            <span
+              className="
+                bg-linear-to-r
+                from-brand-middle
+                to-accent
+                bg-clip-text
+                text-lg
+                font-medium
+                text-transparent
+              "
+            >
+            Engenheira de Software · Front-End
+          </span>
         </div>
 
         <p className="mt-5 max-w-130 text-lg leading-8 text-secondary-font">
@@ -208,7 +220,7 @@ export default function Presentation() {
       </p>
 
       <div className="mt-3 space-y-2  text-md  font-mono">
-        <p className="text-brand-middle">
+        <p className="text-accent">
           position: absolute;
         </p>
 
@@ -236,7 +248,7 @@ export default function Presentation() {
         bg-card/80
         p-4
         shadow-lg
-        backdrop-blur-lg
+        backdrop-blur-xl
         pointer-events-none
       "
     >
@@ -245,7 +257,7 @@ export default function Presentation() {
       </p>
 
       <div className="mt-3 space-y-2 text-md font-mono">
-        <p className="text-brand-middle">
+        <p className="text-accent">
           border-radius: 16px;
         </p>
 

@@ -83,19 +83,35 @@ export default function Experience() {
             text-center
           "
         >
+          <div className="flex flex-col items-center text-center">
           <span
             className="
               font-heading
+              bg-linear-to-r
+              from-brand-middle
+              to-accent
+              bg-clip-text
               text-5xl
               font-bold
               tracking-tight
-              text-brand-middle
-              drop-shadow-[0_4px_15px_rgba(124,92,252,0.20)]
+              text-transparent
               md:text-6xl
             "
           >
-            Experiência
+            Experiencia
           </span>
+          <div
+              className="
+                mt-5
+                h-1
+                rounded-full
+                w-20
+                bg-linear-to-r
+                from-brand-middle
+                to-accent
+              "
+            />
+        </div>
 
           <div
             className="
@@ -113,7 +129,6 @@ export default function Experience() {
         </div>
 
 
-        {/* Timeline */}
         <div
           ref={lineRef}
           className="
@@ -123,7 +138,6 @@ export default function Experience() {
             gap-40
           "
         >
-          {/* Linha base */}
           <div
             className="
               absolute
@@ -137,7 +151,6 @@ export default function Experience() {
               bg-brand-soft
             "
           >
-            {/* Linha animada */}
             <motion.div
               style={{ height: lineHeight }}
               className="

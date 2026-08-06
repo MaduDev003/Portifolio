@@ -68,14 +68,17 @@ export default function AboutMe() {
             text-center
           "
         >
-          <span
+           <span
             className="
               font-heading
+              bg-linear-to-r
+              from-brand-middle
+              to-accent
+              bg-clip-text
               text-5xl
               font-bold
               tracking-tight
-              text-brand-middle
-              drop-shadow-[0_4px_15px_rgba(124,92,252,0.20)]
+              text-transparent
               md:text-6xl
             "
           >
@@ -139,15 +142,12 @@ export default function AboutMe() {
                 "
               >
 
-                {/* Hover background */}
-                <span
+               <span
                   className="
-                    pointer-events-none
                     absolute
                     inset-0
                     bg-linear-to-br
                     from-brand-middle/10
-                    via-transparent
                     to-accent/10
                     opacity-0
                     transition-opacity
@@ -158,8 +158,6 @@ export default function AboutMe() {
 
 
                 <div className="relative z-10">
-
-                  {/* Icon */}
                   <div
                     className="
                       mb-6
@@ -172,8 +170,8 @@ export default function AboutMe() {
                       text-brand-middle
                       transition-all
                       duration-300
-                      group-hover:bg-brand-middle/20
-                      group-hover:text-brand-end
+                      group-hover:text-brand-middle/90
+                      group-hover:bg-accent/30
                     "
                   >
                     <Icon size={24} />
@@ -221,6 +219,7 @@ export default function AboutMe() {
                           className="
                             shrink-0
                             text-brand-middle
+                            group-hover:text-accent
                           "
                           size={14}
                         />
