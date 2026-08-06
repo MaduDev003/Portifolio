@@ -30,7 +30,6 @@ export default function Experience() {
         xl:px-34
       "
     >
-      {/* Textura de fundo */}
       <div
         className="
           pointer-events-none
@@ -181,7 +180,7 @@ export default function Experience() {
               <div
                 className={
                   experience.side === "left"
-                    ? "flex justify-end pr-14"
+                    ? "flex  pr-14"
                     : ""
                 }
               >
@@ -189,11 +188,8 @@ export default function Experience() {
                   <ExperienceCard experience={experience} />
                 )}
               </div>
-
-
+              
               <TimelinePoint />
-
-
               <div
                 className={
                   experience.side === "right"
@@ -204,7 +200,7 @@ export default function Experience() {
                 {experience.side === "right" && (
                   <ExperienceCard experience={experience} />
                 )}
-              </div>
+             </div>
             </div>
           ))}
         </div>
