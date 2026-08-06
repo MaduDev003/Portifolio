@@ -12,7 +12,6 @@ export default function Skills() {
       "
     >
       <div className="mx-auto max-w-7xl">
-        {/* Header */}
         <div className="flex flex-col items-center text-center">
           <span
             className="
@@ -53,8 +52,7 @@ export default function Skills() {
               md:text-xl
             "
           >
-            Tecnologias e ferramentas que utilizo para desenvolver aplicações
-            modernas, acessíveis e focadas na experiência do usuário.
+            Tecnologias e ferramentas que compõem minha stack de desenvolvimento.
           </h2>
         </div>
 
@@ -81,7 +79,7 @@ export default function Skills() {
                   hover:border-brand-middle/35
                 "
               >
-                {/* Hover */}
+
                 <span
                   className="
                     absolute
@@ -98,7 +96,6 @@ export default function Skills() {
                 />
 
                 <div className="relative z-10">
-                  {/* Cabeçalho */}
                   <div className="flex items-center gap-5">
                     <div
                       className="
@@ -142,7 +139,6 @@ export default function Skills() {
                     </div>
                   </div>
 
-                  {/* Skills */}
                   <div
                     className="
                       mt-8
