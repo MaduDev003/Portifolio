@@ -87,36 +87,36 @@ export default function ProjectCard({
         />
 
         {project.contrast && (
-    <span
-  className="
-    absolute
-    left-4
-    top-4
-    flex
-    items-center
-    gap-2
-    rounded-full
-    border
-    border-accent/30
-    bg-card/80
-    px-3
-    py-1
-    text-[12px]
-    font-semibold
-    text-accent
-    backdrop-blur-md
-  "
->
-<span
-    className="
-      size-2
-      rounded-full
-      bg-accent
-      animate-[pulse_0.7s_ease-in-out_infinite]
-    "
-  />
-  Destaque
-</span>
+                <span
+              className="
+                absolute
+                left-4
+                top-4
+                flex
+                items-center
+                gap-2
+                rounded-full
+                border
+                border-accent/30
+                bg-card/80
+                px-3
+                py-1
+                text-[12px]
+                font-semibold
+                text-accent
+                backdrop-blur-md
+              "
+            >
+            <span
+                className="
+                  size-2
+                  rounded-full
+                  bg-accent
+                  animate-[pulse_0.7s_ease-in-out_infinite]
+                "
+              />
+              Destaque
+            </span>
         )}
       </div>
 

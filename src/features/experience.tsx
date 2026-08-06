@@ -45,8 +45,7 @@ export default function Experience() {
         }}
       />
 
-      {/* Divisores da seção */}
-      <div
+     <div
         className="
           pointer-events-none
           absolute
@@ -54,9 +53,8 @@ export default function Experience() {
           top-0
           h-px
           bg-linear-to-r
-          from-transparent
-          via-brand-middle/40
-          to-transparent
+          from-brand-middle
+          to-accent
         "
       />
 
@@ -67,10 +65,9 @@ export default function Experience() {
           inset-x-0
           bottom-0
           h-px
-          bg-linear-to-r
-          from-transparent
-          via-accent/30
-          to-transparent
+           bg-linear-to-r
+          from-brand-middle
+          to-accent
         "
       />
 

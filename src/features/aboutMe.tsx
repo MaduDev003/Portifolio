@@ -18,7 +18,6 @@ export default function AboutMe() {
         xl:px-34
       "
     >
-      {/* Textura técnica */}
       <div
         className="
           pointer-events-none
@@ -33,8 +32,7 @@ export default function AboutMe() {
         }}
       />
 
-      {/* Linha superior */}
-      <div
+       <div
         className="
           pointer-events-none
           absolute
@@ -42,13 +40,11 @@ export default function AboutMe() {
           top-0
           h-px
           bg-linear-to-r
-          from-transparent
-          via-brand-middle/40
-          to-transparent
+          from-brand-middle
+          to-accent
         "
       />
 
-      {/* Linha inferior */}
       <div
         className="
           pointer-events-none
@@ -56,10 +52,9 @@ export default function AboutMe() {
           inset-x-0
           bottom-0
           h-px
-          bg-linear-to-r
-          from-transparent
-          via-accent/30
-          to-transparent
+           bg-linear-to-r
+          from-brand-middle
+          to-accent
         "
       />
 
