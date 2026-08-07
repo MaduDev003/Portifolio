@@ -139,8 +139,10 @@ export default function Contact() {
             mt-16
             grid
             gap-6
-            md:grid-cols-2
             xl:grid-cols-3
+             px-12
+            md:px-16
+            lg:px-0
           "
         >
           {contacts.map((contact) => {
