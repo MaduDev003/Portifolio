@@ -16,14 +16,14 @@ export const aboutMe = [
       "HTML, CSS e JavaScript",
       "React e TypeScript",
       "Node.js, PostgreSQL e MongoDB",
-      "Projetos semanais individuais e em equipe",
+      "Projetos semanais individuais e em equipe"
     ],
   },
   {
     icon: FaBriefcase,
     title: "Minha experiência",
     description:
-      "Minha primeira oportunidade profissional foi no setor financeiro, onde atuei por mais de 3 anos desenvolvendo aplicações internas. Foi uma experiência que consolidou minha visão sobre engenharia de software e desenvolvimento de produtos.",
+      "Minha primeira oportunidade profissional foi no setor financeiro, onde atuei por 3 anos desenvolvendo aplicações internas. Foi uma experiência que consolidou minha visão sobre engenharia de software e desenvolvimento de produtos.",
 
     highlights: [
       "Front-end e Back-end",
@@ -31,14 +31,14 @@ export const aboutMe = [
       "Microsserviços",
       "Mensageria",
       "Testes automatizados",
-      "Metodologias Ágeis",
+      "Metodologias Ágeis"
     ],
   },
   {
     icon: FaHeart,
     title: "O que me move",
     description:
-      "Hoje encontrei no Front-end o espaço onde consigo unir criatividade e tecnologia. Meu propósito é desenvolver interfaces modernas, acessíveis e performáticas, colocando a experiência do usuário no centro de cada decisão.",
+     "Encontrei no Front-end o espaço onde consigo unir criatividade, tecnologia e engenharia de software. Meu objetivo é construir produtos digitais modernos, acessíveis e performáticos, utilizando boas práticas de arquitetura, escalabilidade, segurança e desenvolvimento sustentável, equilibrando excelência técnica com uma experiência de usuário consistente.",
 
     highlights: [
       "React",
@@ -46,7 +46,7 @@ export const aboutMe = [
       "TypeScript",
       "Tailwind CSS",
       "Acessibilidade",
-      "Experiência do Usuário",
+      "Experiência do Usuário"
     ],
   },
 ];

@@ -4,10 +4,11 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { useState } from "react";
 import { FiDownload } from "react-icons/fi";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { HiOutlineViewList } from "react-icons/hi";
 
 export default function Header() {
-  const [activeLink, setActiveLink] = useState("Inicio");
-
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+ 
   const links = [
     {
       label: "Inicio",
@@ -37,19 +38,177 @@ export default function Header() {
 
   return (
     <>
-      <div
-        className="
-          fixed
-          top-0
-          left-0
-          z-40
-          h-15
-          w-full
-          bg-background/30
-          backdrop-blur-xl
-        "
-      />
-
+    <div
+      className={`
+        fixed
+        top-0
+        left-0
+        z-40
+        w-full
+        bg-background/30
+        backdrop-blur-xl
+        transition-all
+        duration-500
+        ease-in-out
+        ${
+          openMenu
+            ? "h-88"
+            : "h-15"
+        }
+      `}
+    />
+      
+          <header
+            className="
+              fixed
+              top-1
+              left-4
+              right-4
+              z-50
+            "
+          >
+            <div
+              className="
+                relative
+                flex
+                h-14
+                items-center
+                justify-between
+                rounded-full
+                border
+                border-[#6e5cb836]
+                bg-card
+                px-5
+                shadow-[0_10px_40px_var(--header-shadow)]
+              "
+            >
+              <div
+                className="
+                  font-heading
+                  text-lg
+                  font-semibold
+                  text-foreground
+                "
+              >
+                Madu.
+              </div>
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-2
+                "
+              >
+                  <button
+                  onClick={() => setOpenMenu((prev) => !prev)}
+                  className="
+                    flex
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-border-button-secondary-hover-border
+                    bg-button-secondary-hover-bg
+                    text-button-secondary-text
+                    transition-all
+                    duration-300
+                    ease-out
+                    active:scale-95
+                  "
+                >
+                  <HiOutlineViewList size={22} />
+                </button>
+                <AnimatedThemeToggler
+                  duration={500}
+                  className="
+                    flex
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-border-button-secondary-hover-border
+                    bg-button-secondary-hover-bg
+                    text-button-secondary-text
+                    transition-all
+                    duration-300
+                    ease-out
+                    cursor-pointer
+                    active:scale-95
+                  "
+                />
+              </div>
+              <div
+                className={`
+                absolute
+                left-4
+                w-[93%]
+                overflow-hidden
+                transition-all
+                duration-500
+                ease-in-out
+                ${
+                  openMenu
+                    ? `
+                      top-12
+                      max-h-96
+                      mt-2
+                      rounded-xl
+                      border
+                      border-[#6e5cb836]
+                      bg-card/80
+                      backdrop-blur-2xl
+                      shadow-lg
+                      divide-y
+                      divide-border
+                    `
+                    : `
+                      top-12
+                      max-h-0
+                      border-0
+                      bg-transparent
+                      shadow-none
+                    `
+                }
+              `}
+              >
+              {links.map((link, index) => (
+                <div
+                  key={link.href}
+                  className={`
+                    cursor-pointer
+                    p-3
+                    transition-colors
+                    duration-300
+                    active:bg-brand-middle/30
+                    ${
+                      index % 2 === 0
+                        ? "bg-brand-middle/8"
+                        : "bg-brand-middle/10"
+                    }
+                  `}
+                >
+                  <a
+                    href={link.href}
+                    className="
+                      block
+                      text-md
+                      font-medium
+                      text-button-secondary-text
+                      transition-colors
+                      duration-300
+                    "
+                  >
+                    {link.label}
+                  </a>
+                </div>
+              ))}
+          </div>
+        </div>
+      </header>
       <header
         className="
           fixed
@@ -57,7 +216,7 @@ export default function Header() {
           left-1/2
           -translate-x-1/2
           z-50
-          flex
+          hidden
           h-14
           w-[78%]
           max-w-6xl
@@ -69,7 +228,7 @@ export default function Header() {
           border-[#6e5cb836]
           px-6
           shadow-[0_10px_40px_var(--header-shadow)]
-
+          md:flex
           before:absolute
           before:inset-0
           before:rounded-full
@@ -98,7 +257,7 @@ export default function Header() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  onClick={() => setActiveLink(item.label)}
+                  
                 className={`
                   relative
                   cursor-pointer

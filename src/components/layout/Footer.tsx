@@ -50,7 +50,7 @@ export default function Footer() {
             <motion.span
             animate={{
                 rotate: [0, 180, 360],
-                opacity: [1, 1, 0.4],
+                opacity: [0.4, 1, 0.4],
             }}
             transition={{
                 duration: 6,
@@ -65,7 +65,7 @@ export default function Footer() {
             <motion.span
             animate={{
                 scale: [1, 1.3, 1],
-                opacity: [0.3, 0.8, 0.3],
+                opacity: [0.3, 1, 0.3],
             }}
             transition={{
                 duration: 3,
