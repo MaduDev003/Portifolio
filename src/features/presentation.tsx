@@ -16,12 +16,28 @@ export default function Presentation() {
       className="
         flex
         min-h-screen
+        flex-col-reverse
         items-center
-        mb-10
+        mb-25
         xl:px-34
+        lg:flex-row
+        sm:px-8
+        md:gap-6
+        sm:gap-20
       "
     >
-      <div className="flex max-w-160 flex-1 flex-col">
+      <div
+  className="
+    flex
+    flex-1
+    flex-col
+    max-w-160
+    items-center
+    justify-center
+    lg:items-start
+    lg:justify-start
+  "
+>
         <div 
           className="
             inline-flex 
@@ -41,27 +57,27 @@ export default function Presentation() {
             Olá, eu sou
           </p>
         </div>
-
-        <h1
-          className="
-            mt-1
-            font-heading
-            text-card-foreground
-            text-[5rem]
-            font-black
-            leading-[0.9]
-            md:text-[5.8rem]
-            lg:text-[6.4rem]
-            xl:text-[6.8rem]
-          "
-        >
-          Maria
-          <br />
-          Eduarda
-        </h1>
+<h1
+  className="
+    lg:mt-1
+    mt-4
+    font-heading
+    text-card-foreground
+    text-[3.5rem]
+    font-black
+    leading-[0.9]
+    sm:text-[4rem]
+    md:text-[5rem]
+    lg:text-[6.4rem]
+    xl:text-[6.8rem]
+  "
+>
+  <span className="lg:block lg:mr-0 mr-2">Maria</span>
+  <span className="lg:block">Eduarda</span>
+</h1>
 
         <div className="mt-5 flex items-center gap-4">
-          <div className="h-px w-8 bg-neutral-300" />
+        <div className="hidden h-px w-8 bg-neutral-300 lg:block" />
             <span
               className="
                 bg-linear-to-r
@@ -170,15 +186,22 @@ export default function Presentation() {
       </div>
 
    <div
-      className="
-        relative
-        flex
-        flex-1
-        max-w-160
-        items-center
-        justify-center
-        overflow-hidden
-      "
+className="
+  relative
+  flex
+  flex-1
+  w-full
+  lg:max-w-135
+  items-center
+  justify-center
+          lg:mb-0
+        mb-15
+  overflow-hidden
+  mt-20
+  max-w-65
+  md:max-w-105
+  lg:mt-0
+"
     >
       <InteractiveGridPattern 
         squaresClassName="
@@ -201,8 +224,10 @@ export default function Presentation() {
       <div
       className="
         absolute
-        top-30
-        right-148
+        lg:top-30
+        top-20
+        right-145
+        
         z-20
         w-50
         rounded-xl
@@ -213,6 +238,8 @@ export default function Presentation() {
         shadow-lg
         backdrop-blur-md
         pointer-events-none
+        hidden
+        md:block
       "
     >
       <p className="text-[14px] font-medium text-muted-foreground">
@@ -238,8 +265,10 @@ export default function Presentation() {
     <div
       className="
         absolute
-        bottom-20
-        right-20
+        md:bottom-43
+        md:right-30
+        lg:right-30
+        lg:bottom-16
         z-20
         w-60
         rounded-xl
@@ -247,6 +276,8 @@ export default function Presentation() {
         border-border
         bg-card/80
         p-4
+        hidden
+        md:block
         shadow-lg
         backdrop-blur-xl
         pointer-events-none
