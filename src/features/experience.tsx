@@ -30,6 +30,7 @@ export default function Experience() {
         xl:px-34
       "
     >
+        
       <div
         className="
           pointer-events-none
@@ -44,29 +45,29 @@ export default function Experience() {
         }}
       />
 
-     <div
-        className="
-          pointer-events-none
-          absolute
-          inset-x-0
-          top-0
-          h-px
-          bg-linear-to-r
-          from-brand-middle
-          to-accent
-        "
-      />
-
-      <div
+        <div
         className="
           pointer-events-none
           absolute
           inset-x-0
           bottom-0
-          h-px
+          h-0.5
            bg-linear-to-r
           from-brand-middle
           to-accent
+        "
+      />
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-x-0
+          top-0
+          z-50
+          h-0.5
+          bg-linear-to-r
+                from-brand-middle
+                to-accent
         "
       />
 

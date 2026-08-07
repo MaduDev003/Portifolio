@@ -32,18 +32,6 @@ export default function AboutMe() {
         }}
       />
 
-       <div
-        className="
-          pointer-events-none
-          absolute
-          inset-x-0
-          top-0
-          h-px
-          bg-linear-to-r
-          from-brand-middle
-          to-accent
-        "
-      />
 
       <div
         className="
@@ -51,13 +39,25 @@ export default function AboutMe() {
           absolute
           inset-x-0
           bottom-0
-          h-px
+          h-0.5
            bg-linear-to-r
           from-brand-middle
           to-accent
         "
       />
-
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-x-0
+          top-0
+          z-50
+          h-0.5
+          bg-linear-to-r
+                from-brand-middle
+                to-accent
+        "
+      />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div
@@ -110,8 +110,6 @@ export default function AboutMe() {
           </h2>
         </div>
 
-
-        {/* Cards */}
         <div
           className="
             mt-16

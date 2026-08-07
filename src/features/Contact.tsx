@@ -57,24 +57,26 @@ export default function Contact() {
         }}
       />
 
-      <div
+       <div
         className="
+          pointer-events-none
           absolute
           inset-x-0
-          top-0
-          h-px
-          bg-linear-to-r
+          bottom-0
+          h-0.5
+           bg-linear-to-r
           from-brand-middle
           to-accent
         "
       />
-
       <div
         className="
+          pointer-events-none
           absolute
           inset-x-0
-          bottom-0
-          h-px
+          top-0
+          z-50
+          h-0.5
           bg-linear-to-r
           from-brand-middle
           to-accent
@@ -120,19 +122,6 @@ export default function Contact() {
               to-accent
             "
           />
-
-          <h2
-            className="
-              mt-8
-              text-xl
-              font-semibold
-              text-foreground
-              md:text-2xl
-            "
-          >
-            Aberta a novas oportunidades.
-          </h2>
-
           <p
             className="
               mt-5
@@ -142,9 +131,7 @@ export default function Contact() {
               text-muted-foreground
             "
           >
-            Se você acredita que meu perfil pode contribuir com seu time ou
-            deseja conversar sobre um projeto, será um prazer conhecer mais
-            sobre a oportunidade.
+           Busco novos desafios em desenvolvimento de software, contribuindo com minha experiência em Front-End e engenharia de software.
           </p>
         </div>
 
