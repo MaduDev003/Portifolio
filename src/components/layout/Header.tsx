@@ -4,7 +4,7 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { useState } from "react";
 import { FiDownload } from "react-icons/fi";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
-import { HiOutlineViewList } from "react-icons/hi";
+import { HiOutlineViewList, HiX } from "react-icons/hi";
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -52,7 +52,7 @@ export default function Header() {
         ease-in-out
         ${
           openMenu
-            ? "h-88"
+            ? "h-109"
             : "h-15"
         }
       `}
@@ -65,6 +65,7 @@ export default function Header() {
               left-4
               right-4
               z-50
+              lg:hidden
             "
           >
             <div
@@ -99,6 +100,7 @@ export default function Header() {
                   gap-2
                 "
               >
+                  
                   <button
                   onClick={() => setOpenMenu((prev) => !prev)}
                   className="
@@ -118,7 +120,11 @@ export default function Header() {
                     active:scale-95
                   "
                 >
-                  <HiOutlineViewList size={22} />
+                 {openMenu ? (
+                    <HiX size={20}/>
+                  ) : (
+                    <HiOutlineViewList size={20} />
+                  )}
                 </button>
                 <AnimatedThemeToggler
                   duration={500}
@@ -140,73 +146,102 @@ export default function Header() {
                     active:scale-95
                   "
                 />
+            
               </div>
-              <div
-                className={`
-                absolute
-                left-4
-                w-[93%]
-                overflow-hidden
+           <div
+            className={`
+              absolute
+              left-3
+              w-[96%]
+              overflow-hidden
+              transition-all
+              duration-500
+              ease-in-out
+        ${
+          openMenu
+            ? `
+              top-12
+              max-h-96
+              mt-2
+              rounded-xl
+              border
+              border-[#6e5cb836]
+              bg-card/80
+              backdrop-blur-2xl
+              shadow-lg
+              divide-y
+              divide-border
+            `
+            : `
+              top-12
+              max-h-0
+              border-0
+              bg-transparent
+              shadow-none
+            `
+        }
+      `}
+    >
+      {links.map((link, index) => (
+        <div
+          key={link.href}
+          className={`
+            cursor-pointer
+            p-3
+            transition-colors
+            duration-300
+            active:bg-brand-middle/30
+            ${
+              index % 2 === 0
+                ? "bg-brand-middle/8"
+                : "bg-brand-middle/10"
+            }
+          `}
+        >
+          <a
+            href={link.href}
+            className="
+              block
+              text-md
+              font-medium
+              text-button-secondary-text
+              transition-colors
+              duration-300
+            "
+          >
+            {link.label}
+          </a>
+        </div>
+      ))}
+
+        <div className="p-3">
+          <a
+            href="/Maria_Eduarda_Marinho_Schwarz_CV.pdf"
+            download
+          >
+            <ShimmerButton
+              shimmerColor="rgba(255,255,255,.65)"
+              shimmerDuration="2.8s"
+              shimmerSize="0.2em"
+              background="#7d68cc"
+              borderRadius="27px"
+              className="
+                h-10
+                w-full
+                gap-2
+                text-sm
+                font-medium
+                text-white
                 transition-all
-                duration-500
-                ease-in-out
-                ${
-                  openMenu
-                    ? `
-                      top-12
-                      max-h-96
-                      mt-2
-                      rounded-xl
-                      border
-                      border-[#6e5cb836]
-                      bg-card/80
-                      backdrop-blur-2xl
-                      shadow-lg
-                      divide-y
-                      divide-border
-                    `
-                    : `
-                      top-12
-                      max-h-0
-                      border-0
-                      bg-transparent
-                      shadow-none
-                    `
-                }
-              `}
-              >
-              {links.map((link, index) => (
-                <div
-                  key={link.href}
-                  className={`
-                    cursor-pointer
-                    p-3
-                    transition-colors
-                    duration-300
-                    active:bg-brand-middle/30
-                    ${
-                      index % 2 === 0
-                        ? "bg-brand-middle/8"
-                        : "bg-brand-middle/10"
-                    }
-                  `}
-                >
-                  <a
-                    href={link.href}
-                    className="
-                      block
-                      text-md
-                      font-medium
-                      text-button-secondary-text
-                      transition-colors
-                      duration-300
-                    "
-                  >
-                    {link.label}
-                  </a>
-                </div>
-              ))}
-          </div>
+                duration-300
+              "
+            >
+              <FiDownload size={18} />
+              Currículo
+            </ShimmerButton>
+          </a>
+        </div>
+      </div>
         </div>
       </header>
       <header
@@ -228,7 +263,7 @@ export default function Header() {
           border-[#6e5cb836]
           px-6
           shadow-[0_10px_40px_var(--header-shadow)]
-          md:flex
+          lg:flex
           before:absolute
           before:inset-0
           before:rounded-full
