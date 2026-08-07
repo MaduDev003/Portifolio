@@ -1,0 +1,156 @@
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { FiDownload } from "react-icons/fi";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+
+interface Link {
+  label: string;
+  href: string;
+}
+
+interface MobileDesktopProps {
+  links: Link[];
+}
+
+export default function MobileDesktop({
+  links,
+}: MobileDesktopProps) {
+  return (
+    <header
+      className="
+        fixed
+        top-1
+        left-1/2
+        -translate-x-1/2
+        z-50
+        flex
+        h-14
+        w-[78%]
+        max-w-6xl
+        items-center
+        justify-between
+        rounded-full
+        border
+        border-[#6e5cb836]
+        bg-card
+        px-6
+        shadow-[0_10px_40px_var(--header-shadow)]
+      "
+    >
+      <div
+        className="
+          font-heading
+          text-lg
+          font-semibold
+          text-foreground
+        "
+      >
+        Madu.
+      </div>
+
+      <nav className="relative">
+        <ul className="flex items-center gap-9">
+          {links.map((item) => (
+            <li key={item.href}>
+              <a
+                href={item.href}
+                className="
+                  relative
+                  cursor-pointer
+                  text-sm
+                  font-medium
+                  text-muted-foreground
+                  transition-colors
+                  duration-300
+                  after:absolute
+                  after:left-0
+                  after:-bottom-1
+                  after:h-0.5
+                  after:w-full
+                  after:origin-center
+                  after:scale-x-0
+                  after:rounded-full
+                  after:bg-linear-to-r
+                  after:from-brand-middle
+                  after:to-accent
+                  after:transition-transform
+                  after:duration-300
+                  after:ease-out
+                  hover:text-brand-middle
+                  hover:after:scale-x-100
+                "
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div
+        className="
+          relative
+          flex
+          items-center
+          gap-2
+        "
+      >
+        <a
+          href="/Maria_Eduarda_Marinho_Schwarz_CV.pdf"
+          download
+        >
+          <ShimmerButton
+            shimmerColor="rgba(255,255,255,.65)"
+            shimmerDuration="2.8s"
+            shimmerSize="0.2em"
+            background="#7d68cc"
+            borderRadius="27px"
+            className="
+              h-10
+              gap-2
+              px-7
+              text-sm
+              font-medium
+              text-white
+              transition-all
+              duration-300
+              hover:-translate-y-0.5
+            "
+          >
+            <FiDownload size={18} />
+            Currículo
+          </ShimmerButton>
+        </a>
+
+        <div
+          className="
+            flex
+            h-9
+            w-9
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-button-secondary-border
+            bg-button-secondary-bg
+            text-button-secondary-text
+            shadow-[0_2px_8px_rgba(15,23,42,0.06)]
+            transition-all
+            duration-300
+            ease-out
+            hover:-translate-y-0.5
+            hover:scale-[1.03]
+            hover:border-button-secondary-hover-border
+            hover:bg-button-secondary-hover-bg
+            hover:text-button-secondary-hover-text
+            hover:shadow-[0_8px_22px_rgba(109,94,247,.14)]
+          "
+        >
+          <AnimatedThemeToggler
+            duration={600}
+            className="cursor-pointer"
+          />
+        </div>
+      </div>
+    </header>
+  );
+}
