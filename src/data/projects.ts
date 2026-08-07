@@ -13,8 +13,8 @@ export const projects = [
       video: "/videos/lumicine.mp4",
       image: lumicineImage.src,
       technologies: ["React", "Next.js", "TypeScript", "TailwindCSS"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/MaduDev003/LumiCine",
+      demo: "https://lumi-cine-tau.vercel.app/",
     },
     {
       title: "BotsInAction",
@@ -34,8 +34,8 @@ export const projects = [
       video: "/videos/skycast.mp4",
       image: skycastImage.src,
       technologies: ["HTML", "CSS", "JavaScript", "API"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/MaduDev003/Skycast",
+      demo: "https://sky-cast-ruby.vercel.app/",
     },
     {
       title: "Massa Bella",
@@ -45,8 +45,8 @@ export const projects = [
       video: "/videos/massaBella.mp4",
       image: massaBellaImage.src,
       technologies: ["HTML", "CSS", "JavaScript", "API"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/MaduDev003/MassaBella",
+      demo: "https://massa-bella.vercel.app/",
     },
     
   ];
