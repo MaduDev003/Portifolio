@@ -1,7 +1,8 @@
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { FiDownload } from "react-icons/fi";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
-
+import { motion } from "framer-motion";
+import { PiStarFourFill } from "react-icons/pi";
 interface Link {
   label: string;
   href: string;
@@ -24,7 +25,7 @@ export default function MobileDesktop({
         z-50
         flex
         h-14
-        w-[78%]
+        w-[65%]
         max-w-6xl
         items-center
         justify-between
@@ -32,19 +33,42 @@ export default function MobileDesktop({
         border
         border-[#6e5cb836]
         bg-card
-        px-6
+        pr-2
         shadow-[0_10px_40px_var(--header-shadow)]
       "
     >
+
+
       <div
         className="
-          font-heading
-          text-lg
-          font-semibold
-          text-foreground
+          flex
+          h-14
+          w-14
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-accent/20
+          bg-brand-middle/10
         "
       >
-        Madu.
+      <span
+        className="
+          px-1
+          font-heading
+          text-2xl
+          font-black
+          tracking-tigher
+          bg-linear-to-br
+          from-brand-middle
+          to-accent
+          bg-clip-text
+          text-transparent
+        "
+      >
+      
+          MS
+        </span>
       </div>
 
       <nav className="relative">
@@ -94,32 +118,7 @@ export default function MobileDesktop({
           gap-2
         "
       >
-        <a
-          href="/Maria_Eduarda_Marinho_Schwarz_CV.pdf"
-          download
-        >
-          <ShimmerButton
-            shimmerColor="rgba(255,255,255,.65)"
-            shimmerDuration="2.8s"
-            shimmerSize="0.2em"
-            background="#7d68cc"
-            borderRadius="27px"
-            className="
-              h-10
-              gap-2
-              px-7
-              text-sm
-              font-medium
-              text-white
-              transition-all
-              duration-300
-              hover:-translate-y-0.5
-            "
-          >
-            <FiDownload size={18} />
-            Currículo
-          </ShimmerButton>
-        </a>
+      
 
         <div
           className="
@@ -150,6 +149,32 @@ export default function MobileDesktop({
             className="cursor-pointer"
           />
         </div>
+          <a
+          href="/Maria_Eduarda_Marinho_Schwarz_CV.pdf"
+          download
+        >
+          <ShimmerButton
+            shimmerColor="rgba(255,255,255,.65)"
+            shimmerDuration="2.8s"
+            shimmerSize="0.2em"
+            background="#7d68cc"
+            borderRadius="27px"
+            className="
+              h-10
+              gap-2
+              px-7
+              text-sm
+              font-medium
+              text-white
+              transition-all
+              duration-300
+              hover:-translate-y-0.5
+            "
+          >
+            <FiDownload size={18} />
+            Currículo
+          </ShimmerButton>
+        </a>
       </div>
     </header>
   );

@@ -42,20 +42,41 @@ export default function MobileHeader({
           border
           border-[#6e5cb836]
           bg-card
-          px-5
+          pr-2
           shadow-[0_10px_40px_var(--header-shadow)]
         "
       >
-        <div
-          className="
-            font-heading
-            text-lg
-            font-semibold
-            text-foreground
-          "
-        >
-          Madu.
-        </div>
+             <div
+        className="
+          flex
+          h-14
+          w-14
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-accent/20
+          bg-brand-middle/10
+        "
+      >
+      <span
+        className="
+          px-1
+          font-heading
+          text-2xl
+          font-black
+          tracking-tigher
+          bg-linear-to-br
+          from-brand-middle
+          to-accent
+          bg-clip-text
+          text-transparent
+        "
+      >
+      
+          MS
+        </span>
+      </div>
 
         <div
           className="
