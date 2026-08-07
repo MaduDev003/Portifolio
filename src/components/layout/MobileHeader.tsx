@@ -74,6 +74,7 @@ export default function MobileHeader({
               justify-center
               rounded-full
               border
+              cursor-pointer
               border-border-button-secondary-hover-border
               bg-button-secondary-hover-bg
               text-button-secondary-text
@@ -191,6 +192,7 @@ export default function MobileHeader({
                 borderRadius="27px"
                 className="
                   h-10
+                  cursor-pointer
                   w-full
                   gap-2
                   text-sm
