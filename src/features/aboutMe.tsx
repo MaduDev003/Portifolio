@@ -15,6 +15,7 @@ export default function AboutMe() {
         border-border/40
         bg-card/40
         py-20
+  
         xl:px-34
       "
     >
@@ -112,6 +113,9 @@ export default function AboutMe() {
         <div
           className="
             mt-16
+            px-12
+            md:px-16
+            lg:px-0
             grid
             gap-8
             lg:grid-cols-3
