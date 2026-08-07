@@ -57,24 +57,24 @@ export default function Presentation() {
             Olá, eu sou
           </p>
         </div>
-<h1
-  className="
-    lg:mt-1
-    mt-4
-    font-heading
-    text-card-foreground
-    text-[3.5rem]
-    font-black
-    leading-[0.9]
-    sm:text-[4rem]
-    md:text-[5rem]
-    lg:text-[6.4rem]
-    xl:text-[6.8rem]
-  "
->
-  <span className="lg:block lg:mr-0 mr-2">Maria</span>
-  <span className="lg:block">Eduarda</span>
-</h1>
+            <h1
+              className="
+                lg:mt-1
+                mt-4
+                font-heading
+                text-card-foreground
+                text-[3rem]
+                font-black
+                leading-[0.9]
+                sm:text-[2rem]
+                md:text-[5rem]
+                lg:text-[6.4rem]
+                xl:text-[6.8rem]
+              "
+            >
+              <span className="lg:block lg:mr-0 mr-2">Maria</span>
+              <span className="lg:block">Eduarda</span>
+            </h1>
 
         <div className="mt-5 flex items-center gap-4">
         <div className="hidden h-px w-8 bg-neutral-300 lg:block" />
@@ -93,12 +93,22 @@ export default function Presentation() {
           </span>
         </div>
 
-        <p className="mt-5 max-w-130 text-lg leading-8 text-secondary-font">
-         Apaixonada por tecnologia, design e experiências digitais. Gosto de aprender continuamente 
-         e explorar novas formas de desenvolver interfaces modernas, acessíveis e intuitivas.
-        </p>
-
-        <div className="mt-8 flex items-center gap-5">
+       <p
+  className="
+    mt-5
+    max-w-130
+    px-4
+    text-lg
+    leading-8
+    text-secondary-font
+    sm:px-2
+    sm:text-md
+  "
+>
+  Apaixonada por tecnologia, design e experiências digitais. Gosto de aprender continuamente
+  e explorar novas formas de desenvolver interfaces modernas, acessíveis e intuitivas.
+</p>
+        <div className="mt-8 flex flex-col items-center gap-5 md:flex-row">
         <ShimmerButton
          onClick={() => {
             document
@@ -186,22 +196,22 @@ export default function Presentation() {
       </div>
 
    <div
-className="
-  relative
-  flex
-  flex-1
-  w-full
-  lg:max-w-135
-  items-center
-  justify-center
-          lg:mb-0
+      className="
+        relative
+        flex
+        flex-1
+        w-full
+        lg:max-w-135
+        items-center
+        justify-center
+        lg:mb-0
         mb-15
-  overflow-hidden
-  mt-20
-  max-w-65
-  md:max-w-105
-  lg:mt-0
-"
+        overflow-hidden
+        mt-20
+        max-w-65
+        md:max-w-105
+        lg:mt-0
+      "
     >
       <InteractiveGridPattern 
         squaresClassName="
@@ -224,10 +234,8 @@ className="
       <div
       className="
         absolute
-        lg:top-30
         top-20
-        right-145
-        
+        right-130
         z-20
         w-50
         rounded-xl
@@ -239,7 +247,7 @@ className="
         backdrop-blur-md
         pointer-events-none
         hidden
-        md:block
+        lg:block
       "
     >
       <p className="text-[14px] font-medium text-muted-foreground">
@@ -265,10 +273,8 @@ className="
     <div
       className="
         absolute
-        md:bottom-43
-        md:right-30
-        lg:right-30
-        lg:bottom-16
+        right-30
+        bottom-8
         z-20
         w-60
         rounded-xl
@@ -277,7 +283,7 @@ className="
         bg-card/80
         p-4
         hidden
-        md:block
+        lg:block
         shadow-lg
         backdrop-blur-xl
         pointer-events-none
