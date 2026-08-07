@@ -150,6 +150,7 @@ export default function MobileHeader({
           {links.map((link, index) => (
             <div
               key={link.href}
+              onClick={() => setOpenMenu(false)}
               className={`
                 cursor-pointer
                 p-3
