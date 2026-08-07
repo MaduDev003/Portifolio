@@ -75,7 +75,6 @@ export default function Contact() {
           absolute
           inset-x-0
           top-0
-          z-50
           h-0.5
           bg-linear-to-r
           from-brand-middle
