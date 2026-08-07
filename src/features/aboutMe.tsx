@@ -172,7 +172,7 @@ export default function AboutMe() {
                       transition-all
                       duration-300
                       group-hover:text-brand-middle/90
-                      group-hover:bg-accent/30
+                      group-hover:bg-accent/40
                     "
                   >
                     <Icon size={24} />

@@ -138,10 +138,10 @@ export default function Contact() {
           className="
             mt-16
             grid
-            gap-6
-            xl:grid-cols-3
-             px-12
-            md:px-16
+            gap-4
+            px-4
+            sm:px-8
+            lg:grid-cols-3
             lg:px-0
           "
         >
@@ -157,13 +157,16 @@ export default function Contact() {
                 className="
                   group
                   relative
+                  flex
+                  items-center
+                  gap-4
                   overflow-hidden
                   rounded-2xl
                   border
                   border-brand-middle/20
                   bg-brand-middle/15
-                  py-6
-                  px-3
+                  py-10
+                  px-6
                   transition-all
                   duration-300
                   backdrop-blur-xl
@@ -185,34 +188,34 @@ export default function Contact() {
                   "
                 />
 
-                <div className="relative z-10">
-                  <div
-                    className="
-                      mb-5
-                      flex
-                      size-12
-                      items-center
-                      justify-center
-                      rounded-xl
-                      bg-brand-middle/10
-                      text-brand-middle
-                      transition-all
-                      duration-300
-                      group-hover:text-brand-middle/90
-                      group-hover:bg-accent/30
-                    "
-                  >
-                    <Icon size={22} />
-                  </div>
+                <div
+                  className="
+                    relative
+                    z-10
+                    flex
+                    size-11
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-brand-middle/10
+                    text-brand-middle
+                     group-hover:text-brand-middle/90
+                      group-hover:bg-accent/40
+                  "
+                >
+                  <Icon size={20} />
+                </div>
 
-                  <h3 className="text-lg font-semibold">
+                <div className="relative z-10 min-w-0">
+                  <h3 className="text-xl font-semibold">
                     {contact.title}
                   </h3>
 
                   <p
                     className="
-                      mt-2
-                      text-sm
+                      mt-1
+                      text-md
                       text-muted-foreground
                     "
                   >
@@ -221,12 +224,12 @@ export default function Contact() {
 
                   <p
                     className="
-                      mt-5
+                      mt-1
+                      truncate
+                      text-sm
                       font-medium
                       text-brand-middle
-                      transition-colors
                       group-hover:text-accent
-                      
                     "
                   >
                     {contact.value}
