@@ -56,8 +56,7 @@ export default function Skills() {
           </h2>
         </div>
 
-        {/* Cards */}
-        <div className="mt-20 grid gap-8 lg:grid-cols-2">
+        <div className="mt-20 grid gap-8 lg:grid-cols-2  lg:px-0 px-12 md:px-16">
           {skillCategories.map((category) => {
             const CategoryIcon = category.icon;
 
