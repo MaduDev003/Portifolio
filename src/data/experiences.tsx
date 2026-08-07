@@ -22,7 +22,7 @@ export const experiences = [
   "Mantive e evoluí um ecossistema de 11 microsserviços responsáveis pelo fechamento contábil mensal.",
   "Projetei testes automatizados com Jest e Cypress, elevando a cobertura para 90% e garantindo aprovação nas pipelines do Azure DevOps.",
   "Resolvi incidentes críticos analisando Front-End, BFF e Back-End de forma integrada.",
-  "Colaborei com equipes multidisciplinares e realizei mentoria técnica para profissionais em início de carreira."
+  "Colaborei com equipes e realizei mentoria técnica para profissional em início de carreira."
 ],
   side: "left",
 },

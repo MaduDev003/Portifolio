@@ -7,42 +7,44 @@
 
 
 :root {
-  --background: #FFFFFF;
+  --background: rgb(242, 240, 245);
   --foreground: #18181B;
 
-  --brand-primary: #7C5CFC;
-  --brand-end: #9365ff;
-  --brand-hover: rgb(153, 70, 247);
-  --brand-text: #8242e8;
+  --brand-primary: #6D4AFF;
+  --brand-end: #9B6DFF;
+  --brand-hover: #5B3FD6;
+  --brand-text: #6D3FD9;
 
-  --card: rgb(235, 232, 245);
+  --card: rgb(233, 222, 247);;
   --card-foreground: #18181B;
 
-  --secondary-font-color: #4F4F63;
+  --accent: #c80de0;
+  --accent-soft: rgba(192, 38, 211, 0.12);
 
-  --brand-middle: #784acf;
+  --secondary-font-color: #52525B;
 
-  --button-secondary-bg: rgba(124, 92, 252, 0.12);
-  --button-secondary-border: rgba(124, 92, 252, 0.342);
+  --brand-middle: #7C5CFC;
+
+  --button-secondary-bg: rgba(124, 92, 252, 0.10);
+  --button-secondary-border: rgba(124, 92, 252, 0.25);
   --button-secondary-text: #5B3FD6;
 
-  --button-secondary-hover-bg: rgba(124, 92, 252, 0.18);
-  --button-secondary-hover-border: #7a58f3;
-  --button-secondary-hover-text: #6725d1;
+  --button-secondary-hover-bg: rgba(124, 92, 252, 0.16);
+  --button-secondary-hover-border: #7C5CFC;
+  --button-secondary-hover-text: #4C1D95;
 
-  --muted: #705bc2;
-  --muted-foreground: #503e5f;
+  --muted: #8B5CF6;
+  --muted-foreground: #52525B;
 
-  --border: rgba(124, 92, 252, 0.14);
+  --border: rgba(124, 92, 252, 0.16);
 
   --ring: #7C5CFC;
 
-  --header-bg: rgba(255, 255, 255, 0.82);
-  --header-border: rgba(124, 92, 252, 0.16);
-  --header-highlight: rgba(255, 255, 255, 0.96);
-  --header-shadow: rgba(124, 92, 252, 0.08);
+  --header-bg: rgba(246, 243, 250, 0.82);
+  --header-border: rgba(124, 92, 252, 0.18);
+  --header-highlight: rgba(255, 255, 255, 0.95);
+  --header-shadow: rgba(124, 92, 252, 0.12);
 }
-
 
 
 .dark {
