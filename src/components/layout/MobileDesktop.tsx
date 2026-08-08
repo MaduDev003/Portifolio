@@ -1,8 +1,7 @@
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { FiDownload } from "react-icons/fi";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
-import { motion } from "framer-motion";
-import { PiStarFourFill } from "react-icons/pi";
+
 interface Link {
   label: string;
   href: string;

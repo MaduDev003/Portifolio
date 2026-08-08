@@ -15,7 +15,11 @@ export default function Experience() {
     offset: ["start center", "end end"],
   });
 
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const lineHeight = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", "100%"],
+  );
 
   return (
     <section
@@ -30,7 +34,6 @@ export default function Experience() {
         xl:px-34
       "
     >
-        
       <div
         className="
           pointer-events-none
@@ -45,18 +48,19 @@ export default function Experience() {
         }}
       />
 
-        <div
+      <div
         className="
           pointer-events-none
           absolute
           inset-x-0
           bottom-0
           h-0.5
-           bg-linear-to-r
+          bg-linear-to-r
           from-brand-middle
           to-accent
         "
       />
+
       <div
         className="
           pointer-events-none
@@ -70,19 +74,19 @@ export default function Experience() {
         "
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-7xl lg:px-0 md:px-10 ">
         <div
           className="
-            mb-25
+            mb-20
             flex
             w-full
             flex-col
             items-center
             justify-center
             text-center
+            md:mb-25
           "
         >
-          <div className="flex flex-col items-center text-center">
           <span
             className="
               font-heading
@@ -99,18 +103,6 @@ export default function Experience() {
           >
             Experiencia
           </span>
-          <div
-              className="
-                mt-5
-                h-1
-                rounded-full
-                w-20
-                bg-linear-to-r
-                from-brand-middle
-                to-accent
-              "
-            />
-        </div>
 
           <div
             className="
@@ -121,12 +113,9 @@ export default function Experience() {
               bg-linear-to-r
               from-brand-middle
               to-accent
-              bg-clip-text
-              text-transparent
             "
           />
         </div>
-
 
         <div
           ref={lineRef}
@@ -134,7 +123,14 @@ export default function Experience() {
             relative
             flex
             flex-col
-            gap-40
+            gap-16
+            px-4
+            pl-14
+            sm:px-6
+            md:px-8
+            lg:gap-40
+            lg:px-2
+            lg:pl-0
           "
         >
           <div
@@ -142,12 +138,15 @@ export default function Experience() {
               absolute
               top-0
               bottom-0
-              left-1/2
-              w-2
-              -translate-x-1/2
+              left-5
+              md:left-3
+              w-1
               overflow-hidden
               rounded-full
               bg-brand-soft
+              lg:left-1/2
+              lg:w-2
+              lg:-translate-x-1/2
             "
           >
             <motion.div
@@ -166,41 +165,62 @@ export default function Experience() {
             />
           </div>
 
-
           {experiences.map((experience, index) => (
             <div
               key={index}
               className="
                 relative
                 grid
-                grid-cols-[1fr_auto_1fr]
+                w-full
+                grid-cols-1
                 items-start
+                lg:grid-cols-[1fr_auto_1fr]
               "
             >
+              <div className="flex w-full justify-center lg:hidden">
+                <div className="w-full max-w-2xl">
+                  <ExperienceCard experience={experience} />
+                </div>
+              </div>
+
               <div
                 className={
                   experience.side === "left"
-                    ? "flex  pr-14"
-                    : ""
+                    ? "hidden pr-14 lg:flex"
+                    : "hidden lg:block"
                 }
               >
                 {experience.side === "left" && (
                   <ExperienceCard experience={experience} />
                 )}
               </div>
-              
-              <TimelinePoint />
+
+              <div
+                className="
+                  absolute
+                  left-[-53]
+                  md:left-[-14]
+                  lg:left-3
+                  top-0
+                  md:-translate-x-1/2
+                  lg:static
+                  lg:translate-x-1
+                "
+              >
+                <TimelinePoint />
+              </div>
+
               <div
                 className={
                   experience.side === "right"
-                    ? "flex justify-start pl-14"
-                    : ""
+                    ? "hidden pl-14 lg:flex"
+                    : "hidden lg:block"
                 }
               >
                 {experience.side === "right" && (
                   <ExperienceCard experience={experience} />
                 )}
-             </div>
+              </div>
             </div>
           ))}
         </div>

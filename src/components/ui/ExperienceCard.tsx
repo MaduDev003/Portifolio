@@ -19,34 +19,37 @@ export default function ExperienceCard({
   return (
     <div
       className="
-      group
-        w-115
-        min-h-170
-        rounded-3xl
-        p-10
+        group
+        w-full
+        min-w-0
+        md:ml-10
+        max-w-full
+        overflow-hidden
+        rounded-2xl
         border
-        border-brand-middle/15
-        bg-card
-        shadow-[0_4px_14px_rgba(15,23,42,0.14)]
-        transition-all
-        duration-300
-        hover:-translate-y-3
+        border-border/60
+        bg-card/80
+        p-5
+        shadow-lg
+        backdrop-blur-sm
+        sm:p-6
+        md:max-w-xl
         hover:border-brand-middle/40
+        transition-all
+       hover:-translate-y-2
+        duration-300
       "
     >
-      <div
-        className="
-          mb-6
-          flex
-          flex-col
-          items-start
-          gap-2
-        "
-      >
+      <div className="mb-5 min-w-0">
         <h3
           className="
-            text-2xl
+            wrap-break-word
+            font-heading
+            text-xl
             font-bold
+            leading-tight
+            text-foreground
+            sm:text-2xl
           "
         >
           {experience.title}
@@ -54,6 +57,8 @@ export default function ExperienceCard({
 
         <p
           className="
+            mt-2
+            wrap-break-word
             text-lg
             font-medium
             text-brand-middle
@@ -67,50 +72,53 @@ export default function ExperienceCard({
         className="
           mb-6
           flex
-          justify-between
-          gap-4
+          flex-col
+          gap-3
+          text-sm
+          text-secondary-font
+          sm:flex-row
+          sm:flex-wrap
+          sm:justify-between
+          sm:gap-4
         "
       >
-        <span
-          className="
-            whitespace-nowrap
-            text-sm
-            text-secondary-font
-          "
-        >
-          <MdOutlineCalendarToday className="mr-2 inline-block" />
-          {experience.period}
+        <span className="flex min-w-0 items-start gap-2">
+          <MdOutlineCalendarToday className="mt-0.5 size-4 shrink-0" />
+
+          <span className="wrap-break-word">
+            {experience.period}
+          </span>
         </span>
 
-        <span
-          className="
-            whitespace-nowrap
-            text-sm
-            text-secondary-font
-          "
-        >
-          <MdLocationOn className="mr-2 inline-block" />
-          {experience.location}
+        <span className="flex min-w-0 items-start gap-2">
+          <MdLocationOn className="mt-0.5 size-4 shrink-0" />
+
+          <span className="wrap-break-word">
+            {experience.location}
+          </span>
         </span>
       </div>
 
       <p
         className="
           mb-8
-          text-base
+          wrap-break-word
+          text-sm
           leading-relaxed
           text-muted-foreground
+          sm:text-base
         "
       >
         {experience.description}
       </p>
 
-      <div className="mt-8">
+      <div className="mt-8 min-w-0">
         <span
           className="
-            text-md
+            text-base
             font-semibold
             text-brand-middle
+            sm:text-md
           "
         >
           Principais conquistas:
@@ -122,6 +130,7 @@ export default function ExperienceCard({
               key={achievement}
               className="
                 flex
+                min-w-0
                 items-start
                 gap-3
                 text-sm
@@ -139,7 +148,9 @@ export default function ExperienceCard({
                 "
               />
 
-              {achievement}
+              <span className="min-w-0 wrap-break-word">
+                {achievement}
+              </span>
             </li>
           ))}
         </ul>
@@ -149,6 +160,7 @@ export default function ExperienceCard({
         className="
           mt-6
           flex
+          min-w-0
           flex-wrap
           gap-2
         "
@@ -157,7 +169,6 @@ export default function ExperienceCard({
           <div
             key={tech}
             className="
-            
               relative
               overflow-hidden
               rounded-full
@@ -170,23 +181,25 @@ export default function ExperienceCard({
               text-brand-middle
             "
           >
-            <span>{tech}</span>
+            <span className="relative z-10">
+              {tech}
+            </span>
 
             <span
-                className="
-                  pointer-events-none
-                  absolute
-                  inset-0
-                  -translate-x-full
-                  bg-linear-to-r
-                  from-transparent
-                  via-brand-middle/20
-                  to-accent/30
-                  transition-transform
-                  duration-700
-                  group-hover:translate-x-full
-                "
-              />
+              className="
+                pointer-events-none
+                absolute
+                inset-0
+                -translate-x-full
+                bg-linear-to-r
+                from-transparent
+                via-brand-middle/30
+                to-accent/40
+                transition-transform
+                duration-700
+                group-hover:translate-x-full
+              "
+            />
           </div>
         ))}
       </div>
