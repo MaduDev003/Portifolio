@@ -235,7 +235,7 @@ export default function Presentation() {
       <div
       className="
         absolute
-        top-40
+        top-28
         right-130
         z-20
         w-50
