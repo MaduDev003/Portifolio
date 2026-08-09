@@ -25,5 +25,31 @@ export const experiences = [
   "Colaborei com equipes e realizei mentoria técnica para profissional em início de carreira."
 ],
   side: "left",
-}
+}, {
+    title: "Engenheira de Software",
+    company: "LumiCine",
+    period: "Projeto autoral",
+    location: "Remoto",
+    description:
+      "Desenvolvimento de uma aplicação de cinema com foco em arquitetura front-end, experiência do usuário e fluxo completo de compra de ingressos. O projeto simula uma plataforma real de reservas, integrando consumo de APIs, gerenciamento de estado, validação de formulários e persistência de dados.",
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "React Hook Form",
+      "Zod",
+      "TMDB API",
+    ],
+    achievements: [
+      "Projetei um fluxo completo de compra de ingressos, contemplando seleção de sessão, assentos, produtos, pagamento e confirmação.",
+      "Implementei gerenciamento de estado global com Zustand e persistência do checkout utilizando localStorage.",
+      "Desenvolvi formulários com React Hook Form e Zod, garantindo validação consistente dos dados.",
+      "Modelei diferentes tipos de assentos, incluindo opções padrão, acessíveis e para acompanhantes.",
+      "Integrei a aplicação à API do TMDB para consumo e apresentação de dados de filmes.",
+      "Estruturei a aplicação priorizando componentização, reutilização de código e separação de responsabilidades.",
+    ],
+    side: "right",
+  },
 ];

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { FaRegStar } from "react-icons/fa";
 
 interface ProjectCardProps {
   project: {

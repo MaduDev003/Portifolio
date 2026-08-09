@@ -4,7 +4,7 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { InteractiveGridPattern  } from "@/components/ui/interactive-grid-pattern";
 import { IoMdArrowForward } from "react-icons/io";
 import SecondaryButton from "@/src/components/ui/SecondaryButton";
-import foto from "@/src/assets/images/foto_perfil.png"
+import foto from "@/src/assets/images/fotoPerfil.png"
 
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
@@ -275,7 +275,7 @@ export default function Presentation() {
       className="
         absolute
         right-20
-        bottom-[-60]
+        bottom-[-40]
         z-20
         w-60
         rounded-xl
