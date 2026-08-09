@@ -1,11 +1,11 @@
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
-import AboutMe from "../features/AboutMe";
-import Experience from "../features/Experience";
-import Presentation from "../features/Presentation";
-import Skills from "../features/Skills";
-import Projects from "../features/Projects";
-import Contact from "../features/Contact";
+import Header from "@/src/components/layout/Header";
+import Footer from "@/src/components/layout/Footer";
+import AboutMe from "@/src/features/AboutMe";
+import Experience from "@/src/features/Experience";
+import Presentation from "@/src/features/Presentation";
+import Skills from "@/src/features/Skills";
+import Projects from "@/src/features/Projects";
+import Contact from "@/src/features/Contact";
 
 export default function Home() {
   return (
