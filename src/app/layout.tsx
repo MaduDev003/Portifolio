@@ -21,11 +21,10 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Maria Eduarda | Front-End Developer",
-  description:
-    "Portfólio de Maria Eduarda, desenvolvedora Front-End especializada em React, Next.js e TypeScript.",
-};
-
+  title: "Madu - Portifólio",
+description:
+  "Portfólio de Maria Eduarda, Engenheira de Software e desenvolvedora Front-End, com foco em React, Next.js, TypeScript e experiências digitais.",
+}
 
 export default function RootLayout({
   children,
