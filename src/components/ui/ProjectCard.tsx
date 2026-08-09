@@ -97,7 +97,7 @@ export default function ProjectCard({
                 rounded-full
                 border
                 border-accent/30
-                bg-card/80
+                bg-card/90
                 px-3
                 py-1
                 text-[12px]
@@ -111,7 +111,7 @@ export default function ProjectCard({
                   size-2
                   rounded-full
                   bg-accent
-                  animate-[pulse_0.7s_ease-in-out_infinite]
+                  animate-[pulse_0.5s_ease-in-out_infinite]
                 "
               />
               Destaque
