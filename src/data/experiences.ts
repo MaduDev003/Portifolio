@@ -27,8 +27,8 @@ export const experiences = [
   side: "left",
 }, {
     title: "Engenheira de Software",
-    company: "LumiCine",
-    period: "Projeto autoral",
+    company: "Projeto Autoral",
+    period: "Janeiro 2026 - Atualmente",
     location: "Remoto",
     description:
       "Desenvolvimento de uma aplicação de cinema com foco em arquitetura front-end, experiência do usuário e fluxo completo de compra de ingressos. O projeto simula uma plataforma real de reservas, integrando consumo de APIs, gerenciamento de estado, validação de formulários e persistência de dados.",
