@@ -103,7 +103,7 @@ export default function Skills() {
                         items-center
                         justify-center
                         rounded-2xl
-                        bg-brand-middle/10
+                        bg-brand-middle/25
                         text-brand-middle
                         transition-all
                         duration-300
@@ -159,8 +159,8 @@ export default function Skills() {
                             gap-2
                             rounded-xl
                             border
-                            border-brand-middle/15
-                            bg-brand-middle/5
+                            border-brand-middle/30
+                            bg-brand-middle/10
                             px-4
                             py-2.5
                             transition-all
