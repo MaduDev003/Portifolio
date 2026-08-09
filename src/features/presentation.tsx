@@ -4,7 +4,7 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { InteractiveGridPattern  } from "@/components/ui/interactive-grid-pattern";
 import { IoMdArrowForward } from "react-icons/io";
 import SecondaryButton from "@/src/components/ui/SecondaryButton";
-import foto from "@/src/assets/images/essa.png"
+import foto from "@/src/assets/images/foto_perfil.png"
 
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
@@ -202,10 +202,11 @@ export default function Presentation() {
         flex-1
         w-full
         lg:max-w-135
+        max-h-130
         items-center
         justify-center
         lg:mb-0
-        mb-15
+        mb-20
         overflow-hidden
         mt-20
         max-w-65
@@ -234,7 +235,7 @@ export default function Presentation() {
       <div
       className="
         absolute
-        top-20
+        top-40
         right-130
         z-20
         w-50
@@ -273,8 +274,8 @@ export default function Presentation() {
     <div
       className="
         absolute
-        right-30
-        bottom-8
+        right-20
+        bottom-[-60]
         z-20
         w-60
         rounded-xl
