@@ -27,14 +27,14 @@ export default function ExperienceCard({
         overflow-hidden
         rounded-2xl
         border
-        border-border/60
-        bg-card/80
+        bg-card/90
         p-5
         shadow-lg
         backdrop-blur-sm
         sm:p-6
         md:max-w-xl
-        hover:border-brand-middle/40
+        border-brand-middle/60
+         hover:shadow-[0_16px_34px_rgba(109,74,255,.25)]
         transition-all
        hover:-translate-y-2
         duration-300
