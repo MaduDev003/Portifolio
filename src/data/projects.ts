@@ -16,6 +16,17 @@ export const projects = [
       github: "https://github.com/MaduDev003/LumiCine",
       demo: "https://lumi-cine-tau.vercel.app/",
     },
+     {
+      title: "Madu - Portifólio",
+      contrast: true,
+      description:
+        "Dashboard de previsão do tempo consumindo API externa com interface responsiva.",
+      video: "/videos/skycast.mp4",
+      image: skycastImage.src,
+      technologies: ["HTML", "CSS", "JavaScript", "API"],
+      github: "https://github.com/MaduDev003/Skycast",
+      demo: "https://sky-cast-ruby.vercel.app/",
+    },
     {
       title: "BotsInAction",
        contrast: true,
@@ -31,7 +42,7 @@ export const projects = [
          contrast: false,
       description:
         "Dashboard de previsão do tempo consumindo API externa com interface responsiva.",
-      video: "/videos/skycast.mp4",
+      video: "/videos/skyCast.mp4",
       image: skycastImage.src,
       technologies: ["HTML", "CSS", "JavaScript", "API"],
       github: "https://github.com/MaduDev003/Skycast",
