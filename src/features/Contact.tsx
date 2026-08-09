@@ -130,7 +130,7 @@ export default function Contact() {
               text-muted-foreground
             "
           >
-           Busco novos desafios em desenvolvimento de software, contribuindo com minha experiência em Front-End e engenharia de software.
+           Se você quiser conversar sobre projetos, oportunidades ou tecnologia, será um prazer trocar uma ideia.
           </p>
         </div>
 
