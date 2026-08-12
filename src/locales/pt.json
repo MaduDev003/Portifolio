@@ -122,5 +122,21 @@
         "description": "Aplicação responsiva simulando um site de Pizza."
       }
     ]
+  },
+  "contact":{
+    "pageTitle": "Vamos conversar?",
+    "subtitle": "Se você quiser conversar sobre projetos, oportunidades ou tecnologia, será um prazer trocar uma ideia.",
+    "callToAction": "Enviar e-mail",
+    "contacts":[
+      {
+        "description": "Vamos nos conectar."
+      },
+      {
+        "description": "Conheça meus projetos."
+      },
+      {
+        "description": "Baixe meu CV."
+      }
+    ]
   }
 }

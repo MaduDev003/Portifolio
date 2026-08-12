@@ -161,7 +161,7 @@ export default function Presentation() {
             </a>
 
              <a
-                href="https://www.linkedin.com/in/maria-eduarda-schwarz/"
+                href="https://www.linkedin.com/in/mariaeduardaschwarz/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

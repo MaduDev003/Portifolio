@@ -123,5 +123,21 @@
         "description": "Responsive application simulating a pizza website."
       }
     ]
+  },
+  "contact":{
+    "pageTitle": "Let's talk",
+    "subtitle": "If you'd like to talk about projects, opportunities, or technology, I'd love to chat.",
+    "callToAction": "Send email",
+    "contacts": [
+      {
+        "description": "Let's connect."
+      },
+      {
+        "description": "Explore my projects."
+      },
+      {
+        "description": "Download my resume."
+      }
+    ]
   }
 }

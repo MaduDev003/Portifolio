@@ -1,35 +1,13 @@
-import {
-  FaGithub,
-  FaLinkedin,
-  FaFileAlt,
-} from "react-icons/fa";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
+"use client";
 
-const contacts = [
-  {
-    title: "LinkedIn",
-    description: "Vamos nos conectar.",
-    value: "linkedin.com/in/maria-eduarda-schwarz",
-    href: "https://www.linkedin.com/in/maria-eduarda-schwarz/",
-    icon: FaLinkedin,
-  },
-  {
-    title: "GitHub",
-    description: "Conheça meus projetos.",
-    value: "github.com/MaduDev003",
-    href: "https://github.com/MaduDev003",
-    icon: FaGithub,
-  },
-  {
-    title: "Currículo",
-    description: "Baixe meu CV.",
-    value: "Download",
-    href:"/Maria_Eduarda_Marinho_Schwarz_CV.pdf",
-    icon: FaFileAlt,
-  },
-];
+import { useLanguage } from "@/src/contexts/LanguageContext";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+import {contacts} from "@/src/data/contact";
+
 
 export default function Contact() {
+  const { translations } = useLanguage();
+  const translate = translations.contact;
   return (
     <section
       id="contact"
@@ -107,7 +85,7 @@ export default function Contact() {
               md:text-6xl
             "
           >
-            Vamos conversar?
+            {translate.pageTitle}
           </span>
 
           <div
@@ -130,7 +108,7 @@ export default function Contact() {
               text-muted-foreground
             "
           >
-           Se você quiser conversar sobre projetos, oportunidades ou tecnologia, será um prazer trocar uma ideia.
+           {translate.subtitle}
           </p>
         </div>
 
@@ -145,12 +123,13 @@ export default function Contact() {
             lg:px-0
           "
         >
-          {contacts.map((contact) => {
+          {contacts.map((contact, index) => {
             const Icon = contact.icon;
+            const description = translate.contacts[index].description;
 
             return (
               <a
-                key={contact.title}
+                key={index}
                 href={contact.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -219,7 +198,7 @@ export default function Contact() {
                       text-muted-foreground
                     "
                   >
-                    {contact.description}
+                    {description}
                   </p>
 
                   <p
@@ -260,7 +239,7 @@ export default function Contact() {
                 shadow-[0_16px_34px_rgba(109,74,255,.25)]
               "
             >
-              Enviar e-mail
+              {translate.callToAction}
             </ShimmerButton>
           </a>
         </div>
