@@ -103,5 +103,25 @@
         ]
       }
     ]
+  },
+  "projects": {
+    "pageTitle": "Projects",
+    "subTitle": "Explore projects where technology, design, and user experience come together.",
+    "Featured": "Featured",
+    "viewProject": "View Project",
+    "projects": [
+      {
+        "description": "Cinema platform developed with a focus on user experience, accessibility, and scalable architecture."
+      },
+      {
+        "description": "Capture and dodge game where technologies increase your score, while bugs and errors reduce your lives. Survive as long as possible."
+      },
+      {
+        "description": "Weather forecast dashboard consuming an external API with a responsive interface."
+      },
+      {
+        "description": "Responsive application simulating a pizza website."
+      }
+    ]
   }
 }

@@ -1,10 +1,13 @@
 "use client";
 
 import ProjectCard from "@/src/components/ui/ProjectCard";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 import { projects } from "@/src/data/projects";
 
 
 export default function Projects() {
+  const { translations } = useLanguage();
+  const translate = translations.projects;
   return (
     <section
       id="projects"
@@ -32,7 +35,7 @@ export default function Projects() {
               md:text-6xl
             "
           >
-            Projetos
+            {translate.pageTitle}
           </span>
           <div
               className="
@@ -55,7 +58,7 @@ export default function Projects() {
               md:text-xl
             "
           >
-            Explore projetos onde tecnologia, design e experiência se encontram.
+            {translate.subTitle}
           </h2>
         </div>
 
@@ -69,12 +72,23 @@ export default function Projects() {
           "
         >
         
-           {projects.map((project, index) => (
+           {projects.map((project, index) => 
+           {
+            const translatedProject = translate.projects[index];
+
+            const experienceData = {
+              ...project,
+              description: translatedProject.description,
+      
+            };
+            return (
               <ProjectCard
                 key={index}
-                project={project}
+                project={experienceData}
               />
-            ))}
+            )
+          })}
+          
         </div>
 
       </div>

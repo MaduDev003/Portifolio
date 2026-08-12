@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 
 interface ProjectCardProps {
   project: {
@@ -18,6 +19,8 @@ interface ProjectCardProps {
 export default function ProjectCard({
   project,
 }: ProjectCardProps) {
+    const { translations } = useLanguage();
+    const translate = translations.projects;
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -114,7 +117,7 @@ export default function ProjectCard({
                   animate-[pulse_0.5s_ease-in-out_infinite]
                 "
               />
-              Destaque
+              {translate.Featured}
             </span>
         )}
       </div>
@@ -218,7 +221,7 @@ export default function ProjectCard({
               hover:bg-brand-hover
             "
           >
-            Ver projeto ↗
+           {translate.viewProject} ↗
           </a>
 
           <a

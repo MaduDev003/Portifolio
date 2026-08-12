@@ -102,5 +102,25 @@
         ]
       }
     ]
+  },
+  "projects":{
+    "pageTitle": "Projetos",
+    "subTitle":"Explore projetos onde tecnologia, design e experiência do usuário se encontram.",
+    "Featured": "Destaque",
+    "viewProject": "Ver Projeto",
+    "projects": [
+      {
+        "description": "Plataforma de cinema desenvolvida com foco em experiência do usuário, acessibilidade e arquitetura escalável."
+      },
+      {
+         "description": "Jogo de captura e esquiva onde tecnologias aumentam sua pontuação, enquanto bugs e erros reduzem suas vidas. Sobreviva o máximo possível."
+      },
+      {
+        "description": "Dashboard de previsão do tempo consumindo API externa com interface responsiva"
+      },
+      {
+        "description": "Aplicação responsiva simulando um site de Pizza."
+      }
+    ]
   }
 }
