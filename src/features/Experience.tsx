@@ -2,12 +2,16 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-
+import { experiences } from "@/src/data/experiences";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 import TimelinePoint from "@/src/components/ui/TimelinePoint";
 import ExperienceCard from "@/src/components/ui/ExperienceCard";
-import { experiences } from "@/src/data/experiences";
+
 
 export default function Experience() {
+  const { translations } = useLanguage();
+  const translate = translations.experience;
+
   const lineRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -101,7 +105,7 @@ export default function Experience() {
               md:text-6xl
             "
           >
-            Experiência
+            {translate.pageTitle}
           </span>
 
           <div

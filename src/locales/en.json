@@ -18,7 +18,7 @@
     "tagline": "Passionate about technology, design, and digital experiences. I enjoy continuously learning and exploring new ways to build modern, accessible, and intuitive interfaces.",
     "callToAction": "View Projects"
   },
-  "AboutMe": {
+  "aboutMe": {
     "pageTitle": "About Me",
     "subTitle": "Turning ideas into digital products.",
     "journey": {
@@ -67,5 +67,8 @@
       "tools": "Tools",
       "quality": "Quality"
     }
+  },
+  "experience":{
+    "pageTitle":"Experience"
   }
 }

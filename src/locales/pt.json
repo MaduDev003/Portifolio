@@ -18,7 +18,7 @@
     "tagline": "Apaixonada por tecnologia, design e experiências digitais. Gosto de aprender continuamente e explorar novas formas de desenvolver interfaces modernas, acessíveis e intuitivas.",
     "callToAction": "Ver Projetos"
   },
-  "AboutMe": {
+  "aboutMe": {
     "pageTitle": "Sobre Mim",
     "subTitle": "Transformando ideias em produtos digitais.",
     "journey": {
@@ -66,5 +66,8 @@
       "tools": "Ferramentas",
       "quality": "Qualidade"
     }
+  },
+  "experience":{
+    "pageTitle":"Experiência"
   }
 }
