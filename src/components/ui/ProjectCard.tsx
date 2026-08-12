@@ -214,6 +214,7 @@ export default function ProjectCard({
               text-[14px]
               font-semibold
               text-white
+              tracking-wide
               transition-all
               duration-300
               hover:-translate-y-0.5
