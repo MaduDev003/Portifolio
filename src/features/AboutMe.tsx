@@ -6,7 +6,7 @@ import { aboutMe } from "../data/aboutMe";
 
 export default function AboutMe() {
   const { translations } = useLanguage();
-  const translate = translations.AboutMe;
+  const translate = translations.aboutMe;
 
   return (
     <section
