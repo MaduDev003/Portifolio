@@ -35,9 +35,8 @@ import {
 
 export const skillCategories = [
   {
-    title: "Front-end",
+    key: "frontend",
     icon: HiOutlineCodeBracket,
-
     skills: [
       {
         name: "React",
@@ -93,9 +92,8 @@ export const skillCategories = [
   },
 
   {
-    title: "Back-end",
+    key: "backend",
     icon: HiOutlineServerStack,
-
     skills: [
       {
         name: "Node.js",
@@ -121,9 +119,8 @@ export const skillCategories = [
   },
 
   {
-    title: "Ferramentas",
+    key: "tools",
     icon: HiOutlineWrenchScrewdriver,
-
     skills: [
       {
         name: "Git",
@@ -154,9 +151,8 @@ export const skillCategories = [
   },
 
   {
-    title: "Qualidade",
+    key: "quality",
     icon: HiOutlineShieldCheck,
-
     skills: [
       {
         name: "Jest",
@@ -170,4 +166,4 @@ export const skillCategories = [
       },
     ],
   },
-];
+] as const;

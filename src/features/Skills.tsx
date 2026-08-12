@@ -1,6 +1,13 @@
+"use client";
+
+import { useLanguage } from "@/src/contexts/LanguageContext";
 import { skillCategories } from "../data/skills";
 
 export default function Skills() {
+  const { translations } = useLanguage();
+
+  const translate = translations.skills;
+
   return (
     <section
       id="skills"
@@ -12,6 +19,7 @@ export default function Skills() {
       "
     >
       <div className="mx-auto max-w-7xl">
+
         <div className="flex flex-col items-center text-center">
           <span
             className="
@@ -27,7 +35,7 @@ export default function Skills() {
               md:text-6xl
             "
           >
-            Habilidades
+            {translate.pageTitle}
           </span>
 
           <div
@@ -52,17 +60,27 @@ export default function Skills() {
               md:text-xl
             "
           >
-            Tecnologias e ferramentas que compõem minha stack de desenvolvimento.
+            {translate.subTitle}
           </h2>
         </div>
 
-        <div className="mt-20 grid gap-8 lg:grid-cols-2  lg:px-0 px-12 md:px-16">
-          {skillCategories.map((category) => {
+        <div
+          className="
+            mt-20
+            grid
+            gap-8
+            px-12
+            md:px-16
+            lg:grid-cols-2
+            lg:px-0
+          "
+        >
+          {skillCategories.map((category, index) => {
             const CategoryIcon = category.icon;
 
             return (
               <article
-                key={category.title}
+                key={index}
                 className="
                   group
                   relative
@@ -95,6 +113,7 @@ export default function Skills() {
                 />
 
                 <div className="relative z-10">
+
                   <div className="flex items-center gap-5">
                     <div
                       className="
@@ -122,7 +141,7 @@ export default function Skills() {
                           text-foreground
                         "
                       >
-                        {category.title}
+                        {translate.categories[category.key]}
                       </h3>
 
                       <div
@@ -137,7 +156,6 @@ export default function Skills() {
                       />
                     </div>
                   </div>
-
                   <div
                     className="
                       mt-8
@@ -196,6 +214,7 @@ export default function Skills() {
                       );
                     })}
                   </div>
+
                 </div>
               </article>
             );
