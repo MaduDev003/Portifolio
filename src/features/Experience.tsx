@@ -101,7 +101,7 @@ export default function Experience() {
               md:text-6xl
             "
           >
-            Experiencia
+            Experiência
           </span>
 
           <div
