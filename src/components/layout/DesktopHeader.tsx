@@ -1,19 +1,24 @@
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { FiDownload } from "react-icons/fi";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
+import SecondaryButton from "../ui/SecondaryButton";
 
 interface Link {
   label: string;
   href: string;
 }
 
-interface MobileDesktopProps {
+interface DesktopHeaderProps {
   links: Link[];
+  setLanguage: React.Dispatch<React.SetStateAction<"PT" | "EN">>;
+  language: string;
 }
 
-export default function MobileDesktop({
+export default function DesktopHeader({
   links,
-}: MobileDesktopProps) {
+  language,
+  setLanguage
+}: DesktopHeaderProps) {
   return (
     <header
       className="
@@ -147,7 +152,18 @@ export default function MobileDesktop({
             duration={600}
             className="cursor-pointer"
           />
+          
         </div>
+         <SecondaryButton
+            onClick={() => setLanguage(language === "PT" ? "EN" : "PT")}
+            className="
+              h-9 w-9 rounded-full
+              shadow-[0_2px_8px_rgba(15,23,42,0.10)]
+              hover:shadow-[0_10px_24px_rgba(15,23,42,0.10),0_0_20px_rgba(124,92,252,0.18)]
+            "
+          >
+            <p className="text-[12px]">{language}</p>
+          </SecondaryButton>
           <a
           href="/Maria_Eduarda_Marinho_Schwarz_CV.pdf"
           download

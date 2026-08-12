@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import MobileHeader from "./MobileHeader";
-import MobileDesktop from "./MobileDesktop";
+import MobileDesktop from "./DesktopHeader";
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [language, setLanguage] = useState<"PT" | "EN">("PT");
 
   const links = [
     {
@@ -60,12 +61,16 @@ export default function Header() {
         <MobileHeader
           openMenu={openMenu}
           setOpenMenu={setOpenMenu}
+          setLanguage={setLanguage}
+          language={language}
           links={links}
         />
       </div>
 
       <div className="hidden lg:flex">
         <MobileDesktop
+          setLanguage={setLanguage}
+          language={language}
           links={links}
         />
       </div>

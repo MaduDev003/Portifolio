@@ -4,6 +4,7 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { FiDownload } from "react-icons/fi";
 import { HiOutlineViewList, HiX } from "react-icons/hi";
+import SecondaryButton from "../ui/SecondaryButton";
 
 interface Link {
   label: string;
@@ -13,6 +14,8 @@ interface Link {
 interface MobileHeaderProps {
   openMenu: boolean;
   setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  setLanguage: React.Dispatch<React.SetStateAction<"PT" | "EN">>;
+  language: string;
   links: Link[];
 }
 
@@ -20,6 +23,8 @@ export default function MobileHeader({
   openMenu,
   setOpenMenu,
   links,
+  setLanguage,
+  language
 }: MobileHeaderProps) {
   return (
     <header
@@ -132,6 +137,18 @@ export default function MobileHeader({
               active:scale-95
             "
           />
+          <SecondaryButton
+            onClick={() => setLanguage(language === "PT" ? "EN" : "PT")}
+            className="
+              h-10 w-10 rounded-full
+              border
+              border-border-button-secondary-hover-border
+              bg-button-secondary-hover-bg
+              text-button-secondary-text
+            "
+          >
+            <p className="text-[12px]">{language}</p>
+          </SecondaryButton>
         </div>
 
         <div
