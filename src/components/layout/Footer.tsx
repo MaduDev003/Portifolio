@@ -1,6 +1,7 @@
 "use client";
 import { PiStarFourFill } from "react-icons/pi";
 import { FaRegCopyright } from "react-icons/fa";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 import { motion } from "framer-motion";
 
 const stars = [
@@ -19,6 +20,7 @@ const stars = [
 ];
 
 export default function Footer() {
+  const {translations} = useLanguage();
   return (
     <footer className="relative border-t border-border/20 py-12  justify-center items-center flex">
       {stars.map((star, index) => (
@@ -93,13 +95,13 @@ export default function Footer() {
         </div>
 
         <h2 className="text-xl font-semibold text-foreground">
-            Obrigada pela visita!
+            {translations.footer.thanks}
         </h2>
 
             <div className="flex gap-2 mt-3">
                  <FaRegCopyright className="mt-1 text-secondary-font"/>
                  <p className="text-[16px] text-secondary-font">
-                    {new Date().getFullYear()} Madu. Todos os direitos reservados.
+                    {new Date().getFullYear()} Madu. {translations.footer.copyright}
                 </p>
             </div>
        

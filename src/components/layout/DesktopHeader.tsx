@@ -18,11 +18,7 @@ interface DesktopHeaderProps {
 export default function DesktopHeader({
   links,
 }: DesktopHeaderProps) {
-  const {
-    language,
-    translations,
-    toggleLanguage,
-  } = useLanguage();
+  const { language, translations, toggleLanguage,} = useLanguage();
 
   return (
     <header
