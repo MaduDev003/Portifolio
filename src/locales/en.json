@@ -69,6 +69,39 @@
     }
   },
   "experience":{
-    "pageTitle":"Experience"
+    "pageTitle":"Experience",
+    "details": "Key Achievements",
+    "experiences":[
+      {
+        "title": "Software Engineer",
+        "company": "GETNET",
+        "period": "May 2023 - January 2026",
+        "location": "Porto Alegre, RS, Brazil",
+        "description": "Worked on web application development, contributing to both front-end and back-end solutions. Experience with React, Node.js, REST APIs, microservices, automated testing, and messaging services in a corporate environment.",
+        "achievements": [
+          "Technically led the evolution of the internal accounting portal after the Front-End developer's departure.",
+          "Automated processes with filters and responsive forms, eliminating manual queries and accelerating data analysis.",
+          "Maintained and evolved an ecosystem of 11 microservices responsible for the monthly accounting closing process.",
+          "Designed automated tests with Jest and Cypress, increasing test coverage to 90% and ensuring successful Azure DevOps pipeline execution.",
+          "Resolved critical incidents by analyzing Front-End, BFF, and Back-End layers as an integrated system.",
+          "Collaborated with teams and provided technical mentoring to an early-career professional."
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "company": "Personal Project",
+        "period": "January 2026 - Present",
+        "location": "Remote",
+        "description": "Development of a cinema application focused on front-end architecture, user experience, and a complete ticket purchasing flow. The project simulates a real-world booking platform, integrating API consumption, state management, form validation, and data persistence.",
+        "achievements": [
+          "Designed a complete ticket purchasing flow covering session selection, seats, products, payment, and confirmation.",
+          "Implemented global state management with Zustand and checkout persistence using localStorage.",
+          "Developed forms with React Hook Form and Zod, ensuring consistent data validation.",
+          "Modeled different seat types, including standard, accessible, and companion options.",
+          "Integrated the application with the TMDB API to consume and display movie data.",
+          "Structured the application with a focus on componentization, code reuse, and separation of responsibilities."
+        ]
+      }
+    ]
   }
 }

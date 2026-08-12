@@ -1,7 +1,10 @@
+"use client";
+
 import {
   MdOutlineCalendarToday,
   MdLocationOn,
 } from "react-icons/md";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 
 export default function ExperienceCard({
   experience,
@@ -16,6 +19,8 @@ export default function ExperienceCard({
     achievements: string[];
   };
 }) {
+    const { translations } = useLanguage();
+    const translate = translations.experience;
   return (
     <div
       className="
@@ -121,7 +126,7 @@ export default function ExperienceCard({
             sm:text-md
           "
         >
-          Principais conquistas:
+         {translate.details}
         </span>
 
         <ul className="mt-4 space-y-3">

@@ -7,7 +7,6 @@ import { useLanguage } from "@/src/contexts/LanguageContext";
 import TimelinePoint from "@/src/components/ui/TimelinePoint";
 import ExperienceCard from "@/src/components/ui/ExperienceCard";
 
-
 export default function Experience() {
   const { translations } = useLanguage();
   const translate = translations.experience;
@@ -22,7 +21,7 @@ export default function Experience() {
   const lineHeight = useTransform(
     scrollYProgress,
     [0, 1],
-    ["0%", "100%"],
+    ["0%", "100%"]
   );
 
   return (
@@ -78,7 +77,7 @@ export default function Experience() {
         "
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl lg:px-0 md:px-10 ">
+      <div className="relative z-10 mx-auto max-w-7xl lg:px-0 md:px-10">
         <div
           className="
             mb-20
@@ -169,64 +168,77 @@ export default function Experience() {
             />
           </div>
 
-          {experiences.map((experience, index) => (
-            <div
-              key={index}
-              className="
-                relative
-                grid
-                w-full
-                grid-cols-1
-                items-start
-                lg:grid-cols-[1fr_auto_1fr]
-              "
-            >
-              <div className="flex w-full justify-center lg:hidden">
-                <div className="w-full max-w-2xl">
-                  <ExperienceCard experience={experience} />
-                </div>
-              </div>
+          {experiences.map((experience, index) => {
+            const translatedExperience = translate.experiences[index];
 
-              <div
-                className={
-                  experience.side === "left"
-                    ? "hidden pr-14 lg:flex"
-                    : "hidden lg:block"
-                }
-              >
-                {experience.side === "left" && (
-                  <ExperienceCard experience={experience} />
-                )}
-              </div>
+            const experienceData = {
+              ...experience,
+              title: translatedExperience.title,
+              period: translatedExperience.period,
+              location: translatedExperience.location,
+              description: translatedExperience.description,
+              achievements: translatedExperience.achievements,
+            };
 
+            return (
               <div
+                key={index}
                 className="
-                  absolute
-                  left-[-53]
-                  md:left-[-14]
-                  lg:left-3
-                  top-0
-                  md:-translate-x-1/2
-                  lg:static
-                  lg:translate-x-1
+                  relative
+                  grid
+                  w-full
+                  grid-cols-1
+                  items-start
+                  lg:grid-cols-[1fr_auto_1fr]
                 "
               >
-                <TimelinePoint />
-              </div>
+                <div className="flex w-full justify-center lg:hidden">
+                  <div className="w-full max-w-2xl">
+                    <ExperienceCard experience={experienceData} />
+                  </div>
+                </div>
 
-              <div
-                className={
-                  experience.side === "right"
-                    ? "hidden pl-14 lg:flex"
-                    : "hidden lg:block"
-                }
-              >
-                {experience.side === "right" && (
-                  <ExperienceCard experience={experience} />
-                )}
+                <div
+                  className={
+                    experience.side === "left"
+                      ? "hidden pr-14 lg:flex"
+                      : "hidden lg:block"
+                  }
+                >
+                  {experience.side === "left" && (
+                    <ExperienceCard experience={experienceData} />
+                  )}
+                </div>
+
+                <div
+                  className="
+                    absolute
+                    left-[-53]
+                    md:left-[-14]
+                    lg:left-3
+                    top-0
+                    md:-translate-x-1/2
+                    lg:static
+                    lg:translate-x-1
+                  "
+                >
+                  <TimelinePoint />
+                </div>
+
+                <div
+                  className={
+                    experience.side === "right"
+                      ? "hidden pl-14 lg:flex"
+                      : "hidden lg:block"
+                  }
+                >
+                  {experience.side === "right" && (
+                    <ExperienceCard experience={experienceData} />
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

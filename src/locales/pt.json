@@ -68,6 +68,39 @@
     }
   },
   "experience":{
-    "pageTitle":"Experiência"
+    "pageTitle":"Experiência",
+    "details": "Principal Conquistas",
+    "experiences": [
+      {
+        "title": "Engenheira de Software",
+        "company": "GETNET",
+        "period": "Maio 2023 - Janeiro 2026",
+        "location": "Porto Alegre, RS, Brasil",
+        "description": "Atuação no desenvolvimento de aplicações web, contribuindo em soluções front-end e back-end. Experiência com React, Node.js, APIs REST, microsserviços, testes automatizados e integração com serviços de mensageria em ambiente corporativo.",
+        "achievements": [
+          "Liderei tecnicamente a evolução do portal contábil interno após a saída do desenvolvedor Front-End.",
+          "Automatizei processos com filtros e formulários responsivos, eliminando consultas manuais e acelerando a análise de dados.",
+          "Mantive e evoluí um ecossistema de 11 microsserviços responsáveis pelo fechamento contábil mensal.",
+          "Projetei testes automatizados com Jest e Cypress, elevando a cobertura para 90% e garantindo aprovação nas pipelines do Azure DevOps.",
+          "Resolvi incidentes críticos analisando Front-End, BFF e Back-End de forma integrada.",
+          "Colaborei com equipes e realizei mentoria técnica para profissional em início de carreira."
+        ]
+      },
+      {
+        "title": "Engenheira de Software",
+        "company": "Projeto Autoral",
+        "period": "Janeiro 2026 - Atualmente",
+        "location": "Remoto",
+        "description": "Desenvolvimento de uma aplicação de cinema com foco em arquitetura front-end, experiência do usuário e fluxo completo de compra de ingressos. O projeto simula uma plataforma real de reservas, integrando consumo de APIs, gerenciamento de estado, validação de formulários e persistência de dados.",
+        "achievements": [
+          "Projetei um fluxo completo de compra de ingressos, contemplando seleção de sessão, assentos, produtos, pagamento e confirmação.",
+          "Implementei gerenciamento de estado global com Zustand e persistência do checkout utilizando localStorage.",
+          "Desenvolvi formulários com React Hook Form e Zod, garantindo validação consistente dos dados.",
+          "Modelei diferentes tipos de assentos, incluindo opções padrão, acessíveis e para acompanhantes.",
+          "Integrei a aplicação à API do TMDB para consumo e apresentação de dados de filmes.",
+          "Estruturei a aplicação priorizando componentização, reutilização de código e separação de responsabilidades."
+        ]
+      }
+    ]
   }
 }
