@@ -8,15 +8,59 @@
     "contact": "Contact",
     "resume": "Resume"
   },
+
   "footer": {
     "thanks": "Thanks for visiting!",
     "copyright": "All rights reserved."
   },
-  "presentation":{
+
+  "presentation": {
     "greeting": "Hello, I'm",
     "professionalTitle": "Software Engineer · Front-End",
     "tagline": "Passionate about technology, design, and digital experiences. I enjoy continuously learning and exploring new ways to build modern, accessible, and intuitive interfaces.",
     "callToAction": "View Projects"
-  
+  },
+
+  "AboutMe": {
+    "pageTitle": "About Me",
+    "subTitle": "Turning ideas into digital products.",
+
+    "journey": {
+      "title": "My journey",
+      "description": "My journey in technology started in 2022, when I was accepted into Driven Education's Full Stack program. During this period, I built a solid foundation through hands-on projects, weekly challenges, and teamwork.",
+      "highlights": [
+        "Full Stack training",
+         "HTML, CSS and JavaScript",
+         "React and TypeScript",
+        "Node.js, PostgreSQL and MongoDB",
+        "Individual and team weekly projects"
+      ]
+    },
+
+    "experience": {
+      "title": "My experience",
+      "description": "My first professional opportunity was in the financial sector, where I spent three years developing internal applications. This experience strengthened my perspective on software engineering and product development.",
+      "highlights":  [
+       "Front-end and Back-end",
+         "REST APIs",
+         "Microservices",
+        "Messaging",
+         "Automated testing",
+         "Agile methodologies"
+      ]
+    },
+
+    "motivation": {
+      "title": "What drives me",
+      "description": "I found in Front-end development the space where I can combine creativity, technology, and software engineering. My goal is to build modern, accessible, and performant digital products using best practices in architecture, scalability, security, and sustainable development, balancing technical excellence with a consistent user experience.",
+      "highlights": [
+         "React",
+         "Next.js",
+         "TypeScript",
+        "Tailwind CSS",
+         "Accessibility",
+         "User Experience"
+      ]
+    }
   }
 }

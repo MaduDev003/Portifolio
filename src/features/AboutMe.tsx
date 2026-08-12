@@ -1,10 +1,13 @@
-import {
-  FaCheckCircle,
-} from "react-icons/fa";
+"use client";
 
+import { FaCheckCircle } from "react-icons/fa";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 import { aboutMe } from "../data/aboutMe";
 
 export default function AboutMe() {
+  const { translations } = useLanguage();
+  const translate = translations.AboutMe;
+
   return (
     <section
       id="about"
@@ -15,7 +18,6 @@ export default function AboutMe() {
         border-border/40
         bg-card/40
         py-20
-  
         xl:px-34
       "
     >
@@ -33,7 +35,6 @@ export default function AboutMe() {
         }}
       />
 
-
       <div
         className="
           pointer-events-none
@@ -41,11 +42,12 @@ export default function AboutMe() {
           inset-x-0
           bottom-0
           h-0.5
-           bg-linear-to-r
+          bg-linear-to-r
           from-brand-middle
           to-accent
         "
       />
+
       <div
         className="
           pointer-events-none
@@ -68,7 +70,7 @@ export default function AboutMe() {
             text-center
           "
         >
-           <span
+          <span
             className="
               font-heading
               bg-linear-to-r
@@ -82,7 +84,7 @@ export default function AboutMe() {
               md:text-6xl
             "
           >
-            Sobre mim
+            {translate.pageTitle}
           </span>
 
           <div
@@ -106,27 +108,28 @@ export default function AboutMe() {
               md:text-2xl
             "
           >
-            Transformando ideias em produtos digitais.
+            {translate.subTitle}
           </h2>
         </div>
 
         <div
           className="
             mt-16
-            px-12
-            md:px-16
-            lg:px-0
             grid
             gap-8
+            px-12
+            md:px-16
             lg:grid-cols-3
+            lg:px-0
           "
         >
           {aboutMe.map((information) => {
             const Icon = information.icon;
+            const content = translate[information.key];
 
             return (
               <article
-                key={information.title}
+                key={information.key}
                 className="
                   group
                   relative
@@ -142,8 +145,7 @@ export default function AboutMe() {
                   hover:border-brand-middle/40
                 "
               >
-
-               <span
+                <span
                   className="
                     absolute
                     inset-0
@@ -157,8 +159,8 @@ export default function AboutMe() {
                   "
                 />
 
-
                 <div className="relative z-10">
+
                   <div
                     className="
                       mb-6
@@ -171,13 +173,12 @@ export default function AboutMe() {
                       text-brand-middle
                       transition-all
                       duration-300
-                      group-hover:text-brand-middle/90
                       group-hover:bg-accent/40
+                      group-hover:text-brand-middle/90
                     "
                   >
                     <Icon size={24} />
                   </div>
-
 
                   <h3
                     className="
@@ -186,9 +187,8 @@ export default function AboutMe() {
                       text-foreground
                     "
                   >
-                    {information.title}
+                    {content.title}
                   </h3>
-
 
                   <p
                     className="
@@ -197,15 +197,13 @@ export default function AboutMe() {
                       text-muted-foreground
                     "
                   >
-                    {information.description}
+                    {content.description}
                   </p>
-
 
                   <div className="my-6 h-px bg-border" />
 
-
                   <ul className="space-y-3">
-                    {information.highlights.map((item) => (
+                    {content.highlights.map((item) => (
                       <li
                         key={item}
                         className="
@@ -229,7 +227,6 @@ export default function AboutMe() {
                       </li>
                     ))}
                   </ul>
-
                 </div>
               </article>
             );
