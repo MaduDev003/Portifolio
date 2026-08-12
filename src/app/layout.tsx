@@ -4,9 +4,7 @@ import "./globals.css";
 
 import { cn } from "@/lib/utils";
 import ThemeProvider from "@/src/providers/ThemeProvider";
-
-
-
+import { LanguageProvider } from "@/src/contexts/LanguageContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,10 +19,10 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Madu - Portifólio",
-description:
-  "Portfólio de Maria Eduarda, Engenheira de Software e desenvolvedora Front-End, com foco em React, Next.js, TypeScript e experiências digitais.",
-}
+  title: "Madu - Portfólio",
+  description:
+    "Portfólio de Maria Eduarda, Engenheira de Software e desenvolvedora Front-End, com foco em React, Next.js, TypeScript e experiências digitais.",
+};
 
 export default function RootLayout({
   children,
@@ -44,7 +42,9 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col">
         <ThemeProvider>
-          {children}
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

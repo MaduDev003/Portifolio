@@ -1,36 +1,41 @@
+"use client";
+
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { FiDownload } from "react-icons/fi";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import SecondaryButton from "../ui/SecondaryButton";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 
 interface Link {
-  label: string;
+  label: "home" | "about" | "skills" | "experience" | "projects" | "contact";
   href: string;
 }
 
 interface DesktopHeaderProps {
   links: Link[];
-  setLanguage: React.Dispatch<React.SetStateAction<"PT" | "EN">>;
-  language: string;
 }
 
 export default function DesktopHeader({
   links,
-  language,
-  setLanguage
 }: DesktopHeaderProps) {
+  const {
+    language,
+    translations,
+    toggleLanguage,
+  } = useLanguage();
+
   return (
     <header
       className="
         fixed
         top-1
         left-1/2
-        -translate-x-1/2
         z-50
         flex
         h-14
         w-[65%]
         max-w-6xl
+        -translate-x-1/2
         items-center
         justify-between
         rounded-full
@@ -41,8 +46,6 @@ export default function DesktopHeader({
         shadow-[0_10px_40px_var(--header-shadow)]
       "
     >
-
-
       <div
         className="
           flex
@@ -56,21 +59,20 @@ export default function DesktopHeader({
           bg-brand-middle/10
         "
       >
-      <span
-        className="
-          px-1
-          font-heading
-          text-2xl
-          font-black
-          tracking-tigher
-          bg-linear-to-br
-          from-brand-middle
-          to-accent
-          bg-clip-text
-          text-transparent
-        "
-      >
-      
+        <span
+          className="
+            px-1
+            font-heading
+            text-2xl
+            font-black
+            tracking-tighter
+            bg-linear-to-br
+            from-brand-middle
+            to-accent
+            bg-clip-text
+            text-transparent
+          "
+        >
           MS
         </span>
       </div>
@@ -89,6 +91,7 @@ export default function DesktopHeader({
                   text-muted-foreground
                   transition-colors
                   duration-300
+
                   after:absolute
                   after:left-0
                   after:-bottom-1
@@ -103,11 +106,12 @@ export default function DesktopHeader({
                   after:transition-transform
                   after:duration-300
                   after:ease-out
+
                   hover:text-brand-middle
                   hover:after:scale-x-100
                 "
               >
-                {item.label}
+                {translations.header[item.label]}
               </a>
             </li>
           ))}
@@ -122,7 +126,6 @@ export default function DesktopHeader({
           gap-2
         "
       >
-      
 
         <div
           className="
@@ -152,19 +155,23 @@ export default function DesktopHeader({
             duration={600}
             className="cursor-pointer"
           />
-          
         </div>
-         <SecondaryButton
-            onClick={() => setLanguage(language === "PT" ? "EN" : "PT")}
-            className="
-              h-9 w-9 rounded-full
-              shadow-[0_2px_8px_rgba(15,23,42,0.10)]
-              hover:shadow-[0_10px_24px_rgba(15,23,42,0.10),0_0_20px_rgba(124,92,252,0.18)]
-            "
-          >
-            <p className="text-[12px]">{language}</p>
-          </SecondaryButton>
-          <a
+
+        <SecondaryButton
+          onClick={toggleLanguage}
+          className="
+            h-9
+            w-9
+            rounded-full
+            shadow-[0_2px_8px_rgba(15,23,42,0.10)]
+            hover:shadow-[0_10px_24px_rgba(15,23,42,0.10),0_0_20px_rgba(124,92,252,0.18)]
+          "
+        >
+          <p className="text-[12px]">
+            {language}
+          </p>
+        </SecondaryButton>
+        <a
           href="/Maria_Eduarda_Marinho_Schwarz_CV.pdf"
           download
         >
@@ -187,7 +194,8 @@ export default function DesktopHeader({
             "
           >
             <FiDownload size={18} />
-            Currículo
+
+            {translations.header.resume}
           </ShimmerButton>
         </a>
       </div>

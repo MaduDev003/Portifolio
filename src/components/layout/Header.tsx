@@ -6,34 +6,33 @@ import MobileDesktop from "./DesktopHeader";
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
-  const [language, setLanguage] = useState<"PT" | "EN">("PT");
 
   const links = [
-    {
-      label: "Inicio",
-      href: "#presentation",
-    },
-    {
-      label: "Sobre mim",
-      href: "#about",
-    },
-    {
-      label: "Habilidades",
-      href: "#skills",
-    },
-    {
-      label: "Experiência",
-      href: "#experience",
-    },
-    {
-      label: "Projetos",
-      href: "#projects",
-    },
-    {
-      label: "Contato",
-      href: "#contact",
-    },
-  ];
+  {
+    label: "home" as const,
+    href: "#presentation",
+  },
+  {
+    label: "about" as const,
+    href: "#about",
+  },
+  {
+    label: "skills" as const,
+    href: "#skills",
+  },
+  {
+    label: "experience" as const,
+    href: "#experience",
+  },
+  {
+    label: "projects" as const,
+    href: "#projects",
+  },
+  {
+    label: "contact" as const,
+    href: "#contact",
+  },
+];
 
   return (
     <>
@@ -49,11 +48,7 @@ export default function Header() {
           transition-all
           duration-500
           ease-in-out
-          ${
-            openMenu
-              ? "h-109"
-              : "h-15"
-          }
+          ${openMenu ? "h-109" : "h-15"}
         `}
       />
 
@@ -61,16 +56,12 @@ export default function Header() {
         <MobileHeader
           openMenu={openMenu}
           setOpenMenu={setOpenMenu}
-          setLanguage={setLanguage}
-          language={language}
           links={links}
         />
       </div>
 
       <div className="hidden lg:flex">
         <MobileDesktop
-          setLanguage={setLanguage}
-          language={language}
           links={links}
         />
       </div>
