@@ -3,7 +3,7 @@ export const experiences = [
   title: "Engenheira de Software",
   company: "GETNET",
   period: "Maio 2023 - Janeiro 2026",
-  location: "Porto Alegre, RS",
+  location: "Madri, Comunidade de Madrid, Espanha",
   description:
     "Atuação no desenvolvimento de aplicações web, contribuindo em soluções front-end e back-end. Experiência com React, Node.js, APIs REST, microsserviços, testes automatizados e integração com serviços de mensageria em ambiente corporativo.",
   technologies: [
