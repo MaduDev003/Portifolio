@@ -7,9 +7,16 @@
     "projects": "Projects",
     "contact": "Contact",
     "resume": "Resume"
-},
+  },
   "footer": {
     "thanks": "Thanks for visiting!",
     "copyright": "All rights reserved."
+  },
+  "presentation":{
+    "greeting": "Hello, I'm",
+    "professionalTitle": "Software Engineer · Front-End",
+    "tagline": "Passionate about technology, design, and digital experiences. I enjoy continuously learning and exploring new ways to build modern, accessible, and intuitive interfaces.",
+    "callToAction": "View Projects"
+  
   }
 }

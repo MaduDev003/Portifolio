@@ -13,5 +13,11 @@
   "footer": {
     "thanks": "Obrigada pela visita!",
     "copyright": "Todos os direitos reservados."
+  },
+  "presentation":{
+    "greeting": "Olá, eu sou",
+    "professionalTitle": "Engenheira de Software · Front-End",
+    "tagline": "Apaixonada por tecnologia, design e experiências digitais. Gosto de aprender continuamente e explorar novas formas de desenvolver interfaces modernas, acessíveis e intuitivas.",
+    "callToAction": "Ver Projetos"
   }
 }

@@ -3,13 +3,15 @@
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { InteractiveGridPattern  } from "@/components/ui/interactive-grid-pattern";
 import { IoMdArrowForward } from "react-icons/io";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 import SecondaryButton from "@/src/components/ui/SecondaryButton";
 import foto from "@/src/assets/images/fotoPerfil.png"
 
-import { FiGithub, FiLinkedin } from "react-icons/fi";
-import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
-
 export default function Presentation() {
+  const {translations} = useLanguage();
+  const translate = translations.presentation;
   return (
     <section
       id="presentation"
@@ -54,7 +56,7 @@ export default function Presentation() {
           <span className="h-2.5 w-2.5 rounded-full bg-accent  animate-[pulse_0.7s_ease-in-out_infinite]" />
 
           <p className="text-sm font-medium  text-accent-foreground">
-            Olá, eu sou
+            {translate.greeting}
           </p>
         </div>
             <h1
@@ -89,7 +91,7 @@ export default function Presentation() {
                 text-transparent
               "
             >
-            Engenheira de Software · Front-End
+           {translate.professionalTitle}
           </span>
         </div>
 
@@ -105,8 +107,7 @@ export default function Presentation() {
     sm:text-md
   "
 >
-  Apaixonada por tecnologia, design e experiências digitais. Gosto de aprender continuamente
-  e explorar novas formas de desenvolver interfaces modernas, acessíveis e intuitivas.
+ {translate.tagline}
 </p>
         <div className="mt-8 flex flex-col items-center gap-5 md:flex-row">
         <ShimmerButton
@@ -136,7 +137,7 @@ export default function Presentation() {
           "
         >
           <span className="flex items-center gap-2 text-[16px]">
-            Ver Projetos
+            {translate.callToAction}
            <div className="w-6 h-6 bg-white/25 rounded-full flex justify-center items-center -rotate-45">
                 <IoMdArrowForward size={16}/>
            </div>
@@ -154,8 +155,6 @@ export default function Presentation() {
                   h-12 w-12 rounded-full
                   shadow-[0_2px_8px_rgba(15,23,42,0.10)]
                   hover:shadow-[0_10px_24px_rgba(15,23,42,0.10),0_0_20px_rgba(124,92,252,0.18)]
-                  dark.shadow-[0_2px_8px_rgba(124,92,252,0.08)]
-                  dark.hover:shadow-[0_10px_28px_rgba(124,92,252,0.18)]
                 ">
                 <FiGithub size={23} />
               </SecondaryButton>
@@ -171,8 +170,6 @@ export default function Presentation() {
                 h-12 w-12 rounded-full
                 shadow-[0_2px_8px_rgba(15,23,42,0.10)]
                 hover:shadow-[0_10px_24px_rgba(15,23,42,0.10),0_0_20px_rgba(124,92,252,0.18)]
-                dark.shadow-[0_2px_8px_rgba(124,92,252,0.08)]
-                dark.hover:shadow-[0_10px_28px_rgba(124,92,252,0.18)]
                 ">
                 <FiLinkedin size={23} />
               </SecondaryButton>
@@ -183,8 +180,6 @@ export default function Presentation() {
                 h-12 w-12 rounded-full
                 shadow-[0_2px_8px_rgba(15,23,42,0.10)]
                 hover:shadow-[0_10px_24px_rgba(15,23,42,0.10),0_0_20px_rgba(124,92,252,0.18)]
-                dark.shadow-[0_2px_8px_rgba(124,92,252,0.08)]
-                dark.hover:shadow-[0_10px_28px_rgba(124,92,252,0.18)]
                 "
                 hoverChildren={<HiOutlineMailOpen size={23} />}
               >
