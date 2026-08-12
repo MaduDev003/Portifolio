@@ -177,6 +177,7 @@ export default function Experience() {
               period: translatedExperience.period,
               location: translatedExperience.location,
               description: translatedExperience.description,
+              company:translatedExperience.company,
               achievements: translatedExperience.achievements,
             };
 
