@@ -229,8 +229,6 @@ export default function MobileHeader({
               </a>
             </div>
           ))}
-
-          {/* Resume */}
           <div className="p-3">
             <a
               href="/Maria_Eduarda_Marinho_Schwarz_CV.pdf"
