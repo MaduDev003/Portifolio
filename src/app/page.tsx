@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
     <Header />
-    <main className="flex-1 mt-6 pt-6">
+    <main className="flex-1">
       <Presentation />
       <AboutMe />
       <Skills/>

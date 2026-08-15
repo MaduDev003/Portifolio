@@ -17,6 +17,8 @@ export default function Presentation() {
       id="presentation"
       className="
         flex
+        pt-26
+        pb-10
         min-h-screen
         flex-col-reverse
         items-center
