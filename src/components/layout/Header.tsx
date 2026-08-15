@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import MobileHeader from "./MobileHeader";
-import MobileDesktop from "./DesktopHeader";
+import DesktopHeader from "./DesktopHeader";
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -61,7 +61,7 @@ export default function Header() {
       </div>
 
       <div className="hidden lg:flex">
-        <MobileDesktop
+        <DesktopHeader
           links={links}
         />
       </div>

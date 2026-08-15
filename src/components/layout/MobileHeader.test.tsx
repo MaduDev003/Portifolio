@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
@@ -92,9 +92,10 @@ describe("MobileHeader", () => {
   });
 
   describe("navigation", () => {
+     beforeEach(() => {
+           renderMobileHeader(true);
+        });
     it("should render all navigation links", () => {
-      renderMobileHeader(true);
-
       expect(
         screen.getByRole("link", { name: /Início/i }),
       ).toBeInTheDocument();
@@ -121,8 +122,6 @@ describe("MobileHeader", () => {
     });
 
     it("should have the correct navigation destinations", () => {
-      renderMobileHeader(true);
-
       expect(
         screen.getByRole("link", { name: /Início/i }),
       ).toHaveAttribute("href", "#presentation");
@@ -150,9 +149,10 @@ describe("MobileHeader", () => {
   });
 
   describe("resume", () => {
+     beforeEach(() => {
+           renderMobileHeader(true);
+        });
     it("should render the resume download link", () => {
-      renderMobileHeader(true);
-
       const resumeLink = screen.getByRole("link", {
         name: /currículo|resume|cv/i,
       });
