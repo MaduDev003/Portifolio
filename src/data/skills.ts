@@ -22,6 +22,8 @@ import {
   SiDocker,
   SiJest,
   SiCypress,
+  SiTestinglibrary,
+  SiVitest 
 } from "react-icons/si";
 
 import { TbWand } from "react-icons/tb";
@@ -158,6 +160,16 @@ export const skillCategories = [
         name: "Jest",
         icon: SiJest,
         color: "#C21325",
+      },
+       {
+        name: "Vistest",
+        icon: SiVitest,
+        color: "#20F386",
+      },
+       {
+        name: "React Testing Library ",
+        icon: SiTestinglibrary,
+        color: "#C2292A",
       },
       {
         name: "Cypress",
