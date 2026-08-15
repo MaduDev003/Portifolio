@@ -24,20 +24,21 @@ export default function DesktopHeader({
     <header
       className="
         fixed
-        top-1
+        top-2
         left-1/2
         z-50
         flex
-        h-14
+        h-13
         w-[65%]
         max-w-6xl
         -translate-x-1/2
         items-center
         justify-between
+        backdrop-blur-3xl
         rounded-full
         border
         border-[#6e5cb836]
-        bg-card
+        bg-card/90
         pr-2
         shadow-[0_10px_40px_var(--header-shadow)]
       "
@@ -45,21 +46,22 @@ export default function DesktopHeader({
       <div
         className="
           flex
-          h-14
-          w-14
+          h-13
+          w-13
           items-center
           justify-center
           rounded-full
           border
           border-accent/20
           bg-brand-middle/10
+         
         "
       >
         <span
           className="
             px-1
             font-heading
-            text-2xl
+            text-lg
             font-black
             tracking-tighter
             bg-linear-to-br
@@ -67,6 +69,7 @@ export default function DesktopHeader({
             to-accent
             bg-clip-text
             text-transparent
+           
           "
         >
           MS
@@ -74,7 +77,7 @@ export default function DesktopHeader({
       </div>
 
       <nav className="relative">
-        <ul className="flex items-center gap-9">
+        <ul className="flex items-center gap-7">
           {links.map((item) => (
             <li key={item.href}>
               <a

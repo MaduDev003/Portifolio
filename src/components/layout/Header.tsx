@@ -48,7 +48,7 @@ export default function Header() {
           transition-all
           duration-500
           ease-in-out
-          ${openMenu ? "h-109" : "h-15"}
+          ${openMenu ? "h-109" : "h-17"}
         `}
       />
 
