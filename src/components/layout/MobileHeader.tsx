@@ -37,7 +37,7 @@ export default function MobileHeader({
     <header
       className="
         fixed
-        top-1
+        top-2
         left-4
         right-4
         z-50
