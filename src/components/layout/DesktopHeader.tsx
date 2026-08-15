@@ -168,7 +168,7 @@ export default function DesktopHeader({
           </p>
         </SecondaryButton>
         <a
-          href="/Maria_Eduarda_Marinho_Schwarz_CV.pdf"
+          href={language === "PT" ? "/Maria_Eduarda_Marinho_Schwarz_CV.pdf": "/Maria_Eduarda_Schwarz_CV_EN.pdf"}
           download
         >
           <ShimmerButton

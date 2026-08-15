@@ -6,7 +6,7 @@ import {contacts} from "@/src/data/contact";
 
 
 export default function Contact() {
-  const { translations } = useLanguage();
+  const { translations, language } = useLanguage();
   const translate = translations.contact;
   return (
     <section
@@ -126,11 +126,11 @@ export default function Contact() {
           {contacts.map((contact, index) => {
             const Icon = contact.icon;
             const description = translate.contacts[index].description;
-
+            const cvHref = language === "PT" ? contact.href : "/Maria_Eduarda_Schwarz_CV_EN.pdf";
             return (
               <a
                 key={index}
-                href={contact.href}
+                href={contact.value === "Download" ? cvHref : contact.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="

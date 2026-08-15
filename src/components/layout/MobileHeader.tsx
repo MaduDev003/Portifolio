@@ -231,7 +231,7 @@ export default function MobileHeader({
           ))}
           <div className="p-3">
             <a
-              href="/Maria_Eduarda_Marinho_Schwarz_CV.pdf"
+              href={language === "PT" ? "/Maria_Eduarda_Marinho_Schwarz_CV.pdf": "/Maria_Eduarda_Schwarz_CV_EN.pdf"}
               download
             >
               <ShimmerButton
