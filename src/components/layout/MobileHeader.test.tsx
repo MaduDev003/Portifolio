@@ -61,7 +61,7 @@ describe("MobileHeader", () => {
       expect(
         screen.getByRole("button", {
           name: "Abrir menu",
-        }),
+        })
       ).toBeInTheDocument();
     });
 
@@ -71,7 +71,7 @@ describe("MobileHeader", () => {
       expect(
         screen.getByRole("button", {
           name: "Fechar menu",
-        }),
+        })
       ).toBeInTheDocument();
     });
 
@@ -84,7 +84,7 @@ describe("MobileHeader", () => {
       await user.click(
         screen.getByRole("button", {
           name: "Abrir menu",
-        }),
+        })
       );
 
       expect(setOpenMenu).toHaveBeenCalledTimes(1);
