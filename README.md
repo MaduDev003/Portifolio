@@ -169,9 +169,8 @@ Alguns pontos trabalhados:
 
 * Elementos HTML semânticos
 * Hierarquia de headings
-* Uso de elementos interativos apropriados
+* Uso de elementos interativos
 * Contraste de cores
-* Labels e informações acessíveis quando necessários
 
 ## 🧪 Testes
 
