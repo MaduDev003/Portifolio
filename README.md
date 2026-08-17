@@ -45,19 +45,19 @@ O portfólio possui suporte para dois idiomas:
 
 ## ✨ Funcionalidades
 
-* Suporte a **Português (Brasil)** e **Inglês**.
-* Alternância entre tema claro e escuro.
-* Interface responsiva.
-* Seção de apresentação profissional.
-* Seção de experiência profissional.
-* Seção de projetos.
-* Seção de habilidades e tecnologias.
-* Seção de contato.
-* Links para projetos, GitHub e outras plataformas profissionais.
-* Componentes reutilizáveis.
-* Animações e microinterações.
-* Testes automatizados para componentes com lógica ou interação.
-* Interface desenvolvida com foco em acessibilidade.
+* Suporte a **Português (Brasil)** e **Inglês**
+* Alternância entre tema claro e escuro
+* Interface responsiva
+* Seção de apresentação profissional
+* Seção de experiência profissional
+* Seção de projetos
+* Seção de habilidades e tecnologias
+* Seção de contato
+* Links para projetos, GitHub e outras plataformas profissionais
+* Componentes reutilizáveis
+* Animações e microinterações
+* Testes automatizados para componentes com lógica ou interação
+* Interface desenvolvida com foco em acessibilidade
 
 ## 🏗️ Arquitetura
 ### Components
@@ -68,12 +68,12 @@ Os componentes são divididos conforme sua responsabilidade, evitando concentrar
 
 Entre eles estão:
 
-* Componentes de layout.
-* Componentes de navegação.
-* Cards.
-* Botões.
-* Componentes de timeline.
-* Outros componentes reutilizáveis de UI.
+* Componentes de layout
+* Componentes de navegação
+* Cards
+* Botões
+* Componentes de timeline
+* Outros componentes reutilizáveis de UI
 
 ### Features
 
@@ -83,12 +83,12 @@ Cada feature representa uma parte específica da aplicação, mantendo suas resp
 
 Exemplos:
 
-* Presentation.
-* AboutMe.
-* Experience.
-* Projects.
-* Skills.
-* Contact.
+* Presentation
+* AboutMe
+* Experience
+* Projects
+* Skills
+* Contact
 
 Essa organização facilita a manutenção e permite que cada seção evolua de forma independente.
 
@@ -127,11 +127,11 @@ O design do portfólio segue uma proposta mais escura, minimalista e com roxo co
 
 Alguns dos principais elementos do visual são:
 
-* Tema escuro.
-* Roxo como cor principal e de destaque.
-* Contraste entre fundos, textos e elementos interativos.
-* Bordas e efeitos de brilho usados nos detalhes.
-* Tipografia com diferentes pesos e tamanhos para criar hierarquia.
+* Tema escuro
+* Roxo como cor principal e de destaque
+* Contraste entre fundos, textos e elementos interativos
+* Bordas e efeitos de brilho usados nos detalhes
+* Tipografia com diferentes pesos e tamanhos para criar hierarquia
 
 ### Componentização
 
@@ -139,14 +139,14 @@ A interface foi dividida em componentes para facilitar a reutilização e manter
 
 Entre eles estão:
 
-* Botões.
-* Cards de projetos.
-* Cards de experiência.
-* Timeline.
-* Header.
-* Footer.
-* Componentes de navegação.
-* Componentes de tema e idioma.
+* Botões
+* Cards de projetos
+* Cards de experiência
+* Timeline
+* Header
+* Footer
+* Componentes de navegação
+* Componentes de tema e idioma
 
 ### Responsividade
 
@@ -154,12 +154,12 @@ O layout foi pensado para funcionar em diferentes tamanhos de tela.
 
 Alguns elementos que mudam de acordo com o espaço disponível são:
 
-* Grid de projetos.
-* Cards.
-* Navegação.
-* Espaçamentos.
-* Tamanhos de fonte.
-* Organização das seções.
+* Grid de projetos
+* Cards
+* Navegação
+* Espaçamentos
+* Tamanhos de fonte
+* Organização das seções
 
 ### Acessibilidade
 
@@ -167,11 +167,11 @@ Também considerei acessibilidade durante o desenvolvimento, principalmente na e
 
 Alguns pontos trabalhados:
 
-* Elementos HTML semânticos.
-* Hierarquia de headings.
-* Uso de elementos interativos apropriados.
-* Contraste de cores.
-* Labels e informações acessíveis quando necessários.
+* Elementos HTML semânticos
+* Hierarquia de headings
+* Uso de elementos interativos apropriados
+* Contraste de cores
+* Labels e informações acessíveis quando necessários
 
 ## 🧪 Testes
 
@@ -181,13 +181,13 @@ Os testes são focados principalmente no comportamento observado pelo usuário, 
 
 Entre os comportamentos testados estão:
 
-* Renderização de informações.
-* Renderização condicional.
-* Links.
-* Interações de hover.
-* Eventos de clique.
-* Conteúdo acessível.
-* Componentes que dependem de contexto.
+* Renderização de informações
+* Renderização condicional
+* Links
+* Interações de hover
+* Eventos de clique
+* Conteúdo acessível
+* Componentes que dependem de contexto
 
 Os dados utilizados nos testes são mantidos próximos aos respectivos arquivos de teste quando são específicos daquele componente.
 
