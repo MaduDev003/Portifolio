@@ -43,8 +43,6 @@ O portfólio possui suporte para dois idiomas:
 * **Português (Brasil)**
 * **Inglês**
 
-A troca de idioma é feita diretamente pela interface, mantendo a mesma estrutura visual nos dois idiomas.
-
 ## ✨ Funcionalidades
 
 * Suporte a **Português (Brasil)** e **Inglês**.
@@ -62,9 +60,6 @@ A troca de idioma é feita diretamente pela interface, mantendo a mesma estrutur
 * Interface desenvolvida com foco em acessibilidade.
 
 ## 🏗️ Arquitetura
-
-A estrutura do projeto foi organizada com foco em separação de responsabilidades, reutilização de componentes e facilidade de manutenção.
-
 ### Components
 
 A pasta `components` concentra os componentes reutilizáveis da aplicação.
