@@ -2,23 +2,14 @@
 
 import { useState } from "react";
 import { useLanguage } from "@/src/contexts/LanguageContext";
+import {Project} from "@/src/types/Project";
 
-interface ProjectCardProps {
-  project: {
-    title: string;
-    description: string;
-    image: string;
-    video?: string;
-    github: string;
-    demo: string;
-    technologies: string[];
-    contrast?: boolean;
-  };
-}
 
 export default function ProjectCard({
   project,
-}: ProjectCardProps) {
+}: {
+  project: Project;
+}) {
     const { translations } = useLanguage();
     const translate = translations.projects;
   const [isHovered, setIsHovered] = useState(false);
