@@ -5,19 +5,12 @@ import {
   MdLocationOn,
 } from "react-icons/md";
 import { useLanguage } from "@/src/contexts/LanguageContext";
+import {Experience} from "@/src/types/Experience";
 
 export default function ExperienceCard({
   experience,
 }: {
-  experience: {
-    title: string;
-    company: string;
-    period: string;
-    location: string;
-    description: string;
-    technologies: string[];
-    achievements: string[];
-  };
+  experience: Experience
 }) {
     const { translations } = useLanguage();
     const translate = translations.experience;
