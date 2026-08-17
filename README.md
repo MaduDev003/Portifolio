@@ -56,7 +56,7 @@ O portfólio possui suporte para dois idiomas:
 * Links para projetos, GitHub e outras plataformas profissionais
 * Componentes reutilizáveis
 * Animações e microinterações
-* Testes automatizados para componentes com lógica ou interação
+* Testes automatizados para componentes
 * Interface desenvolvida com foco em acessibilidade
 
 ## 🏗️ Arquitetura
