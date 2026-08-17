@@ -29,8 +29,6 @@
 * [🏗️ Arquitetura](#️-arquitetura)
 * [🎨 Design System e UI/UX](#-design-system-e-uiux)
 * [🧪 Testes](#-testes)
-* [⚙️ Decisões técnicas](#️-decisões-técnicas)
-* [💻 Como executar](#-como-executar)
 
 ## 👩🏻‍💻 Sobre o projeto
 
