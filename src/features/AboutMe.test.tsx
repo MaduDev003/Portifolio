@@ -62,7 +62,6 @@ describe("AboutMe", () => {
         });
 
         it("should render the card descriptions", () => {
-            console.log("screen",screen)
             expect(
                 screen.getByText(/primeira/i),
             ).toBeInTheDocument();
