@@ -44,7 +44,7 @@ export const projects = [
         "Aplicação responsiva simulando um site de Pizza.",
       video: "/videos/massaBella.mp4",
       image: massaBellaImage.src,
-      technologies: ["HTML", "CSS", "JavaScript", "API"],
+      technologies: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/MaduDev003/MassaBella",
       demo: "https://massa-bella.vercel.app/",
     },
