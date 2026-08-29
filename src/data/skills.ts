@@ -23,7 +23,8 @@ import {
   SiJest,
   SiCypress,
   SiTestinglibrary,
-  SiVitest 
+  SiVitest,
+  SiPostgresql
 } from "react-icons/si";
 
 import { TbWand } from "react-icons/tb";
@@ -103,9 +104,24 @@ export const skillCategories = [
         color: "#5FA04E",
       },
       {
-        name: "Express",
+        name: "Express.js",
         icon: SiExpress,
         color: "#A1A1AA",
+      },
+      {
+        name: "REST APIs",
+        icon: HiOutlineServerStack,
+        color: "#60A5FA",
+      },
+      {
+        name: "BFF",
+        icon: HiOutlineServerStack,
+        color: "#8B5CF6",
+      },
+      {
+        name: "Microservices",
+        icon: HiOutlineServerStack,
+        color: "#C084FC",
       },
       {
         name: "MongoDB",
@@ -113,10 +129,20 @@ export const skillCategories = [
         color: "#47A248",
       },
       {
+        name: "PostgreSQL",
+        icon: SiPostgresql,
+        color: "#4169E1",
+      },
+      {
         name: "RabbitMQ",
         icon: SiRabbitmq,
         color: "#FF6600",
       },
+      {
+        name: "Azure Service Bus",
+        icon: HiOutlineServerStack,
+        color: "#0078D4",
+      }
     ],
   },
 
@@ -149,6 +175,7 @@ export const skillCategories = [
         icon: BiLogoFigma,
         color: "#F24E1E",
       },
+      
     ],
   },
 
@@ -161,13 +188,13 @@ export const skillCategories = [
         icon: SiJest,
         color: "#C21325",
       },
-       {
-        name: "Vistest",
+      {
+        name: "Vitest",
         icon: SiVitest,
         color: "#20F386",
       },
-       {
-        name: "React Testing Library ",
+      {
+        name: "React Testing Library",
         icon: SiTestinglibrary,
         color: "#C2292A",
       },

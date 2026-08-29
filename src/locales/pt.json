@@ -14,8 +14,8 @@
   },
   "presentation": {
     "greeting": "Olá, eu sou",
-    "professionalTitle": "Engenheira de Software · Front-End",
-    "tagline": "Apaixonada por tecnologia, design e experiências digitais. Gosto de aprender continuamente e explorar novas formas de desenvolver interfaces modernas, acessíveis e intuitivas.",
+    "professionalTitle": "Engenheira de Software · Full Stack",
+    "tagline": "Apaixonada por tecnologia, design e engenharia de software. Gosto de aprender continuamente e explorar novas formas de desenvolver soluções modernas, acessíveis, intuitivas e escaláveis.",
     "callToAction": "Ver Projetos"
   },
   "aboutMe": {
@@ -34,26 +34,28 @@
     },
     "experience": {
       "title": "Minha experiência",
-      "description": "Minha primeira oportunidade profissional foi no setor financeiro, onde atuei por três anos desenvolvendo aplicações internas. Foi uma experiência que consolidou minha visão sobre engenharia de software e desenvolvimento de produtos.",
+      "description": "Minha primeira oportunidade profissional foi no setor financeiro, onde atuei por três anos desenvolvendo aplicações internas. Foi uma experiência que consolidou minha visão sobre engenharia de software e desenvolvimento de produtos, atuando entre Front-end, Back-end e integrações.",
       "highlights": [
         "Front-end e Back-end",
         "APIs REST",
         "Microsserviços",
         "Mensageria",
         "Testes automatizados",
+        "React",
+        "Next.js",
         "Metodologias Ágeis"
       ]
     },
     "motivation": {
       "title": "O que me move",
-      "description": "Encontrei no Front-end o espaço onde consigo unir criatividade, tecnologia e engenharia de software. Meu objetivo é construir produtos digitais modernos, acessíveis e performáticos, utilizando boas práticas de arquitetura, escalabilidade, segurança e desenvolvimento sustentável, equilibrando excelência técnica com uma experiência de usuário consistente.",
-      "highlights": [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Acessibilidade",
-        "Experiência do Usuário"
+      "description": "Gosto de conectar tecnologia, engenharia de software e experiência do usuário para construir produtos digitais modernos, acessíveis e performáticos. Meu objetivo é desenvolver soluções de ponta a ponta, utilizando boas práticas de arquitetura, escalabilidade, segurança e desenvolvimento sustentável.",
+     "highlights": [
+        "Full Stack",
+        "Arquitetura",
+        "Integração de Sistemas",
+        "Engenharia de Software",
+        "Qualidade de Código",
+        "Desenvolvimento de Produtos"
       ]
     }
   },
@@ -67,8 +69,8 @@
       "quality": "Qualidade"
     }
   },
-  "experience":{
-    "pageTitle":"Experiência",
+  "experience": {
+    "pageTitle": "Experiência",
     "details": "Principal Conquistas",
     "experiences": [
       {
@@ -76,7 +78,7 @@
         "company": "GETNET",
         "period": "Maio 2023 - Janeiro 2026",
         "location": "Madri, Comunidade de Madrid, Espanha",
-        "description": "Atuação no desenvolvimento de aplicações web, contribuindo em soluções front-end e back-end. Experiência com React, Node.js, APIs REST, microsserviços, testes automatizados e integração com serviços de mensageria em ambiente corporativo.",
+        "description": "Atuação no desenvolvimento de aplicações web, contribuindo em soluções Front-end e Back-end. Experiência com React, Node.js, APIs REST, BFF, microsserviços, testes automatizados e integração com serviços de mensageria em ambiente corporativo.",
         "achievements": [
           "Liderei tecnicamente a evolução do portal contábil interno após a saída do desenvolvedor Front-End.",
           "Automatizei processos com filtros e formulários responsivos, eliminando consultas manuais e acelerando a análise de dados.",
@@ -91,7 +93,7 @@
         "company": "Projeto Autoral",
         "period": "Janeiro 2026 - Atualmente",
         "location": "Remoto",
-        "description": "Desenvolvimento de uma aplicação de cinema com foco em arquitetura front-end, experiência do usuário e fluxo completo de compra de ingressos. O projeto simula uma plataforma real de reservas, integrando consumo de APIs, gerenciamento de estado, validação de formulários e persistência de dados.",
+        "description": "Desenvolvimento de uma aplicação de cinema com foco em arquitetura de software, experiência do usuário e fluxo completo de compra de ingressos. O projeto simula uma plataforma real de reservas, integrando consumo de APIs, gerenciamento de estado, validação de formulários e persistência de dados.",
         "achievements": [
           "Projetei um fluxo completo de compra de ingressos, contemplando seleção de sessão, assentos, produtos, pagamento e confirmação.",
           "Implementei gerenciamento de estado global com Zustand e persistência do checkout utilizando localStorage.",
@@ -103,9 +105,9 @@
       }
     ]
   },
-  "projects":{
+  "projects": {
     "pageTitle": "Projetos",
-    "subTitle":"Explore projetos onde tecnologia, design e experiência do usuário se encontram.",
+    "subTitle": "Explore projetos onde tecnologia, design e experiência do usuário se encontram.",
     "Featured": "Destaque",
     "viewProject": "Ver Projeto",
     "projects": [
@@ -113,21 +115,21 @@
         "description": "Plataforma de cinema desenvolvida com foco em experiência do usuário, acessibilidade e arquitetura escalável."
       },
       {
-         "description": "Jogo de captura e esquiva onde tecnologias aumentam sua pontuação, enquanto bugs e erros reduzem suas vidas. Sobreviva o máximo possível."
+        "description": "Jogo de captura e esquiva onde tecnologias aumentam sua pontuação, enquanto bugs e erros reduzem suas vidas. Sobreviva o máximo possível."
       },
       {
-        "description": "Dashboard de previsão do tempo consumindo API externa com interface responsiva"
+        "description": "Dashboard de previsão do tempo consumindo API externa com interface responsiva."
       },
       {
         "description": "Aplicação responsiva simulando um site de Pizza."
       }
     ]
   },
-  "contact":{
+  "contact": {
     "pageTitle": "Vamos conversar?",
     "subtitle": "Se você quiser conversar sobre projetos, oportunidades ou tecnologia, será um prazer trocar uma ideia.",
     "callToAction": "Enviar e-mail",
-    "contacts":[
+    "contacts": [
       {
         "description": "Vamos nos conectar."
       },

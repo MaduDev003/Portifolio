@@ -14,8 +14,8 @@
   },
   "presentation": {
     "greeting": "Hello, I'm",
-    "professionalTitle": "Software Engineer · Front-End",
-    "tagline": "Passionate about technology, design, and digital experiences. I enjoy continuously learning and exploring new ways to build modern, accessible, and intuitive interfaces.",
+    "professionalTitle": "Software Engineer · Full Stack",
+    "tagline": "Passionate about technology, design, and software engineering. I enjoy continuously learning and exploring new ways to build modern, accessible, intuitive, and scalable solutions.",
     "callToAction": "View Projects"
   },
   "aboutMe": {
@@ -34,33 +34,34 @@
     },
     "experience": {
       "title": "My experience",
-      "description": "My first professional opportunity was in the financial sector, where I spent three years developing internal applications. This experience strengthened my perspective on software engineering and product development.",
+      "description": "My first professional opportunity was in the financial sector, where I spent three years developing internal applications. This experience strengthened my perspective on software engineering and product development, working across Front-end, Back-end, and integrations.",
       "highlights": [
         "Front-end and Back-end",
         "REST APIs",
         "Microservices",
         "Messaging",
         "Automated testing",
+        "React",
+        "Next.js",
         "Agile methodologies"
       ]
     },
     "motivation": {
       "title": "What drives me",
-      "description": "I found in Front-end development the space where I can combine creativity, technology, and software engineering. My goal is to build modern, accessible, and performant digital products using best practices in architecture, scalability, security, and sustainable development, balancing technical excellence with a consistent user experience.",
+      "description": "I enjoy connecting technology, software engineering, and user experience to build modern, accessible, and high-performance digital products. My goal is to develop end-to-end solutions using best practices in architecture, scalability, security, and sustainable development.",
       "highlights": [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Accessibility",
-        "User Experience"
+        "Full Stack",
+        "Architecture",
+        "Systems Integration",
+        "Software Engineering",
+        "Code Quality",
+        "Product Development"
       ]
     }
   },
   "skills": {
     "pageTitle": "Skills",
     "subTitle": "Technologies and tools that make up my development stack.",
-
     "categories": {
       "frontend": "Front-end",
       "backend": "Back-end",
@@ -68,19 +69,19 @@
       "quality": "Quality"
     }
   },
-  "experience":{
-    "pageTitle":"Experience",
+  "experience": {
+    "pageTitle": "Experience",
     "details": "Key Achievements",
-    "experiences":[
+    "experiences": [
       {
         "title": "Software Engineer",
         "company": "GETNET",
         "period": "May 2023 - January 2026",
-        "location": "Madri, Community of Madrid, Spain",
-        "description": "Worked on web application development, contributing to both front-end and back-end solutions. Experience with React, Node.js, REST APIs, microservices, automated testing, and messaging services in a corporate environment.",
+        "location": "Madrid, Community of Madrid, Spain",
+        "description": "Worked on web application development, contributing to both Front-end and Back-end solutions. Experience with React, Node.js, REST APIs, BFF, microservices, automated testing, and integration with messaging services in a corporate environment.",
         "achievements": [
           "Technically led the evolution of the internal accounting portal after the Front-End developer's departure.",
-          "Automated processes with filters and responsive forms, eliminating manual queries and accelerating data analysis.",
+          "Automated processes with responsive filters and forms, eliminating manual queries and accelerating data analysis.",
           "Maintained and evolved an ecosystem of 11 microservices responsible for the monthly accounting closing process.",
           "Designed automated tests with Jest and Cypress, increasing test coverage to 90% and ensuring successful Azure DevOps pipeline execution.",
           "Resolved critical incidents by analyzing Front-End, BFF, and Back-End layers as an integrated system.",
@@ -92,7 +93,7 @@
         "company": "Personal Project",
         "period": "January 2026 - Present",
         "location": "Remote",
-        "description": "Development of a cinema application focused on front-end architecture, user experience, and a complete ticket purchasing flow. The project simulates a real-world booking platform, integrating API consumption, state management, form validation, and data persistence.",
+        "description": "Development of a cinema application focused on software architecture, user experience, and a complete ticket purchasing flow. The project simulates a real-world booking platform, integrating API consumption, state management, form validation, and data persistence.",
         "achievements": [
           "Designed a complete ticket purchasing flow covering session selection, seats, products, payment, and confirmation.",
           "Implemented global state management with Zustand and checkout persistence using localStorage.",
@@ -124,7 +125,7 @@
       }
     ]
   },
-  "contact":{
+  "contact": {
     "pageTitle": "Let's talk",
     "subtitle": "If you'd like to talk about projects, opportunities, or technology, I'd love to chat.",
     "callToAction": "Send email",
